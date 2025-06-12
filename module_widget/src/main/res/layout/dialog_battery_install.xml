@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="@dimen/common_590dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/common_shape_rect_solid_color_ff_radius_10"
+        android:paddingBottom="@dimen/common_30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_close"
+            android:layout_width="@dimen/common_44dp"
+            android:layout_height="@dimen/common_44dp"
+            android:scaleType="center"
+            android:src="@drawable/mission_ic_close"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_warn"
+            android:layout_width="@dimen/common_30dp"
+            android:layout_height="@dimen/common_30dp"
+            android:layout_marginStart="@dimen/common_20dp"
+            android:layout_marginTop="@dimen/common_18dp"
+            android:src="@drawable/mission_strong_warning_tip"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tv_warn_tip_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common_8dp"
+            android:layout_marginEnd="@dimen/common_55dp"
+            android:text="@string/common_text_h_battery_check_title"
+            android:textColor="@color/common_color_black"
+            android:textSize="@dimen/common_text_size_sp_17"
+            android:textStyle="bold"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_warn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_warn"
+            app:layout_constraintTop_toTopOf="@+id/iv_warn" />
+
+
+        <TextView
+            android:id="@+id/tv_warn_tips1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common_58dp"
+            android:layout_marginTop="@dimen/common_16dp"
+            android:layout_marginEnd="@dimen/common_55dp"
+            android:gravity="start"
+            android:text="@string/common_text_h_battery_check_tips1"
+            android:textColor="@color/common_color_black"
+            android:textSize="@dimen/common_text_size_sp_15"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_warn_tip_title" />
+
+        <ImageView
+            android:id="@+id/iv_warn_tip1"
+            android:layout_width="@dimen/common_320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common_58dp"
+            android:layout_marginTop="@dimen/common_12dp"
+            android:src="@drawable/common_ic_h_battery_buckle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_warn_tips1" />
+
+        <TextView
+            android:id="@+id/tv_warn_tips2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common_58dp"
+            android:layout_marginTop="@dimen/common_20dp"
+            android:layout_marginEnd="@dimen/common_55dp"
+            android:gravity="start"
+            android:text="@string/common_text_h_battery_check_tips2"
+            android:textColor="@color/common_color_black"
+            android:textSize="@dimen/common_text_size_sp_15"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_warn_tip1" />
+
+
+        <ImageView
+            android:id="@+id/iv_warn_tip2"
+            android:layout_width="@dimen/common_320dp"
+            android:layout_height="@dimen/common_240dp"
+            android:layout_marginStart="@dimen/common_58dp"
+            android:layout_marginTop="@dimen/common_12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_warn_tips2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

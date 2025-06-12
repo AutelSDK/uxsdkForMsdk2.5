@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_color_black_50"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal"
+    tools:layout_height="@dimen/common_50dp">
+
+    <ImageView
+        android:id="@+id/iv_mission_remote_electric"
+        android:layout_width="@dimen/common_35dp"
+        android:layout_height="@dimen/common_42dp"
+        android:layout_gravity="center_vertical"
+        android:paddingStart="@dimen/common_10dp"
+        android:paddingTop="@dimen/common_8_5dp"
+        android:paddingBottom="@dimen/common_8_5dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/mission_ic_remote_control_electric" />
+
+    <com.autel.common.widget.OutlineTextView
+        android:id="@+id/tv_remote_control_electric"
+        style="@style/common_font_white_13"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/common_4dp"
+        android:paddingEnd="@dimen/common_10dp"
+        android:text="@string/common_text_no_value"
+        android:textSize="@dimen/common_text_size_sp_16"
+        android:textStyle="bold"
+        app:AutelTextFace="DIN_Alternate_Bold"
+        app:outlineColor="@color/common_color_black_50"
+        app:outlineWidth="@dimen/common_line_width" />
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/iv_remote_control_signal"
+            android:layout_width="@dimen/common_45dp"
+            android:layout_height="@dimen/common_45dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/common_5dp"
+            android:paddingStart="@dimen/common_10dp"
+            android:paddingTop="@dimen/common_8_5dp"
+            android:paddingEnd="@dimen/common_10dp"
+            android:paddingBottom="@dimen/common_8_5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/mission_ic_remote_control_signal5" />
+        <TextView
+            android:id="@+id/tv_rc_signal_quality"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/common_text_size_sp_9"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:layout_alignParentBottom="true"
+            android:layout_alignEnd="@+id/iv_remote_control_signal" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_color_f2f4f6">
+
+    <com.autel.common.widget.CommonTitleView
+        android:id="@+id/title"
+        android:layout_width="@dimen/common_0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/common_color_ff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title_leftIconVisibility="true"
+        app:title_name="@string/common_text_data_security" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.autel.common.widget.CommonItemSwitch
+                android:id="@+id/cis_aircraft_frequency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_32dp"
+                android:layout_marginTop="@dimen/common_16dp"
+                android:layout_marginEnd="@dimen/common_32dp"
+                android:background="@drawable/common_item_bg_white_all"
+                android:paddingBottom="@dimen/common_15dp"
+                app:content_text_color="@color/common_color_99"
+                app:content_value="@string/common_text_aircraft_frequency_encryption_tip"
+                app:end_margin="@dimen/common_20dp"
+                app:start_margin="@dimen/common_20dp"
+                app:switch_button_background="@color/common_color_e6"
+                app:title_name="@string/common_text_aircraft_frequency_encryption"
+                app:title_text_color="@color/common_color_33" />
+
+            <com.autel.common.widget.CommonItemSwitch
+                android:id="@+id/cis_media_file_encryption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_32dp"
+                android:layout_marginTop="@dimen/common_16dp"
+                android:layout_marginEnd="@dimen/common_32dp"
+                android:background="@drawable/common_item_bg_white_all"
+                android:paddingBottom="@dimen/common_15dp"
+                app:content_text_color="@color/common_color_99"
+                app:content_value="@string/common_text_media_file_encryption_tip"
+                app:end_margin="@dimen/common_20dp"
+                app:start_margin="@dimen/common_20dp"
+                app:switch_button_background="@color/common_color_e6"
+                app:title_name="@string/common_text_media_file_encryption"
+                app:title_text_color="@color/common_color_33" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_32dp"
+                android:layout_marginTop="@dimen/common_16dp"
+                android:layout_marginEnd="@dimen/common_32dp"
+                android:background="@drawable/common_item_bg_white_all"
+                android:orientation="vertical">
+
+
+                <com.autel.common.widget.CommonItemSwitch
+                    android:id="@+id/cis_not_generate_task"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/common_item_bg_white_all"
+                    android:paddingBottom="@dimen/common_15dp"
+                    app:content_text_color="@color/common_color_99"
+                    app:content_value="@string/common_text_photo_and_video_tip"
+                    app:end_margin="@dimen/common_20dp"
+                    app:start_margin="@dimen/common_20dp"
+                    app:switch_button_background="@color/common_color_e6"
+                    app:title_name="@string/common_text_not_generate_task_data"
+                    app:title_text_color="@color/common_color_33" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/common_20dp"
+                    android:orientation="vertical">
+
+                    <com.autel.common.widget.CommonItemSwitch
+                        android:id="@+id/cis_not_generate_media"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/common_15dp"
+                        app:bottom_line_visibility="visible"
+                        app:content_text_color="@color/common_color_99"
+                        app:content_value="@string/common_text_photo_and_video_tip"
+                        app:end_margin="@dimen/common_20dp"
+                        app:start_margin="@dimen/common_20dp"
+                        app:switch_button_background="@color/common_color_e6"
+                        app:title_name="@string/common_text_photo_and_video"
+                        app:title_text_color="@color/common_color_33" />
+
+                    <com.autel.common.widget.CommonItemSwitch
+                        android:id="@+id/cis_not_generate_media_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/common_15dp"
+                        app:bottom_line_visibility="visible"
+                        app:content_text_color="@color/common_color_99"
+                        app:content_value="@string/common_text_photo_and_video_info_tip"
+                        app:end_margin="@dimen/common_20dp"
+                        app:start_margin="@dimen/common_20dp"
+                        app:switch_button_background="@color/common_color_e6"
+                        app:title_name="@string/common_text_photo_and_video_info"
+                        app:title_text_color="@color/common_color_33" />
+
+                    <com.autel.common.widget.CommonItemSwitch
+                        android:id="@+id/cis_not_generate_fly_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/common_15dp"
+                        app:bottom_line_visibility="visible"
+                        app:content_text_color="@color/common_color_99"
+                        app:content_value="@string/common_text_fly_data_tip"
+                        app:end_margin="@dimen/common_20dp"
+                        app:start_margin="@dimen/common_20dp"
+                        app:switch_button_background="@color/common_color_e6"
+                        app:title_name="@string/common_text_fly_data"
+                        app:title_text_color="@color/common_color_33" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_32dp"
+                android:layout_marginTop="@dimen/common_16dp"
+                android:layout_marginEnd="@dimen/common_32dp"
+                android:background="@drawable/common_item_bg_white_all"
+                android:orientation="vertical">
+
+                <com.autel.common.widget.CommonItemSwitch
+                    android:id="@+id/cis_clear_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/common_15dp"
+                    app:content_text_color="@color/common_color_99"
+                    app:content_value="@string/common_text_data_clear_tip"
+                    app:end_margin="@dimen/common_20dp"
+                    app:start_margin="@dimen/common_20dp"
+                    app:switch_button_background="@color/common_color_e6"
+                    app:title_name="@string/common_text_data_clear"
+                    app:title_text_color="@color/common_color_33" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/common_20dp"
+                    android:orientation="vertical">
+
+                    <com.autel.common.widget.CommonItemSwitch
+                        android:id="@+id/cis_auto_clear_data_disconnect"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/common_15dp"
+                        app:bottom_line_visibility="visible"
+                        app:content_text_color="@color/common_color_99"
+                        app:content_value="@string/common_text_auto_clear_data_disconnect_tip"
+                        app:end_margin="@dimen/common_20dp"
+                        app:start_margin="@dimen/common_20dp"
+                        app:switch_button_background="@color/common_color_e6"
+                        app:title_name="@string/common_text_auto_clear_data_disconnect"
+                        app:title_text_color="@color/common_color_33" />
+
+                    <com.autel.common.widget.CommonItemSwitch
+                        android:id="@+id/cis_auto_clear_data_without_returning"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/common_15dp"
+                        app:bottom_line_visibility="visible"
+                        app:content_text_color="@color/common_color_99"
+                        app:content_value="@string/common_text_auto_clear_data_without_returning_tip"
+                        app:end_margin="@dimen/common_20dp"
+                        app:start_margin="@dimen/common_20dp"
+                        app:switch_button_background="@color/common_color_e6"
+                        app:title_name="@string/common_text_auto_clear_data_without_returning"
+                        app:title_text_color="@color/common_color_33" />
+
+                    <com.autel.common.widget.CommonItemSwitch
+                        android:id="@+id/cis_auto_clear_media_file"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/common_15dp"
+                        app:bottom_line_visibility="visible"
+                        app:content_text_color="@color/common_color_99"
+                        app:content_value="@string/common_text_auto_clear_media_file_tip"
+                        app:end_margin="@dimen/common_20dp"
+                        app:start_margin="@dimen/common_20dp"
+                        app:switch_button_background="@color/common_color_e6"
+                        app:title_name="@string/common_text_auto_clear_media_file"
+                        app:title_text_color="@color/common_color_33" />
+
+                    <com.autel.common.widget.CommonItemSwitch
+                        android:id="@+id/cis_auto_clear_route_file"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/common_15dp"
+                        app:bottom_line_visibility="visible"
+                        app:content_text_color="@color/common_color_99"
+                        app:content_value="@string/common_text_auto_clear_route_file_tip"
+                        app:end_margin="@dimen/common_20dp"
+                        app:start_margin="@dimen/common_20dp"
+                        app:switch_button_background="@color/common_color_e6"
+                        app:title_name="@string/common_text_auto_clear_route_file"
+                        app:title_text_color="@color/common_color_33" />
+
+                    <com.autel.common.widget.CommonItemSwitch
+                        android:id="@+id/cis_auto_clear_upgrade_file"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/common_15dp"
+                        app:bottom_line_visibility="visible"
+                        app:content_text_color="@color/common_color_99"
+                        app:content_value="@string/common_text_auto_clear_upgrade_file_tip"
+                        app:end_margin="@dimen/common_20dp"
+                        app:start_margin="@dimen/common_20dp"
+                        app:switch_button_background="@color/common_color_e6"
+                        app:title_name="@string/common_text_auto_clear_upgrade_file"
+                        app:title_text_color="@color/common_color_33" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_clear_all_aircraft_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_50dp"
+                android:layout_marginEnd="@dimen/common_50dp"
+                android:gravity="center"
+                android:paddingTop="@dimen/common_40dp"
+                android:paddingBottom="@dimen/common_40dp"
+                android:text="@string/common_text_clear_all_aircraft_data"
+                android:textColor="@color/common_color_brand_007aff"
+                android:textSize="@dimen/common_text_size_sp_17" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

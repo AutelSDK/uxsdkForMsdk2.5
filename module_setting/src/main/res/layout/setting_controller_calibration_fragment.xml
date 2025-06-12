@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_color_white">
+
+    <com.autel.common.widget.CommonTitleView
+        android:id="@+id/view_title"
+        android:layout_width="@dimen/common_0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title_leftIconVisibility="true"
+        app:title_name="@string/common_text_remote_calibration"
+        app:title_rightIconVisibility="false" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_left_roll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.autel.setting.widget.RemoteCalibrationImageView
+                android:id="@+id/cl_left_roll_iv"
+                android:layout_width="@dimen/common_120dp"
+                android:layout_height="@dimen/common_44dp"
+                android:layout_marginTop="@dimen/common_80dp"
+                android:background="@drawable/setting_calibration_roll"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.autel.setting.widget.RemoteCalibrationImageView
+                android:id="@+id/iv_left_roll_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_4dp"
+                android:layout_marginBottom="@dimen/common_5dp"
+                android:rotation="-90"
+                android:src="@drawable/setting_calibration_arrow_normal"
+                app:layout_constraintBottom_toTopOf="@id/cl_left_roll_iv"
+                app:layout_constraintLeft_toLeftOf="@id/cl_left_roll_iv" />
+
+            <com.autel.setting.widget.RemoteCalibrationImageView
+                android:id="@+id/iv_left_roll_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/common_4dp"
+                android:layout_marginBottom="@dimen/common_5dp"
+                android:rotation="90"
+                android:src="@drawable/setting_calibration_arrow_normal"
+                app:layout_constraintBottom_toTopOf="@id/cl_left_roll_iv"
+                app:layout_constraintRight_toRightOf="@id/cl_left_roll_iv" />
+
+            <TextView
+                style="@style/common_font_black_18"
+                android:layout_marginTop="@dimen/common_66dp"
+                android:maxWidth="@dimen/common_150dp"
+                android:text="@string/common_text_controller_calibration_left_roll"
+                app:layout_constraintLeft_toLeftOf="@id/cl_left_roll_iv"
+                app:layout_constraintRight_toRightOf="@id/cl_left_roll_iv"
+                app:layout_constraintTop_toBottomOf="@id/cl_left_roll_iv"
+                tools:text="1222555555555555555" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_right_roll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_72dp"
+            app:layout_constraintLeft_toRightOf="@id/cl_left_roll"
+            app:layout_constraintTop_toTopOf="@id/cl_left_roll">
+
+            <com.autel.setting.widget.RemoteCalibrationImageView
+                android:id="@+id/cl_right_roll_up_iv"
+                android:layout_width="@dimen/common_120dp"
+                android:layout_height="@dimen/common_44dp"
+                android:layout_marginTop="@dimen/common_20dp"
+                android:background="@drawable/setting_calibration_roll"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.autel.setting.widget.RemoteCalibrationImageView
+                android:id="@+id/iv_right_roll_up_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_4dp"
+                android:layout_marginBottom="@dimen/common_5dp"
+                android:rotation="-90"
+                android:src="@drawable/setting_calibration_arrow_normal"
+                app:layout_constraintBottom_toTopOf="@id/cl_right_roll_up_iv"
+                app:layout_constraintLeft_toLeftOf="@id/cl_right_roll_up_iv" />
+
+            <com.autel.setting.widget.RemoteCalibrationImageView
+                android:id="@+id/iv_right_roll_up_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/common_4dp"
+                android:layout_marginBottom="@dimen/common_5dp"
+                android:rotation="90"
+                android:src="@drawable/setting_calibration_arrow_normal"
+                app:layout_constraintBottom_toTopOf="@id/cl_right_roll_up_iv"
+                app:layout_constraintRight_toRightOf="@id/cl_right_roll_up_iv" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/right_roll_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="cl_right_roll_up_iv,iv_right_roll_up_left,iv_right_roll_up_right" />
+
+            <com.autel.setting.widget.RemoteCalibrationImageView
+                android:id="@+id/cl_right_roll_iv"
+                android:layout_width="@dimen/common_120dp"
+                android:layout_height="@dimen/common_44dp"
+                android:layout_marginTop="@dimen/common_43_5dp"
+                android:background="@drawable/setting_calibration_roll"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cl_right_roll_up_iv"
+                app:layout_goneMarginTop="@dimen/common_80dp" />
+
+            <com.autel.setting.widget.RemoteCalibrationImageView
+                android:id="@+id/iv_right_roll_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_4dp"
+                android:layout_marginBottom="@dimen/common_5dp"
+                android:rotation="-90"
+                android:src="@drawable/setting_calibration_arrow_normal"
+                app:layout_constraintBottom_toTopOf="@id/cl_right_roll_iv"
+                app:layout_constraintLeft_toLeftOf="@id/cl_right_roll_iv" />
+
+            <com.autel.setting.widget.RemoteCalibrationImageView
+                android:id="@+id/iv_right_roll_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/common_4dp"
+                android:layout_marginBottom="@dimen/common_5dp"
+                android:rotation="90"
+                android:src="@drawable/setting_calibration_arrow_normal"
+                app:layout_constraintBottom_toTopOf="@id/cl_right_roll_iv"
+                app:layout_constraintRight_toRightOf="@id/cl_right_roll_iv" />
+
+            <TextView
+                style="@style/common_font_black_18"
+                android:layout_marginTop="@dimen/common_125dp"
+                android:maxWidth="@dimen/common_150dp"
+                android:text="@string/common_text_controller_calibration_right_roll"
+                app:layout_constraintLeft_toLeftOf="@id/cl_right_roll_up_iv"
+                app:layout_constraintRight_toRightOf="@id/cl_right_roll_up_iv"
+                app:layout_constraintTop_toBottomOf="@id/cl_right_roll_up_iv"
+                app:layout_goneMarginTop="@dimen/common_185dp"
+                tools:text="1222555555555555555" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_left_calibration"
+            android:layout_width="@dimen/common_180dp"
+            android:layout_height="@dimen/common_240dp"
+            android:layout_marginLeft="@dimen/common_72dp"
+            app:layout_constraintBottom_toBottomOf="@id/cl_right_roll"
+            app:layout_constraintLeft_toRightOf="@+id/cl_right_roll"
+            app:layout_constraintTop_toTopOf="@id/cl_right_roll">
+
+            <com.autel.setting.widget.RemoteCalibrationImageView
+                android:id="@+id/iv_left_calibration"
+                android:layout_width="@dimen/common_120dp"
+                android:layout_height="@dimen/common_120dp"
+                android:layout_marginTop="@dimen/common_40dp"
+                android:background="@drawable/setting_calibration"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.autel.setting.widget.RemoteCalibrationImageView
+                android:id="@+id/iv_left_calibration_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/common_2dp"
+                android:src="@drawable/setting_calibration_arrow_normal"
+                app:layout_constraintBottom_toTopOf="@id/iv_left_calibration"
+                app:layout_constraintLeft_toLeftOf="@id/iv_left_calibration"
+                app:layout_constraintRight_toRightOf="@id/iv_left_calibration" />
+
+            <com.autel.setting.widget.RemoteCalibrationImageView
+                android:id="@+id/iv_left_calibration_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:rotation="45"
+                android:src="@drawable/setting_calibration_arrow_normal"
+                app:layout_constraintRight_toRightOf="@id/iv_left_calibration"
+                app:layout_constraintTop_toTopOf="@id/iv_left_calibration" />
+
+            <com.autel.setting.widget.RemoteCalibrationImageView
+                android:id="@+id/iv_left_calibration_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_5dp"
+                android:rotation="90"
+                android:src="@drawable/setting_calibration_arrow_normal"
+                app:layout_constraintBottom_toBottomOf="@id/iv_left_calibration"
+                app:layout_constraintLeft_toRightOf="@id/iv_left_calibration"
+                app:layout_constraintTop_toTopOf="@id/iv_left_calibration" />
+
+            <com.autel.setting.widget.RemoteCalibrationImageView
+                android:id="@+id/iv_left_calibration_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:rotation="125"
+                android:src="@drawable/setting_calibration_arrow_normal"
+                app:layout_constraintBottom_toBottomOf="@id/iv_left_calibration"
+                app:layout_constraintRight_toRightOf="@id/iv_left_calibration" />
+
+            <com.autel.setting.widget.RemoteCalibrationImageView
+                android:id="@+id/iv_left_calibration_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_3dp"
+                android:rotation="180"
+                android:src="@drawable/setting_calibration_arrow_normal"
+                app:layout_constraintLeft_toLeftOf="@id/iv_left_calibration"
+                app:layout_constraintRight_toRightOf="@id/iv_left_calibration"
+                app:layout_constraintTop_toBottomOf="@id/iv_left_calibration" />
+
+            <com.autel.setting.widget.RemoteCalibrationImageView
+                android:id="@+id/iv_left_calibration_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:rotation="225"
+                android:src="@drawable/setting_calibration_arrow_normal"
+                app:layout_constraintBottom_toBottomOf="@id/iv_left_calibration"
+                app:layout_constraintLeft_toLeftOf="@id/iv_left_calibration" />
+
+            <com.autel.setting.widget.RemoteCalibrationImageView
+                android:id="@+id/iv_left_calibration_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/common_5dp"
+                android:rotation="270"
+                android:src="@drawable/setting_calibration_arrow_normal"
+                app:layout_constraintBottom_toBottomOf="@id/iv_left_calibration"
+                app:layout_constraintRight_toLeftOf="@id/iv_left_calibration"
+                app:layout_constraintTop_toTopOf="@id/iv_left_calibration" />
+
+            <com.autel.setting.widget.RemoteCalibrationImageView
+                android:id="@+id/iv_left_calibration_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/common_2dp"
+                android:rotation="315"
+                android:src="@drawable/setting_calibration_arrow_normal"
+                app:layout_constraintLeft_toLeftOf="@id/iv_left_calibration"
+                app:layout_constraintTop_toTopOf="@id/iv_left_calibration" />
+
+            <TextView
+                style="@style/common_font_black_18"
+                android:layout_marginTop="@dimen/common_30dp"
+                android:maxWidth="@dimen/common_150dp"
+                android:text="@string/common_text_controller_calibration_left"
+                app:layout_constraintLeft_toLeftOf="@id/iv_left_calibration"
+                app:layout_constraintRight_toRightOf="@id/iv_left_calibration"
+                app:layout_constraintTop_toBottomOf="@id/iv_left_calibration"
+                tools:text="1222555" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_right_calibration"
+            android:layout_width="@dimen/common_180dp"
+            android:layout_height="@dimen/common_240dp"
+            android:layout_marginLeft="@dimen/common_72dp"
+            app:layout_constraintBottom_toBottomOf="@id/cl_left_calibration"
+            app:layout_constraintLeft_toRightOf="@id/cl_left_calibration"
+            app:layout_constraintTop_toTopOf="@id/cl_left_calibration">
+
+            <com.autel.setting.widget.RemoteCalibrationImageView
+                android:id="@+id/iv_right_calibration"
+                android:layout_width="@dimen/common_120dp"
+                android:layout_height="@dimen/common_120dp"
+                android:layout_marginTop="@dimen/common_40dp"
+                android:background="@drawable/setting_calibration"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.autel.setting.widget.RemoteCalibrationImageView
+                android:id="@+id/iv_right_calibration_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/common_3dp"
+                android:src="@drawable/setting_calibration_arrow_normal"
+                app:layout_constraintBottom_toTopOf="@id/iv_right_calibration"
+                app:layout_constraintLeft_toLeftOf="@id/iv_right_calibration"
+                app:layout_constraintRight_toRightOf="@id/iv_right_calibration" />
+
+            <com.autel.setting.widget.RemoteCalibrationImageView
+                android:id="@+id/iv_right_calibration_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:rotation="45"
+                android:src="@drawable/setting_calibration_arrow_normal"
+                app:layout_constraintRight_toRightOf="@id/iv_right_calibration"
+                app:layout_constraintTop_toTopOf="@id/iv_right_calibration" />
+
+            <com.autel.setting.widget.RemoteCalibrationImageView
+                android:id="@+id/iv_right_calibration_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_5dp"
+                android:rotation="90"
+                android:src="@drawable/setting_calibration_arrow_normal"
+                app:layout_constraintBottom_toBottomOf="@id/iv_right_calibration"
+                app:layout_constraintLeft_toRightOf="@id/iv_right_calibration"
+                app:layout_constraintTop_toTopOf="@id/iv_right_calibration" />
+
+            <com.autel.setting.widget.RemoteCalibrationImageView
+                android:id="@+id/iv_right_calibration_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:rotation="125"
+                android:src="@drawable/setting_calibration_arrow_normal"
+                app:layout_constraintBottom_toBottomOf="@id/iv_right_calibration"
+                app:layout_constraintRight_toRightOf="@id/iv_right_calibration" />
+
+            <com.autel.setting.widget.RemoteCalibrationImageView
+                android:id="@+id/iv_right_calibration_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_3dp"
+                android:rotation="180"
+                android:src="@drawable/setting_calibration_arrow_normal"
+                app:layout_constraintLeft_toLeftOf="@id/iv_right_calibration"
+                app:layout_constraintRight_toRightOf="@id/iv_right_calibration"
+                app:layout_constraintTop_toBottomOf="@id/iv_right_calibration" />
+
+            <com.autel.setting.widget.RemoteCalibrationImageView
+                android:id="@+id/iv_right_calibration_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:rotation="225"
+                android:src="@drawable/setting_calibration_arrow_normal"
+                app:layout_constraintBottom_toBottomOf="@id/iv_right_calibration"
+                app:layout_constraintLeft_toLeftOf="@id/iv_right_calibration" />
+
+            <com.autel.setting.widget.RemoteCalibrationImageView
+                android:id="@+id/iv_right_calibration_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/common_5dp"
+                android:rotation="270"
+                android:src="@drawable/setting_calibration_arrow_normal"
+                app:layout_constraintBottom_toBottomOf="@id/iv_right_calibration"
+                app:layout_constraintRight_toLeftOf="@id/iv_right_calibration"
+                app:layout_constraintTop_toTopOf="@id/iv_right_calibration" />
+
+            <com.autel.setting.widget.RemoteCalibrationImageView
+                android:id="@+id/iv_right_calibration_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/common_2dp"
+                android:rotation="315"
+                android:src="@drawable/setting_calibration_arrow_normal"
+                app:layout_constraintLeft_toLeftOf="@id/iv_right_calibration"
+                app:layout_constraintTop_toTopOf="@id/iv_right_calibration" />
+
+            <TextView
+                style="@style/common_font_black_18"
+                android:layout_marginTop="@dimen/common_30dp"
+                android:maxWidth="@dimen/common_150dp"
+                android:text="@string/common_text_controller_calibration_right"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@id/iv_right_calibration"
+                app:layout_constraintRight_toRightOf="@id/iv_right_calibration"
+                app:layout_constraintTop_toBottomOf="@id/iv_right_calibration"
+                tools:text="1222555555555555555" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_controller_calibration_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_40dp"
+            android:gravity="center"
+            android:text="@string/common_text_controller_calibration_title"
+            android:textColor="@color/common_color_80"
+            android:textSize="@dimen/common_text_size_sp_15"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cl_right_calibration" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/gp_calibration_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="tv_controller_calibration_title,cl_left_roll,cl_right_roll,cl_left_calibration,cl_right_calibration"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <include
+        android:id="@+id/include_start_controller_calibration"
+        layout="@layout/setting_controller_calibration_start_fragment"
+        tools:visibility="gone" />
+
+    <include
+        android:id="@+id/include_calibration_result"
+        layout="@layout/setting_view_calibration_status"
+        android:visibility="gone" />
+</androidx.constraintlayout.widget.ConstraintLayout>

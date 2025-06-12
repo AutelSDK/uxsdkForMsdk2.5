@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/common_color_white">
+
+    <TextView
+        android:id="@+id/tv_colour_atla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/common_10dp"
+        android:background="@drawable/common_shape_solid_color_black_70_radius_8"
+        android:paddingStart="@dimen/common_10dp"
+        android:paddingTop="@dimen/common_7dp"
+        android:paddingEnd="@dimen/common_10dp"
+        android:paddingBottom="@dimen/common_7dp"
+        android:textColor="@color/common_color_white"
+        android:textSize="@dimen/common_text_size_sp_15"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_colour_atla"
+        app:layout_constraintEnd_toStartOf="@id/iv_colour_atla"
+        app:layout_constraintTop_toTopOf="@+id/iv_colour_atla"
+        tools:text="铁红"
+        tools:visibility="visible" />
+
+    <!--这个控件只占位-->
+    <ImageView
+        android:id="@+id/iv_colour_atla"
+        android:layout_width="@dimen/common_variety_codec_btn_size"
+        android:layout_height="@dimen/common_variety_codec_btn_size"
+        android:layout_marginStart="@dimen/common_10dp"
+        android:layout_marginEnd="@dimen/common_10dp"
+        android:background="@color/common_color_white_50"
+        android:padding="@dimen/common_8_5dp"
+        android:visibility="invisible"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_content"
+        android:layout_width="@dimen/common_70dp"
+        android:layout_height="@dimen/common_278dp"
+        android:layout_marginTop="@dimen/common_10dp"
+        android:background="@drawable/common_bg_codec_window"
+        app:layout_constraintEnd_toEndOf="@+id/iv_colour_atla"
+        app:layout_constraintStart_toStartOf="@+id/iv_colour_atla"
+        app:layout_constraintTop_toBottomOf="@+id/iv_colour_atla" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

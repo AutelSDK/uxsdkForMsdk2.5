@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="@dimen/common_450dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.autel.common.widget.CommonItemText
+            android:id="@+id/setting_cit_remote_model"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_55dp"
+            app:bottom_line_visibility="visible"
+            app:cit_item_bg="1"
+            app:drawableEnd="@drawable/common_ic_arrow_right_white"
+            app:title_name="@string/common_text_remote_model"
+            tools:end_view_text="@string/common_text_controller_model_usa" />
+
+        <com.autel.common.widget.CommonItemText
+            android:id="@+id/setting_cit_remote_calibration"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/common_55dp"
+            app:bottom_line_visibility="gone"
+            android:background="@drawable/common_item_bg_only_bottom"
+            app:drawableEnd="@drawable/common_ic_arrow_right_white"
+            app:title_name="@string/common_text_remote_calibration" />
+
+        <com.autel.common.widget.CommonItemText
+            android:id="@+id/setting_cit_remote_compass_calibration"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/common_55dp"
+            android:layout_marginTop="@dimen/common_8dp"
+            android:background="@drawable/common_item_bg_all"
+            app:bottom_line_visibility="gone"
+            app:drawableEnd="@drawable/common_ic_arrow_right_white"
+            app:title_name="@string/common_text_remote_compass_calibration" />
+
+        <com.autel.common.widget.CommonItemText
+            android:id="@+id/setting_cit_remote_custom_key"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/common_8dp"
+            android:layout_height="@dimen/common_55dp"
+            android:background="@drawable/common_item_bg_all"
+            app:bottom_line_visibility="gone"
+            app:drawableEnd="@drawable/common_ic_arrow_right_white"
+            app:title_name="@string/common_text_remote_custom_key"
+            android:visibility="visible"/>
+
+        <com.autel.common.widget.CommonItemText
+            android:id="@+id/setting_cit_remote_control_handle"
+            android:layout_width="@dimen/common_450dp"
+            android:layout_height="@dimen/common_55dp"
+            android:layout_marginTop="@dimen/common_8dp"
+            android:background="@drawable/common_item_bg_all"
+            app:bottom_line_visibility="gone"
+            app:drawableEnd="@drawable/common_ic_arrow_right_white"
+            app:title_name="@string/common_text_remote_control_handle" />
+
+        <com.autel.common.widget.CommonItemText
+            android:id="@+id/setting_cit_remote_match"
+            android:layout_width="@dimen/common_450dp"
+            android:layout_height="@dimen/common_55dp"
+            android:layout_marginTop="@dimen/common_8dp"
+            android:background="@drawable/common_item_bg_all"
+            app:bottom_line_visibility="gone"
+            app:drawableEnd="@drawable/common_ic_arrow_right_white"
+            app:title_name="@string/common_text_matching"
+            tools:end_view_text="@string/common_text_not_connected"/>
+
+        <com.autel.common.widget.CommonItemSwitch
+            android:id="@+id/cis_rc_voice"
+            android:layout_width="@dimen/common_450dp"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/common_55dp"
+            android:layout_marginTop="@dimen/common_8dp"
+            android:background="@drawable/common_item_bg_all"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title_name="@string/common_text_rc_voice_switch" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_triangle"
+        android:layout_width="@dimen/common_17dp"
+        android:layout_height="@dimen/common_8dp"
+        android:layout_alignEnd="@+id/cl_layout"
+        android:layout_marginEnd="@dimen/common_37dp"
+        android:src="@drawable/mission_ic_triangle_path_black" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_triangle"
+        android:background="@drawable/common_shape_solid_color_black_90_radius_8"
+        android:paddingBottom="@dimen/common_10dp">
+
+        <LinearLayout
+            android:id="@+id/ll_electric"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common_15dp"
+            android:layout_marginTop="@dimen/common_10dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_electric_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/common_color_secondary_3ce171"
+                android:textSize="@dimen/common_text_size_sp_14"
+                tools:text="68%" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/common_2_5dp"
+                android:textStyle="bold"
+                android:text="@string/common_text_electric_quantity"
+                android:textColor="@color/common_color_cc_ff"
+                android:textSize="@dimen/common_text_size_sp_13" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_voltage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common_30dp"
+            android:layout_marginTop="@dimen/common_10dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toEndOf="@+id/ll_electric"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_voltage_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/common_color_secondary_3ce171"
+                android:textSize="@dimen/common_text_size_sp_14"
+                tools:text="24.60V" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/common_2_5dp"
+                android:text="@string/common_text_voltage"
+                android:textColor="@color/common_color_cc_ff"
+                android:textSize="@dimen/common_text_size_sp_13" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common_30dp"
+            android:layout_marginTop="@dimen/common_10dp"
+            android:layout_marginEnd="@dimen/common_10dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ll_voltage"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_temperature_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/common_color_secondary_3ce171"
+                android:textSize="@dimen/common_text_size_sp_14"
+                tools:text="89.1°C" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/common_2_5dp"
+                android:text="@string/common_text_temperature"
+                android:textColor="@color/common_color_cc_ff"
+                android:textSize="@dimen/common_text_size_sp_13" />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

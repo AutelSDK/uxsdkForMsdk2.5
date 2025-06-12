@@ -1,0 +1,42 @@
+rootProject.ext {
+    basicAndroidConfig = this.&basicAndroidConfig
+}
+
+def basicAndroidConfig(Project project) {
+    project.android {
+
+        ndkVersion = rootProject.ext.versions.ndk
+
+        compileSdk = rootProject.ext.versions.compileSdk
+
+        defaultConfig {
+            minSdk = rootProject.ext.versions.minSdk
+            targetSdk = rootProject.ext.versions.targetSdk
+            versionCode = rootProject.ext.versions.versionCode
+            versionName = rootProject.ext.versions.versionName
+
+            testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        }
+
+        buildTypes {
+            debug {
+                consumerProguardFiles 'proguard-rules.pro'
+            }
+            release {
+                consumerProguardFiles 'proguard-rules.pro'
+            }
+        }
+        compileOptions {
+            sourceCompatibility rootProject.ext.versions.javaCompatibility
+            targetCompatibility rootProject.ext.versions.javaCompatibility
+        }
+        kotlinOptions {
+            jvmTarget = rootProject.ext.versions.javaCompatibility
+        }
+
+        buildFeatures {
+            viewBinding = true
+            buildConfig = true
+        }
+    }
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.autel.widget.widget.histogram.HistogramChartView
+        android:id="@+id/view_chart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/common_2dp" />
+
+
+    <TextView
+        android:id="@+id/tv_lens_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/common_8dp"
+        android:layout_marginTop="@dimen/common_8dp"
+        android:textColor="@color/common_color_white"
+        android:textSize="@dimen/common_text_size_sp_15"
+        tools:text="广角" />
+
+    <RelativeLayout
+        android:id="@+id/layout_histogram_cancel"
+        android:layout_width="@dimen/common_24dp"
+        android:layout_height="@dimen/common_24dp"
+        android:layout_alignParentEnd="true">
+
+        <ImageView
+            android:layout_width="@dimen/common_10dp"
+            android:layout_height="@dimen/common_10dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/mission_icon_histogram_cancel" />
+    </RelativeLayout>
+
+</RelativeLayout>

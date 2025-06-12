@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingDefaultResource,ResourceName">
+
+    <RelativeLayout
+        android:layout_width="@dimen/common_320dp"
+        android:layout_height="@dimen/common_130dp"
+        android:layout_gravity="center"
+        android:background="@drawable/common_shape_rect_solid_color_ff_radius_14"
+        >
+
+        <TextView
+            android:id="@+id/tv_msg"
+            style="@style/common_font_black_00_15"
+            android:layout_width="match_parent"
+            android:padding="@dimen/common_15dp"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/common_80dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/common_text_quick_change_battery_tips" />
+
+        <View
+            style="@style/common_vertical_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_line_width"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/common_50dp"
+            android:background="@color/common_color_cd" />
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            style="@style/common_font_blue_17"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_50dp"
+            android:textStyle="bold"
+            android:layout_alignParentBottom="true"
+            android:text="@string/common_text_confirm" />
+    </RelativeLayout>
+
+</FrameLayout>

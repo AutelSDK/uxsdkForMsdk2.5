@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_color_f2f2f6">
+
+
+    <FrameLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_42dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/common_text_more_remote_id_title"
+            android:textColor="@color/common_color_FF333333"
+            android:textSize="@dimen/common_text_size_sp_17" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/back"
+            android:layout_width="@dimen/common_80dp"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:src="@drawable/common_ic_outlined_back_black" />
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/input"
+        android:layout_width="@dimen/common_0dp"
+        android:layout_height="@dimen/common_55dp"
+        android:layout_marginTop="@dimen/common_100dp"
+        android:background="@drawable/setting_edit_text_white_bg"
+        android:hint="@string/common_text_input_pilot_id_2"
+        android:imeOptions="actionDone"
+        android:paddingStart="@dimen/common_20dp"
+        android:paddingEnd="@dimen/common_70dp"
+        android:singleLine="true"
+        android:textColor="@color/common_color_FF333333"
+        android:textColorHint="@color/common_color_4d3c3c43"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintWidth_percent="0.6" />
+
+    <ImageView
+        android:id="@+id/iv_clear_edittext"
+        android:layout_width="@dimen/common_55dp"
+        android:layout_height="@dimen/common_55dp"
+        android:layout_marginStart="@dimen/common_4_5dp"
+        android:layout_marginEnd="@dimen/common_4_5dp"
+        android:padding="@dimen/common_15_5dp"
+        android:src="@drawable/common_ic_clear_edittext_black"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/input"
+        app:layout_constraintEnd_toEndOf="@id/input"
+        app:layout_constraintTop_toTopOf="@id/input" />
+
+    <TextView
+        android:id="@+id/input_tips"
+        android:layout_width="@dimen/common_0dp"
+        android:layout_height="@dimen/common_50dp"
+        android:layout_marginStart="@dimen/common_20dp"
+        android:layout_marginTop="@dimen/common_10dp"
+        android:layout_marginEnd="@dimen/common_20dp"
+        android:text="@string/common_text_input_pilot_id_2_tips"
+        android:textColor="@color/common_color_808080"
+        app:layout_constraintEnd_toEndOf="@id/input"
+        app:layout_constraintStart_toStartOf="@id/input"
+        app:layout_constraintTop_toBottomOf="@id/input" />
+
+    <TextView
+        android:id="@+id/login"
+        android:layout_width="@dimen/common_0dp"
+        android:layout_height="@dimen/common_45dp"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/common_10dp"
+        android:background="@drawable/mission_bg_blue_selector"
+        android:text="@string/common_text_confirm"
+        android:textColor="@color/white"
+        android:textSize="@dimen/common_text_size_sp_17"
+        app:layout_constraintEnd_toEndOf="@id/input"
+        app:layout_constraintStart_toStartOf="@id/input"
+        app:layout_constraintTop_toBottomOf="@id/input_tips" />
+
+    <TextView
+        android:id="@+id/clear"
+        app:layout_constraintTop_toBottomOf="@id/login"
+        app:layout_constraintStart_toStartOf="@id/login"
+        app:layout_constraintEnd_toEndOf="@id/login"
+        android:layout_marginTop="@dimen/common_20dp"
+        android:textColor="@color/common_color_red"
+        android:textSize="@dimen/common_text_size_sp_17"
+        android:text="@string/common_text_clear_flyer_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

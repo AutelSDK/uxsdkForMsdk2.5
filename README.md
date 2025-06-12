@@ -14,7 +14,7 @@
 
 ## 2. Main Interface Widget Components Overview & Usage
 
-![20250612-121325](.\20250612-121325.jpg)
+![20250612-121325](20250612-121325.jpg)
 
 ### 1. Component Directory Structure
 
@@ -117,7 +117,7 @@ override fun onCreate(savedInstanceState: Bundle?) {
 
 ## 4. Settings Module Feature Overview
 
-![20250612-121332](.\20250612-121332.jpg)
+![20250612-121332](20250612-121332.jpg)
 
 ### 1. Main Settings Features
 

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/black">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/content_layout"
+        android:layout_width="@dimen/common_400dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|start"
+        android:layout_marginLeft="@dimen/common_10dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/common_15dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.autel.common.widget.HeightModifyView
+                android:id="@+id/takeoff_height"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/common_10dp"
+                android:background="@color/common_color_white"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/common_10dp"
+                app:bottom_line_visibility="gone"
+                app:layout_constraintTop_toTopOf="parent"
+                app:theme_color="white"
+                app:button_margin_top="@dimen/common_10dp"
+                app:title_name="@string/common_text_move_take_off_height_title"
+                app:title_name_textColor="@color/black" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/common_20dp"
+                android:layout_marginTop="@dimen/common_20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/flight_record_shape_btn_bg_gray"
+                android:paddingVertical="@dimen/common_16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/takeoff_height">
+
+                <com.autel.widget.LongClickTakeOffView
+                    android:id="@+id/takeoff"
+                    android:layout_width="@dimen/common_94dp"
+                    android:layout_height="@dimen/common_94dp"
+                    android:layout_marginLeft="@dimen/common_16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:progressAnimatorTime="2000"
+                    app:progressBgColor="@color/common_color_CCCCCC"
+                    app:progressColor="@color/common_color_28CD41"
+                    app:progress_strokeWidth="@dimen/common_6dp" />
+
+                <ImageView
+                    android:id="@+id/takeoff_icon"
+                    android:layout_width="@dimen/common_40dp"
+                    android:layout_height="@dimen/common_40dp"
+                    android:src="@drawable/common_icon_takeoff"
+                    app:layout_constraintBottom_toBottomOf="@id/takeoff"
+                    app:layout_constraintEnd_toEndOf="@id/takeoff"
+                    app:layout_constraintStart_toStartOf="@id/takeoff"
+                    app:layout_constraintTop_toTopOf="@id/takeoff"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common_10dp"
+                    android:text="@string/common_text_long_click_takeoff"
+                    android:textColor="@color/common_color_33"
+                    android:textSize="@dimen/common_text_size_sp_16"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@id/tips"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/takeoff"
+                    app:layout_constraintTop_toTopOf="@id/takeoff" />
+
+                <TextView
+                    android:id="@+id/tips"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_8dp"
+                    android:layout_marginRight="@dimen/common_20dp"
+                    android:text="@string/common_text_single_take_off_tips"
+                    android:textColor="@color/common_color_66"
+                    android:textSize="@dimen/common_text_size_sp_15"
+                    app:layout_constraintBottom_toBottomOf="@id/takeoff"
+                    app:layout_constraintLeft_toLeftOf="@id/title"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/title" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

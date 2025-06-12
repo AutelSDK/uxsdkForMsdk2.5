@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_container"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common_66dp"
+    android:paddingStart="@dimen/common_24dp"
+    android:paddingEnd="@dimen/common_24dp"
+    tools:background="@drawable/common_shape_rect_solid_color_1c_radius_9"
+    tools:ignore="ResourceName">
+
+    <ImageView
+        android:id="@+id/iv_file_type"
+        android:layout_width="@dimen/common_35dp"
+        android:layout_height="@dimen/common_35dp"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/common_24dp"
+        tools:background="@drawable/icon_type_file" />
+
+    <TextView
+        android:id="@+id/tv_file_name"
+        style="@style/common_font_white_19.5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/iv_file_type"
+        android:textColor="@color/common_color_white"
+        tools:text="AI model名称" />
+
+    <ImageView
+        android:id="@+id/iv_choose"
+        android:layout_width="@dimen/common_29dp"
+        android:layout_height="@dimen/common_29dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/common_icon_unchecked" />
+
+    <View
+        android:id="@+id/v_bottom_line"
+        style="@style/common_horizontal_line"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

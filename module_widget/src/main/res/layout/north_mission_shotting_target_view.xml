@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.autel.common.widget.OutlineTextView
+        android:id="@+id/otv_drone_target_v_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/common_text_dron_target_v_distance"
+        android:textColor="@color/common_color_03fef4"
+        android:textSize="@dimen/common_text_size_sp_14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:outlineColor="@color/common_color_black_50"
+        app:outlineWidth="@dimen/common_1dp"
+        tools:text="机目垂直距离:245.8m" />
+
+    <com.autel.common.widget.OutlineTextView
+        android:id="@+id/otv_drone_target_h_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/common_text_dron_target_h_distance"
+        android:textColor="@color/common_color_03fef4"
+        android:textSize="@dimen/common_text_size_sp_14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/otv_drone_target_v_distance"
+        app:outlineColor="@color/common_color_black_50"
+        app:outlineWidth="@dimen/common_1dp"
+        tools:text="机目水平距离:245.8m" />
+
+    <com.autel.common.widget.OutlineTextView
+        android:id="@+id/otv_drone_target_x"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/common_text_target_distance_x"
+        android:textColor="@color/common_color_03fef4"
+        android:textSize="@dimen/common_text_size_sp_14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/otv_drone_target_h_distance"
+        app:outlineColor="@color/common_color_black_50"
+        app:outlineWidth="@dimen/common_1dp"
+        tools:text="目标X:123456" />
+
+    <com.autel.common.widget.OutlineTextView
+        android:id="@+id/otv_drone_target_y"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/common_text_target_distance_y"
+        android:textColor="@color/common_color_03fef4"
+        android:textSize="@dimen/common_text_size_sp_14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/otv_drone_target_x"
+        app:outlineColor="@color/common_color_black_50"
+        app:outlineWidth="@dimen/common_1dp"
+        tools:text="目标Y:123456" />
+
+    <com.autel.common.widget.OutlineTextView
+        android:id="@+id/otv_drone_target_abs_high"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/common_text_abs_hight"
+        android:textColor="@color/common_color_03fef4"
+        android:textSize="@dimen/common_text_size_sp_14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/otv_drone_target_y"
+        app:outlineColor="@color/common_color_black_50"
+        app:outlineWidth="@dimen/common_1dp"
+        tools:text="相对高度:123456" />
+
+    <com.autel.common.widget.OutlineTextView
+        android:id="@+id/otv_drone_target_host_target_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/common_text_host_tareget_v_distance"
+        android:textColor="@color/common_color_03fef4"
+        android:textSize="@dimen/common_text_size_sp_14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/otv_drone_target_abs_high"
+        app:outlineColor="@color/common_color_black_50"
+        app:outlineWidth="@dimen/common_1dp"
+        tools:text="主目平面距离:123456" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

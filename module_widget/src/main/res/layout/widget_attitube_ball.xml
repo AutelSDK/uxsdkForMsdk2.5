@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:background="@color/black">
+
+    <com.autel.common.widget.NewAttitudeBallView
+        android:id="@+id/ballView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/common_28dp"
+        android:layout_marginBottom="@dimen/common_8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.autel.common.widget.AircraftASLView
+        android:id="@+id/asl_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/common_10dp"
+        android:layout_marginBottom="@dimen/common_8dp"
+        app:layout_constraintBottom_toBottomOf="@id/ballView"
+        app:layout_constraintEnd_toStartOf="@id/ballView" />
+
+    <ImageView
+        android:id="@+id/iv_ball_visual"
+        android:layout_width="@dimen/common_36dp"
+        android:layout_height="@dimen/common_36dp"
+        android:layout_marginBottom="@dimen/common_8dp"
+        android:layout_marginEnd="@dimen/common_6dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/common_selector_ball_in_drone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

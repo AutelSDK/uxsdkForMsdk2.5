@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/common_450dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/common_item_bg_all">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="@dimen/common_450dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/common_item_bg_all">
+
+        <View
+            android:id="@+id/v_middle"
+            android:layout_width="@dimen/common_1dp"
+            android:layout_height="@dimen/common_1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.autel.setting.widget.ExpAdjustView
+            android:id="@+id/exp_up_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_13dp"
+            app:layout_constraintEnd_toEndOf="@id/v_middle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/v_middle" />
+
+        <com.autel.setting.widget.ExpAdjustView
+            android:id="@+id/exp_left_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_13dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/v_middle"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.autel.setting.widget.ExpAdjustView
+            android:id="@+id/exp_forward_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_30dp"
+            app:layout_constraintEnd_toEndOf="@id/v_middle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/exp_up_down" />
+
+        <TextView
+            android:id="@+id/exp_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_20dp"
+            android:paddingStart="@dimen/common_20dp"
+            android:paddingEnd="@dimen/common_20dp"
+            android:text="@string/common_text_exp_title"
+            android:textColor="@color/common_color_80"
+            android:textSize="@dimen/common_text_size_sp_14"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/exp_forward_back" />
+
+        <TextView
+            android:id="@+id/tv_reset_exp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/common_25dp"
+            android:paddingTop="@dimen/common_20dp"
+            android:paddingBottom="@dimen/common_40dp"
+            android:text="@string/common_text_exp_reset"
+            android:textColor="@color/common_color_FEE15D"
+            android:textSize="@dimen/common_text_size_sp_16"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/exp_title" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_reset_exp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

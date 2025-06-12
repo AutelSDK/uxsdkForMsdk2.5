@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:background="@color/common_color_black">
+
+    <LinearLayout
+        android:id="@+id/ll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_warn_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/common_5dp"
+            tools:src="@drawable/mission_ic_warn" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            style="@style/common_font_white_14"
+            android:layout_marginVertical="@dimen/common_10dp"
+            android:layout_marginStart="@dimen/common_8dp"
+            android:drawableEnd="@drawable/common_ic_arrow_right_white"
+            android:gravity="start|center_vertical"
+            android:paddingEnd="@dimen/common_10dp"
+            tools:text="遥控器电池严重低电量遥控器" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_warn_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_detail"
+            style="@style/common_font_white_14"
+            android:layout_marginStart="@dimen/variety_size_warn_detail_start_margin"
+            android:layout_marginBottom="@dimen/common_10dp"
+            android:layout_weight="1"
+            android:gravity="start|center_vertical"
+            android:paddingEnd="@dimen/common_10dp"
+            tools:text="遥控器电池严重低电量遥控器电池严重低电量遥控器电池严重低电量遥控器电池严重低电量，请谨慎飞行遥控器电池严重低电量" />
+
+    </LinearLayout>
+
+</LinearLayout>

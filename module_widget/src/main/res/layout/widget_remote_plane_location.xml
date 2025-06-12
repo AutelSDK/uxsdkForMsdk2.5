@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_remote_plane_location"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:parentTag="com.autel.widget.widget.remotelocation.RemotePlaneLocationWidget">
+
+    <com.autel.common.widget.OutlineTextView
+        android:id="@+id/otv_plane_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="@dimen/common_text_size_sp_14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:outlineColor="@color/common_color_black_50"
+        app:outlineWidth="@dimen/common_1dp"
+        tools:text="飞机  E 123123123 N 12.36565655 " />
+
+    <com.autel.common.widget.OutlineTextView
+        android:id="@+id/otv_remote_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="@dimen/common_text_size_sp_14"
+        app:layout_constraintLeft_toLeftOf="@id/otv_plane_location"
+        app:layout_constraintTop_toBottomOf="@id/otv_plane_location"
+        app:outlineColor="@color/common_color_black_50"
+        app:outlineWidth="@dimen/common_1dp"
+        tools:text="遥控器  E 123123123 N 12.36565655 " />
+
+
+</merge>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_container"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common_55dp"
+    android:paddingStart="@dimen/common_20dp"
+    tools:background="@drawable/common_item_bg_all">
+
+    <TextView
+        android:id="@+id/tv_title_name"
+        style="@style/common_font_white_19.5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/common_8dp"
+        android:gravity="start"
+        tools:text="AI model名称" />
+
+    <TextView
+        android:id="@+id/tv_is_best"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/tv_title_name"
+        android:background="@drawable/common_bg_30af28_r2"
+        android:paddingStart="@dimen/common_4dp"
+        android:paddingEnd="@dimen/common_4dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/common_text_size_sp_12"
+        tools:text="最好" />
+
+    <View
+        android:id="@+id/v_bottom_line"
+        style="@style/common_horizontal_line"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true" />
+
+    <RelativeLayout
+        android:id="@+id/rl_state"
+        android:layout_width="@dimen/common_84dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/common_15dp">
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="@dimen/common_84dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/common_10dp"
+            android:layout_marginBottom="@dimen/common_10dp"
+            android:background="@drawable/ai_model_progressbar"
+            android:indeterminateOnly="false"
+            android:progress="40"
+            android:progressDrawable="@drawable/ai_model_progressbar" />
+
+        <LinearLayout
+            android:id="@+id/ll_state"
+            android:layout_width="@dimen/common_84dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/common_10dp"
+            android:layout_marginBottom="@dimen/common_10dp"
+            android:background="@drawable/common_bg_bdbdbd_r100"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_download" />
+
+            <TextView
+                android:id="@+id/tv_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/common_2dp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="@color/common_color_FEE15D"
+                android:textSize="@dimen/common_text_size_sp_17"
+                tools:text="19%" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_state_uploaded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="@dimen/common_15dp"
+            android:src="@drawable/icon_upload_success"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_delete"
+        android:layout_width="@dimen/common_41dp"
+        android:layout_height="@dimen/common_41dp"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/common_12dp"
+        android:layout_toStartOf="@id/rl_state"
+        android:padding="@dimen/common_6dp"
+        android:src="@drawable/icon_delete_item"
+        android:visibility="visible" />
+</RelativeLayout>

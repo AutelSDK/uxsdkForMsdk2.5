@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path
+        name="files_root"
+        path="Android/data/${applicationId}/" />
+    <external-path
+        name="external_storage_root"
+        path="." />
+
+    <external-files-path name="external-files_root" path="." />
+    <external-files-path name="external-files" path="app/" />
+
+    <external-path
+        name="external_storage_app"
+        path="app/" />
+    <external-cache-path name="external_cache_files" path="." />
+    <external-path
+        name="AutelTest_storage_path"
+        path="AutelTest" />
+</paths>

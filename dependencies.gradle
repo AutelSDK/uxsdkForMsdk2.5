@@ -1,0 +1,244 @@
+apply from: rootProject.file('versions.gradle')
+rootProject.ext {
+    versionCode = rootProject.properties['VERSION_CODE']
+    versionName = rootProject.properties['VERSION_NAME']
+    enable_module_nest = rootProject.properties['enable_module_nest']
+    versions = [
+            'versionName'      : versionName,
+            'ndk'              : '20.1.5948944',
+            'compileSdk'       : 35,
+            'minSdk'           : 23,
+            'targetSdk'        : 35,
+            'javaCompatibility': JavaVersion.VERSION_17,
+            'libExposeVersion' : '1.0.6-SNAPSHOT',
+            'libToolsVersion'  : '1.0.2-SNAPSHOT',
+    ]
+
+    autel.component = [
+            'log'    : "com.autel.component:component-log:3.0.7",
+            'storage': "com.autel.component:component-storage:2.0.3",
+            'ui'     : "com.autel.component:component-ui:2.0.11",
+            'utils'  : "com.autel.component:component-utils:2.0.14",
+            'map'    : "com.autel.component:component-map:2.0.21",
+            'gdal'   : "com.autel.component:component-gdal:1.0.0",
+    ]
+
+    autel.library = [
+            'data'   : "com.autel.library:data:1.0.21@aar",
+            'kml'    : "com.autel.library:kml:1.0.2@aar",
+            'network': "com.autel.library:network:1.5",
+            'frame'  : "com.autel.library:library-frame:1.0.5",
+    ]
+
+    deps = [
+            'external': [
+                    'kotlin'                       : [
+                            'stdlib'           : "org.jetbrains.kotlin:kotlin-stdlib:2.1.10",
+                            'coroutines'       : "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.1",
+                            'coroutinesandroid': "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.1",
+                            'coroutinestest'   : "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.10.1"
+                    ],
+                    'jackson'                     : [
+                            'core'      : "com.fasterxml.jackson.core:jackson-core:2.15.2",
+                            'databind'  : "com.fasterxml.jackson.core:jackson-databind:2.15.2",
+                            'annotations': "com.fasterxml.jackson.core:jackson-annotations:2.15.2"
+                    ],
+                    'android'                      : [
+                            'appcompat'         : 'androidx.appcompat:appcompat:1.7.0',
+                            'activity_ktx'      : 'androidx.activity:activity-ktx:1.10.1',
+                            'fragment_ktx'      : 'androidx.fragment:fragment-ktx:1.8.6',
+                            'navi_fragment_ktx' : 'androidx.navigation:navigation-fragment-ktx:2.8.9',
+                            'navigation_ui_ktx' : 'androidx.navigation:navigation-ui-ktx:2.8.9',
+                            'design'            : 'com.google.android.material:material:1.12.0',
+                            'recyclerview'      : 'androidx.recyclerview:recyclerview:1.4.0',
+                            'constraint'        : 'androidx.constraintlayout:constraintlayout:2.2.1',
+                            'swiperefreshlayout': 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0',
+                            'multidex'          : 'androidx.multidex:multidex:2.0.1',
+                            'core_ktx'          : 'androidx.core:core-ktx:1.15.0',
+                            'viewpager2'        : 'androidx.viewpager2:viewpager2:1.0.0',
+                            "annotation"        : 'androidx.annotation:annotation:1.9.1',
+                            "flexbox"           : 'com.google.android:flexbox:2.0.1'
+                    ],
+                    'test'                         : [
+                            'junit'      : 'junit:junit:4.13.2',
+                            'ext_junit'  : 'androidx.test.ext:junit:1.1.3',
+                            'espresso'   : 'androidx.test.espresso:espresso-core:3.4.0',
+                            'power_junit': 'org.powermock:powermock-module-junit4:1.6.5'
+                    ],
+                    'lifecycle'                    : [
+                            'viewmodel' : 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.0',
+                            'livedata'  : 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.0',
+                            'runtime'   : 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.0',
+                            'savedstate': 'androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.0'
+                    ],
+                    'okhttp'                       : [
+                            'core'               : "com.squareup.okhttp3:okhttp:4.10.0",
+                            'logging_interceptor': "com.squareup.okhttp3:logging-interceptor:4.10.0",
+                            'mockwebserver'      : "com.squareup.okhttp3:mockwebserver:4.10.0"
+                    ],
+                    'retrofit'                     : [
+                            'core'                    : "com.squareup.retrofit2:retrofit:2.9.0",
+                            'rxjava'                  : "com.squareup.retrofit2:adapter-rxjava3:2.9.0",
+                            'gson'                    : "com.squareup.retrofit2:converter-gson:2.9.0",
+                            'retrofit_converter_moshi': "com.squareup.retrofit2:converter-moshi:2.9.0"
+                    ],
+                    'gson'                         : "com.google.code.gson:gson:2.9.0",
+                    'arouter'                      : [
+                            'api'     : "com.alibaba:arouter-api:1.5.2",
+                            'compiler': "com.alibaba:arouter-compiler:1.5.2",
+                    ],
+                    'glide'                        : [
+                            'glide'   : "com.github.bumptech.glide:glide:4.13.2",
+                            'compiler': "com.github.bumptech.glide:compiler:4.13.2"
+                    ],
+                    'database'                     : [
+                            'sqlite'       : "androidx.sqlite:sqlite:2.2.0",
+                            'room_common'  : "androidx.room:room-runtime:2.6.1",
+                            'room_runtime' : "androidx.room:room-runtime:2.6.1",
+                            'room_compiler': "androidx.room:room-compiler:2.6.1",
+                            'room_ktx'     : "androidx.room:room-ktx:2.6.1"
+                    ],
+                    'firebase'                     : [
+                            'googleServicesPlugin'   : "com.google.gms:google-services:4.3.14",
+                            'googleCrashlyticsPlugin': "com.google.firebase:firebase-crashlytics-gradle:2.9.2",
+                            'bom'                    : "com.google.firebase:firebase-bom:31.1.0",
+                            'analytics'              : "com.google.firebase:firebase-analytics",
+                            'crashlytics'            : "com.google.firebase:firebase-crashlytics",
+                            'ndk'                    : "com.google.firebase:firebase-crashlytics-ndk"
+                    ],
+                    'leakcanary'                   : "com.squareup.leakcanary:leakcanary-android:2.10",
+                    'blockcanary'                  : "com.github.markzhai:blockcanary-android:1.5.0",
+                    'multitype'                    : "com.drakeet.multitype:multitype:4.3.0",
+                    'exoplayer'                    : "com.google.android.exoplayer:exoplayer:2.18.1",
+                    'debugdb'                      : 'com.amitshekhar.android:debug-db:1.0.6',
+                    'swipelayout'                  : "com.daimajia.swipelayout:library:1.2.0",
+                    'protobuf_java'                : "com.google.protobuf:protobuf-javalite:3.21.12",
+                    'lottie'                       : "com.airbnb.android:lottie:5.2.0",
+                    "commons"                      : "commons-codec:commons-codec:1.10",
+                    "BaseRecyclerViewAdapterHelper": 'com.autel.sdk:BaseRecyclerViewAdapterHelper:1.0.2',
+                    "backgroundlibrary"            : "com.github.JavaNoober.BackgroundLibrary:libraryx:1.7.5",
+                    'hilt'                         : [
+                            'hilt_gradle_plugin': "com.google.dagger:hilt-android-gradle-plugin:2.56.1",
+                            'hilt_android'      : "com.google.dagger:hilt-android:2.56.1",
+                            'hilt_compiler'     : "com.google.dagger:hilt-compiler:2.56.1"
+                    ],
+                    "ffmpeg"                       : "com.arthenica:ffmpeg-kit-min-gpl:4.5.LTS",
+                    "compose"                      : [
+                            'bom'               : "androidx.compose:compose-bom:2025.03.00",
+                            'ui'                : "androidx.compose.ui:ui",
+                            'runtime'           : "androidx.compose.runtime:runtime",
+                            'ui_graphics'       : "androidx.compose.ui:ui-graphics",
+                            'ui_tooling_preview': "androidx.compose.ui:ui-tooling-preview",
+                            'material3'         : "androidx.compose.material3:material3",
+                            'runtime_livedata'  : "androidx.compose.runtime:runtime-livedata",
+                            'constraintlayout'  : "androidx.constraintlayout:constraintlayout-compose:1.1.1",
+                            'activity'          : "androidx.activity:activity-compose:1.10.1",
+                            'ui_tooling'        : 'androidx.compose.ui:ui-tooling',
+                            'ui_test_manifest'  : 'androidx.compose.ui:ui-test-manifest',
+                    ],
+            ],
+    ]
+
+    libraryFrameDependencies = { Project project ->
+        project.dependencies {
+            configurations.all {
+                resolutionStrategy {
+                    eachDependency { details ->
+                        if (details.requested.group == 'org.jetbrains.kotlin') {
+                            details.useVersion '2.1.10'
+                        } else if (details.requested.group == 'com.google.code.gson') {
+                            details.useVersion '2.12.1'
+                        } else if (details.requested.group == 'androidx.lifecycle') {
+                            details.useVersion '2.8.7'
+                        } else if (details.requested.group == 'androidx.room') {
+                            details.useVersion '2.6.1'
+                        }
+                    }
+                    force 'androidx.appcompat:appcompat:1.7.0'
+                    force 'androidx.fragment:fragment-ktx:1.8.6'
+                }
+            }
+
+            api rootProject.ext.autel.component.log
+            api rootProject.ext.autel.component.ui
+            api rootProject.ext.autel.component.storage
+            api rootProject.ext.autel.component.utils
+            api rootProject.ext.autel.library.data
+            api rootProject.ext.autel.library.frame
+
+            implementation rootProject.ext.autel.component.gdal
+            api 'mil.nga:mgrs:2.1.2'
+            implementation rootProject.ext.deps.external.okhttp.logging_interceptor
+            api rootProject.ext.deps.external.hilt.hilt_android
+            kapt rootProject.ext.deps.external.hilt.hilt_compiler
+            kapt rootProject.ext.deps.external.arouter.compiler
+            api(
+                    rootProject.ext.deps.external.arouter.api,
+                    rootProject.ext.deps.external.multitype,
+                    rootProject.ext.deps.external.android.viewpager2,
+                    rootProject.ext.deps.external.lifecycle.viewmodel,
+                    rootProject.ext.deps.external.lifecycle.livedata,
+                    rootProject.ext.deps.external.lifecycle.runtime,
+                    rootProject.ext.deps.external.lifecycle.savedstate,
+                    rootProject.ext.deps.external.android.multidex,
+                    rootProject.ext.deps.external.android.core_ktx,
+                    rootProject.ext.deps.external.android.appcompat,
+                    rootProject.ext.deps.external.android.activity_ktx,
+                    rootProject.ext.deps.external.android.fragment_ktx,
+                    rootProject.ext.deps.external.android.design,
+                    rootProject.ext.deps.external.glide.glide,
+                    rootProject.ext.deps.external.lottie,
+                    rootProject.ext.deps.external.retrofit.core,
+                    rootProject.ext.deps.external.retrofit.rxjava,
+                    rootProject.ext.deps.external.retrofit.gson,
+                    rootProject.ext.deps.external.retrofit.retrofit_converter_moshi,
+                    rootProject.ext.deps.external.commons,
+                    rootProject.ext.deps.external.BaseRecyclerViewAdapterHelper,
+                    rootProject.ext.deps.external.ffmpeg
+            )
+            annotationProcessor rootProject.ext.deps.external.glide.compiler
+
+            testApi rootProject.ext.deps.external.test.junit
+            androidTestApi rootProject.ext.deps.external.test.ext_junit
+            androidTestApi rootProject.ext.deps.external.test.espresso
+            implementation "com.autel.sdk:liblegal:1.0.5"
+
+            implementation("org.yaml:snakeyaml:2.0")
+            implementation(libs.kotlin.reflect)
+
+            // compose 婵犵妲呴崹顏堟晸閸婄喐鐝柛瀣舵嫹
+            implementation(platform(rootProject.ext.deps.external.compose.bom))
+            implementation(rootProject.ext.deps.external.compose.ui)
+            implementation(rootProject.ext.deps.external.compose.runtime)
+            implementation(rootProject.ext.deps.external.compose.ui_graphics)
+            implementation(rootProject.ext.deps.external.compose.ui_tooling_preview)
+            implementation(rootProject.ext.deps.external.compose.material3)
+            implementation(rootProject.ext.deps.external.compose.runtime_livedata)
+            implementation(rootProject.ext.deps.external.compose.constraintlayout)
+            implementation(rootProject.ext.deps.external.compose.activity)
+            debugImplementation(rootProject.ext.deps.external.compose.ui_tooling)
+            debugImplementation(rootProject.ext.deps.external.compose.ui_test_manifest)
+        }
+    }
+}
+
+configurations.configureEach {
+    resolutionStrategy {
+        force 'androidx.core:core:1.15.0'
+        force 'androidx.core:core-ktx:1.15.0'
+        force 'androidx.room:room-runtime:2.6.1'
+        force 'androidx.room:room-compiler:2.6.1'
+        force 'androidx.room:room-ktx:2.6.1'
+    }
+    resolutionStrategy.eachDependency { details ->
+        if (details.requested.group == 'org.jetbrains.kotlin') {
+            details.useVersion '2.1.10'
+        } else if (details.requested.group == 'com.google.code.gson') {
+            details.useVersion '2.12.1'
+        } else if (details.requested.group == 'androidx.lifecycle') {
+            details.useVersion '2.8.7'
+        } else if (details.requested.group == 'androidx.room') {
+            details.useVersion '2.6.1'
+        }
+    }
+}

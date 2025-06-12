@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="@dimen/common_450dp"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ll_rtk_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <com.autel.common.widget.CommonSettingItemSpinnerView
+                    android:id="@+id/llRtkSignalType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/common_item_bg_all"
+                    app:title_name = "@string/common_text_rtk_signal_type"/>
+                <com.autel.common.widget.CommonItemSwitch
+                    android:id="@+id/rtk_cis_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_8dp"
+                    android:background="@drawable/common_item_bg_all"
+                    app:bottom_line_visibility="gone"
+                    app:content_value="@string/common_text_rtk_location_content"
+                    app:title_name="@string/common_text_rtk_gps_title" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llc_gnss_system"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_8dp"
+                android:background="@drawable/common_item_bg_all"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_rtk_top"
+                android:orientation="vertical">
+
+                <com.autel.common.widget.CommonItemSwitch
+                    android:id="@+id/civ_gnss_switch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:content_value="@string/common_text_gnss_tips"
+                    app:title_name="@string/common_text_gnss_location" />
+
+                <com.autel.common.widget.spinnerview.CommonSpinnerView
+                    android:id="@+id/csv_check_gnss_mode"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/common_34dp"
+                    android:layout_marginTop="@dimen/common_15dp"
+                    android:layout_marginStart="@dimen/common_15dp"
+                    android:layout_marginEnd="@dimen/common_15dp"
+                    android:layout_marginBottom="@dimen/common_20dp"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_rtk_sta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_8dp"
+                android:background="@drawable/common_item_bg_all"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llc_gnss_system">
+                <TextView
+                    style="@style/common_font_white_16"
+                    android:layout_marginLeft="@dimen/common_15dp"
+                    android:layout_marginTop="@dimen/common_15dp"
+                    android:layout_marginBottom="@dimen/common_15dp"
+                    android:text="@string/common_text_connection_status"
+                    android:textSize="@dimen/common_text_size_sp_17"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+
+                <TextView
+                    android:id="@+id/rtk_status"
+                    style="@style/common_font_white_16"
+                    android:layout_marginLeft="@dimen/common_15dp"
+                    android:layout_marginTop="@dimen/common_15dp"
+                    android:layout_marginRight="@dimen/common_15dp"
+                    android:layout_marginBottom="@dimen/common_15dp"
+                    android:text="@string/common_text_rtk_connect_failed"
+                    android:textSize="@dimen/common_text_size_sp_17"
+                    android:textColor="@color/common_battery_setting_critical"
+                    android:visibility="invisible"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_rtk_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_8dp"
+                android:background="@drawable/common_item_bg_all"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cl_rtk_sta">
+
+                <com.autel.common.widget.CommonItemSwitch
+                    android:id="@+id/cis_auto_connect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:bottom_line_visibility="visible"
+                    app:content_value="@string/common_text_rtk_auto_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:title_name="@string/common_text_rtk_auto_Title" />
+                <View
+                    android:id="@+id/rtk_line_2"
+                    style="@style/common_horizontal_line"
+                    android:layout_marginLeft="@dimen/common_15dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cis_auto_connect" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/rtk_server_address"
+                    style="@style/common_font_white_18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/common_40dp"
+                    android:layout_marginTop="@dimen/common_22dp"
+                    android:paddingLeft="@dimen/common_15dp"
+                    android:text="@string/common_text_rtk_server_address"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rtk_line_2"
+                    tools:layout_editor_absoluteX="@dimen/common_2dp" />
+
+                <EditText
+                    style="@style/setting_RTKEditText"
+                    android:id="@+id/et_server_address"
+                    android:hint="@string/common_text_rtk_input_server_address"
+                    android:inputType="textUri"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cis_auto_connect" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/rtk_port"
+                    style="@style/common_font_white_18"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="@dimen/common_32dp"
+                    android:layout_height="@dimen/common_40dp"
+                    android:paddingLeft="@dimen/common_15dp"
+                    android:text="@string/common_text_server_port"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rtk_server_address"
+                    tools:layout_editor_absoluteX="@dimen/common_2dp" />
+
+                <EditText
+                    style="@style/setting_RTKEditText"
+                    android:id="@+id/et_port"
+                    android:layout_marginTop="@dimen/common_32dp"
+                    android:hint="@string/common_text_rtk_input_port"
+                    android:inputType="number"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/et_server_address" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/rtk_account"
+                    style="@style/common_font_white_18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/common_40dp"
+                    android:layout_marginTop="@dimen/common_32dp"
+                    android:paddingLeft="@dimen/common_15dp"
+                    android:text="@string/common_text_account"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rtk_port"
+                    tools:layout_editor_absoluteX="@dimen/common_2dp" />
+
+                <EditText
+                    style="@style/setting_RTKEditText"
+                    android:id="@+id/et_account"
+                    android:layout_marginTop="@dimen/common_32dp"
+                    android:hint="@string/common_text_rtk_input_account"
+                    android:inputType="text"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rtk_port" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/rtk_password"
+                    style="@style/common_font_white_18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/common_40dp"
+                    android:layout_marginTop="@dimen/common_32dp"
+                    android:paddingLeft="@dimen/common_15dp"
+                    android:text="@string/common_text_sip_user_pwd"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rtk_account"
+                    tools:layout_editor_absoluteX="@dimen/common_2dp" />
+
+                <EditText
+                    style="@style/setting_RTKEditText"
+                    android:id="@+id/et_password"
+                    android:layout_marginTop="@dimen/common_32dp"
+                    android:hint="@string/common_text_rtk_input_password"
+                    android:inputType="textPassword"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rtk_account" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/rtk_mount_point"
+                    style="@style/common_font_white_18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/common_40dp"
+                    android:layout_marginTop="@dimen/common_32dp"
+                    android:paddingLeft="@dimen/common_15dp"
+                    android:text="@string/common_text_rtk_mount_point"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rtk_password"
+                    tools:layout_editor_absoluteX="@dimen/common_2dp" />
+
+                <EditText
+                    style="@style/setting_RTKEditText"
+                    android:id="@+id/et_mount_point"
+                    android:layout_marginTop="@dimen/common_32dp"
+                    android:hint="@string/common_text_rtk_input_mount_point"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rtk_password" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/bt_login_account"
+                    style="@style/common_font_white_18"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/common_50dp"
+                    android:layout_marginTop="@dimen/common_32dp"
+                    android:layout_marginEnd="@dimen/common_75dp"
+                    android:layout_marginStart="@dimen/common_75dp"
+                    android:textSize="@dimen/common_19dp"
+                    android:text="@string/common_text_rtk_login_account"
+                    android:textColor="@color/common_color_00_A1"
+                    android:background="@drawable/setting_rtk_white_button_bg"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rtk_mount_point"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_historical_account"
+                    style="@style/common_font_white_18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_20dp"
+                    android:layout_marginBottom="@dimen/common_20dp"
+                    android:layout_gravity="center"
+                    android:text="@string/common_text_rtk_historical_account"
+                    android:textSize="@dimen/common_text_size_sp_19"
+                    android:textColor="#FFFEE15D"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/bt_login_account"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:layout_editor_absoluteX="@dimen/common_2dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_rtk_report_inf"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/common_8dp"
+                android:layout_marginBottom="@dimen/common_55dp"
+                android:background="@drawable/common_item_bg_all"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cl_rtk_info"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <TextView
+                    android:id="@+id/rtk_coordinate_system"
+                    style="@style/common_font_white_16"
+                    android:layout_marginLeft="@dimen/common_15dp"
+                    android:layout_marginTop="@dimen/common_15dp"
+                    android:text="@string/common_text_rtk_coordinate_system"
+                    android:textSize="@dimen/common_text_size_sp_17"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_coordinate_system"
+                    style="@style/common_font_white_16"
+                    android:layout_marginLeft="@dimen/common_15dp"
+                    android:layout_marginTop="@dimen/common_15dp"
+                    android:layout_marginRight="@dimen/common_15dp"
+                    android:text="N/A"
+                    android:textSize="@dimen/common_text_size_sp_16"
+                    android:textColor="#FFBDBDBD"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/common_15dp"
+                    android:layout_marginRight="@dimen/common_15dp"
+                    android:layout_marginTop="@dimen/common_15dp"
+                    android:layout_marginBottom="@dimen/common_15dp"
+                    android:background="@drawable/setting_rtk_report_info_bg"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rtk_coordinate_system">
+
+                    <TextView
+                        style="@style/common_font_white_16"
+                        android:id="@+id/tv_row_one_1"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_row_one_2"
+                        style="@style/setting_rtk_text_view"
+                        android:layout_marginLeft="@dimen/common_16dp"
+                        android:layout_marginTop="@dimen/common_4dp"
+                        android:text="@string/common_text_aircraft"
+                        app:layout_constraintBottom_toTopOf="@+id/rtk_line_8"
+                        app:layout_constraintLeft_toRightOf="@id/rtk_line_4"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/rtk_line_4"
+                        style="@style/common_vertical_line"
+                        android:layout_width="@dimen/common_1dp"
+                        android:layout_marginLeft="@dimen/common_15dp"
+                        android:layout_marginRight="@dimen/common_15dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    <View
+                        android:id="@+id/rtk_line_8"
+                        style="@style/common_horizontal_line"
+                        android:layout_height="@dimen/common_1dp"
+                        android:layout_marginTop="@dimen/common_15dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_row_one_2" />
+
+                    <TextView
+                        style="@style/setting_rtk_text_view"
+                        android:id="@+id/tv_fix_sta"
+                        android:layout_marginTop="@dimen/common_15dp"
+                        android:layout_marginBottom="@dimen/common_15dp"
+                        android:text="@string/common_text_rtk_directional_location"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/rtk_line_8"
+                        app:layout_constraintBottom_toBottomOf="@+id/rtk_line_5"/>
+
+                    <View
+                        android:id="@+id/rtk_line_5"
+                        style="@style/common_horizontal_line"
+                        android:layout_height="@dimen/common_1dp"
+                        android:layout_marginTop="@dimen/common_15dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_fix_sta" />
+
+                    <TextView
+                        style="@style/setting_rtk_text_view"
+                        android:id="@+id/tv_row_2_0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_15dp"
+                        android:text="@string/common_text_longitude"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/rtk_line_5" />
+
+                    <TextView
+                        style="@style/setting_rtk_text_view"
+                        android:id="@+id/tv_row_2_1"
+                        android:text="@string/common_text_latitude"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_row_2_0" />
+
+                    <TextView
+                        style="@style/setting_rtk_text_view"
+                        android:id="@+id/tv_row_2_2"
+                        android:text="@string/common_text_rtk_altitude"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_row_2_1"
+                        app:layout_constraintBottom_toTopOf="@+id/rtk_line_6"/>
+
+                    <View
+                        android:id="@+id/rtk_line_6"
+                        style="@style/common_horizontal_line"
+                        android:layout_height="@dimen/common_1dp"
+                        android:layout_marginTop="@dimen/common_15dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_row_2_2" />
+
+                    <TextView
+                        style="@style/setting_rtk_text_view"
+                        android:id="@+id/tv_lon"
+                        android:layout_marginTop="@dimen/common_15dp"
+                        android:text="0.0000000"
+                        app:layout_constraintLeft_toRightOf="@id/rtk_line_4"
+                        app:layout_constraintTop_toBottomOf="@+id/rtk_line_5" />
+
+                    <TextView
+                        style="@style/setting_rtk_text_view"
+                        android:id="@+id/tv_lat"
+                        android:text="0.0000000"
+                        app:layout_constraintLeft_toRightOf="@id/rtk_line_4"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_row_2_0" />
+
+                    <TextView
+                        style="@style/setting_rtk_text_view"
+                        android:id="@+id/tv_hgt"
+                        android:text="0.0000000"
+                        app:layout_constraintLeft_toRightOf="@id/rtk_line_4"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_row_2_1" />
+
+                    <TextView
+                        style="@style/setting_rtk_text_view"
+                        android:id="@+id/tv_row_3_0"
+                        android:layout_marginTop="@dimen/common_15dp"
+                        android:text="@string/common_text_rtk_gps_number"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/rtk_line_6" />
+
+                    <TextView
+                        style="@style/setting_rtk_text_view"
+                        android:id="@+id/tv_row_3_1"
+                        android:text="@string/common_text_rtk_beidou_number"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_row_3_0" />
+
+                    <TextView
+                        style="@style/setting_rtk_text_view"
+                        android:id="@+id/tv_row_3_2"
+                        android:gravity="left"
+                        android:text="@string/common_text_rtk_glo_number"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_row_3_1" />
+
+                    <TextView
+                        style="@style/setting_rtk_text_view"
+                        android:id="@+id/tv_row_3_3"
+                        android:text="@string/common_text_rtk_gal_number"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_row_3_2" />
+
+                    <TextView
+                        style="@style/setting_rtk_text_view"
+                        android:id="@+id/tv_gps"
+                        android:layout_marginTop="@dimen/common_15dp"
+                        android:text="0"
+                        app:layout_constraintLeft_toRightOf="@id/rtk_line_4"
+                        app:layout_constraintTop_toBottomOf="@+id/rtk_line_6" />
+
+                    <TextView
+                        style="@style/setting_rtk_text_view"
+                        android:id="@+id/tv_baidou"
+                        android:text="0"
+                        app:layout_constraintLeft_toRightOf="@id/rtk_line_4"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_row_3_0" />
+
+                    <TextView
+                        style="@style/setting_rtk_text_view"
+                        android:id="@+id/tv_glo"
+                        android:text="0"
+                        app:layout_constraintLeft_toRightOf="@id/rtk_line_4"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_row_3_1" />
+
+                    <TextView
+                        style="@style/setting_rtk_text_view"
+                        android:id="@+id/tv_gal"
+                        android:text="0"
+                        app:layout_constraintLeft_toRightOf="@id/rtk_line_4"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_row_3_2" />
+
+                    <View
+                        android:id="@+id/rtk_line_7"
+                        style="@style/common_horizontal_line"
+                        android:layout_height="@dimen/common_1dp"
+                        android:layout_marginTop="@dimen/common_15dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_row_3_3" />
+
+                    <TextView
+                        style="@style/setting_rtk_text_view"
+                        android:id="@+id/tv_row_4_0"
+                        android:layout_marginTop="@dimen/common_15dp"
+                        android:text="@string/common_text_standard_deviation"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/rtk_line_7" />
+
+                    <TextView
+                        style="@style/setting_rtk_text_view"
+                        android:id="@+id/tv_lat_sd"
+                        android:layout_marginTop="@dimen/common_15dp"
+                        android:text="Lat: 0.00m"
+                        app:layout_constraintLeft_toRightOf="@id/rtk_line_4"
+                        app:layout_constraintTop_toBottomOf="@+id/rtk_line_7" />
+
+                    <TextView
+                        style="@style/setting_rtk_text_view"
+                        android:id="@+id/tv_lng_sd"
+                        android:text="Lng: 0.00m"
+                        app:layout_constraintLeft_toRightOf="@id/rtk_line_4"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_lat_sd" />
+
+                    <TextView
+                        style="@style/setting_rtk_text_view"
+                        android:id="@+id/tv_alt_sd"
+                        android:layout_marginBottom="@dimen/common_15dp"
+                        android:text="Alt: 0.00m"
+                        app:layout_constraintLeft_toRightOf="@id/rtk_line_4"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_lng_sd"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

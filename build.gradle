@@ -1,0 +1,102 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    apply from: 'dependencies.gradle'
+
+    repositories {
+        maven { url = "https://maven.autelrobotics.cn/public" }
+        google()
+        mavenCentral()
+        maven { url = "https://jitpack.io" }
+        maven { url = "https://mirrors.tencent.com/nexus/repository/maven-public" }
+    }
+
+    dependencies {
+//        classpath rootProject.ext.deps.external.firebase.googleServicesPlugin
+//        classpath rootProject.ext.deps.external.firebase.googleCrashlyticsPlugin
+        classpath rootProject.ext.deps.external.hilt.hilt_gradle_plugin
+        classpath 'com.github.kezong:fat-aar:1.3.8'
+    }
+}
+
+plugins {
+//    id 'com.android.application' version '8.9.0' apply false
+//    id 'com.android.library' version '8.9.0' apply false
+    alias(libs.plugins.com.android.application) apply false
+    alias(libs.plugins.com.android.library) apply false
+//    id 'org.jetbrains.kotlin.android' version '2.1.10' apply false
+    alias(libs.plugins.org.jetbrains.kotlin.android) apply false
+    alias(libs.plugins.compose.compiler) apply false
+}
+
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+static def isJenkins() {
+    return System.getenv('BUILD_NUMBER') != null
+}
+
+ext.isJenkins = isJenkins()
+
+task initBuildNumber {
+    if (isJenkins()) {
+        project.ext.set("autelBuildNumber", System.getenv('BUILD_NUMBER'))
+        project.ext.set("autelBuildNamePrefix", "AutelEnterprise_v${versions.versionName}(${project.autelBuildNumber})_"
+                + new Date().format("yyyMMddHHmm", TimeZone.getTimeZone("GMT+08:00")))
+    } else {
+        def time = new Date().format("yyyMMddHHmm", TimeZone.getTimeZone("GMT+08:00"))
+        project.ext.set("autelBuildNumber", time)
+        project.ext.set("autelBuildNamePrefix", "AutelEnterprise_v${versions.versionName}(${project.autelBuildNumber})")
+    }
+}
+
+// 在文件开头添加
+import org.gradle.api.tasks.Exec
+
+// 在 android {} 配置之后添加以下任务
+task createVersionTag(type: Exec) {
+    def props = new Properties()
+    file("gradle.properties").withInputStream { props.load(it) }
+
+    def autoTag = props.getProperty("auto_version_tag", "false").toBoolean()
+    def versionName = props.getProperty("VERSION_NAME")
+
+    onlyIf {
+        autoTag
+    }
+
+    doFirst {
+        def lastCommitMessage = "git log -1 --pretty=%B".execute().text.trim()
+
+        // 为 Enterprise 工程创建 TAG
+        commandLine 'git', 'tag', '-a', versionName, '-m', lastCommitMessage
+        "git push origin ${versionName}".execute()
+        println "Created and pushed tag for Enterprise: ${versionName} with message: ${lastCommitMessage}"
+
+        // 为 autelMobileSdk 工程创建 TAG
+        def sdkDir = new File(project.rootDir, 'autelMobileSdk')
+        if (sdkDir.exists()) {
+            // 获取 SDK 工程最后一次提交信息
+            def sdkLastCommitMessage = ["sh", "-c", "cd ${sdkDir} && git log -1 --pretty=%B"].execute().text.trim()
+
+            // 在 SDK 目录中创建和推送 TAG
+            ["sh", "-c", "cd ${sdkDir} && git tag -a ${versionName} -m \"${sdkLastCommitMessage}\""].execute()
+            ["sh", "-c", "cd ${sdkDir} && git push origin ${versionName}"].execute()
+
+            println "Created and pushed tag for SDK: ${versionName} with message: ${sdkLastCommitMessage}"
+        } else {
+            println "Warning: autelMobileSdk directory not found"
+        }
+    }
+}
+
+// 将任务添加到构建周期中
+afterEvaluate {
+    // 为所有以 Release 结尾的构建任务添加 TAG 创建任务
+    tasks.matching { task ->
+        task.name.endsWith('Release')
+    }.configureEach { task ->
+        task.finalizedBy(createVersionTag)
+    }
+}

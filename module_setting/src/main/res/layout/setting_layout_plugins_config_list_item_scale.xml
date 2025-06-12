@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/common_8dp"
+    android:background="@drawable/common_item_bg_all">
+
+    <com.autel.common.widget.CommonSuperSeekView
+        android:id="@+id/cssv_scale"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bottom_line_visibility="gone"
+        app:cssv_range_max="100"
+        app:cssv_range_min="0"
+        app:cssv_title="@string/common_text_safety_distance"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

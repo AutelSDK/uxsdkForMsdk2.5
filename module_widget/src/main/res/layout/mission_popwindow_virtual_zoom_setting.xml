@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/common_125dp"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_quick"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_quick_max"
+            android:layout_width="@dimen/common_35dp"
+            android:layout_height="@dimen/common_35dp"
+            android:layout_marginTop="@dimen/common_5dp"
+            android:background="@drawable/common_selector_bg_circle"
+            android:gravity="center"
+            android:text="160"
+            android:textColor="@color/common_color_selector_black_white"
+            android:textSize="@dimen/common_text_size_sp_15" />
+
+        <TextView
+            android:id="@+id/tv_quick_max_2"
+            android:layout_width="@dimen/common_35dp"
+            android:layout_height="@dimen/common_35dp"
+            android:layout_marginTop="@dimen/common_15dp"
+            android:background="@drawable/common_selector_bg_circle"
+            android:gravity="center"
+            android:text="80"
+            android:textColor="@color/common_color_selector_black_white"
+            android:textSize="@dimen/common_text_size_sp_15" />
+
+        <TextView
+            android:id="@+id/tv_quick_max_4"
+            android:layout_width="@dimen/common_35dp"
+            android:layout_height="@dimen/common_35dp"
+            android:layout_marginTop="@dimen/common_15dp"
+            android:background="@drawable/common_selector_bg_circle"
+            android:gravity="center"
+            android:text="40"
+            android:textColor="@color/common_color_selector_black_white"
+            android:textSize="@dimen/common_text_size_sp_15" />
+
+        <TextView
+            android:id="@+id/tv_quick_max_8"
+            android:layout_width="@dimen/common_35dp"
+            android:layout_height="@dimen/common_35dp"
+            android:layout_marginTop="@dimen/common_15dp"
+            android:background="@drawable/common_selector_bg_circle"
+            android:gravity="center"
+            android:text="20"
+            android:textColor="@color/common_color_selector_black_white"
+            android:textSize="@dimen/common_text_size_sp_15" />
+
+        <TextView
+            android:id="@+id/tv_quick_max_16"
+            android:layout_width="@dimen/common_35dp"
+            android:layout_height="@dimen/common_35dp"
+            android:layout_marginTop="@dimen/common_15dp"
+            android:background="@drawable/common_selector_bg_circle"
+            android:gravity="center"
+            android:text="10"
+            android:textColor="@color/common_color_selector_black_white"
+            android:textSize="@dimen/common_text_size_sp_15" />
+
+
+        <TextView
+            android:id="@+id/tv_quick_5"
+            android:layout_width="@dimen/common_35dp"
+            android:layout_height="@dimen/common_35dp"
+            android:layout_marginTop="@dimen/common_15dp"
+            android:background="@drawable/common_selector_bg_circle"
+            android:gravity="center"
+            android:text="5"
+            android:textColor="@color/common_color_selector_black_white"
+            android:textSize="@dimen/common_text_size_sp_15" />
+
+        <TextView
+            android:id="@+id/tv_quick_3"
+            android:layout_width="@dimen/common_35dp"
+            android:layout_height="@dimen/common_35dp"
+            android:layout_marginTop="@dimen/common_15dp"
+            android:background="@drawable/common_selector_bg_circle"
+            android:gravity="center"
+            android:text="3"
+            android:textColor="@color/common_color_selector_black_white"
+            android:textSize="@dimen/common_text_size_sp_15" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="@dimen/common_75dp"
+        android:layout_height="@dimen/common_0dp"
+        android:paddingTop="@dimen/common_25dp"
+        android:background="@drawable/common_shape_solid_color_black_70_radius_8"
+        android:paddingBottom="@dimen/common_25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.autel.widget.widget.lenszoom.VirtualZoomScaleView
+            android:id="@+id/scale"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingEnd="@dimen/common_12dp" />
+
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

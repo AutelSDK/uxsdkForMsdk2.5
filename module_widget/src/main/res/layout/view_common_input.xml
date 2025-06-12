@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:background="@color/black"
+    tools:ignore="ResourceName">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/input"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/common_input_bg"
+        android:gravity="start|center_vertical"
+        android:imeOptions="actionDone|flagNoExtractUi"
+        android:inputType="text"
+        android:paddingStart="@dimen/common_15dp"
+        android:paddingEnd="@dimen/common_50dp"
+        android:textColor="@color/common_color_ff"
+        android:textSize="@dimen/common_text_size_sp_16"
+        tools:text="啊实打实大家啊首单礼金卡受打击阿卡拉受打击手打啦手打阿萨德金坷垃山东科技阿是啦抗打击手打实打实大金石可镂大声道阿萨德" />
+
+    <ImageView
+        android:id="@+id/iv_clean"
+        android:layout_width="@dimen/common_50dp"
+        android:layout_height="@dimen/common_50dp"
+        android:layout_gravity="end|center_vertical"
+        android:scaleType="centerInside"
+        android:src="@drawable/common_icon_clear" />
+</FrameLayout>

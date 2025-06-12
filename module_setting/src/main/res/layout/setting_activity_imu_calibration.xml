@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_color_white"
+    android:fitsSystemWindows="false">
+
+    <com.autel.common.widget.CommonTitleView
+        android:id="@+id/view_title"
+        android:layout_width="@dimen/common_0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title_leftIconVisibility="true"
+        app:title_name="@string/common_text_imu_calibration"
+        app:title_rightIconVisibility="false" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_step"
+        android:layout_width="@dimen/common_0dp"
+        android:layout_height="@dimen/common_0dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_title">
+
+        <TextView
+            android:id="@+id/tv_step"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="1/3"
+            android:textColor="@color/common_color_black_50"
+            android:textSize="@dimen/common_text_size_sp_14"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="@dimen/common_432dp"
+            android:layout_height="@dimen/common_360dp"
+            android:layout_marginStart="@dimen/common_150dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/setting_icon_imu_0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/ll_cal_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/common_10dp"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@id/iv_logo"
+            app:layout_constraintEnd_toEndOf="@id/iv_logo"
+            app:layout_constraintStart_toStartOf="@id/iv_logo">
+
+            <ImageView
+                android:id="@+id/iv_step1"
+                android:layout_width="@dimen/common_10dp"
+                android:layout_height="@dimen/common_10dp"
+                android:src="@drawable/setting_shape_007aff_360" />
+
+            <ImageView
+                android:id="@+id/iv_step2"
+                android:layout_width="@dimen/common_10dp"
+                android:layout_height="@dimen/common_10dp"
+                android:layout_marginStart="@dimen/common_10dp"
+                android:src="@drawable/setting_shape_4d0000_360" />
+
+            <ImageView
+                android:id="@+id/iv_step3"
+                android:layout_width="@dimen/common_10dp"
+                android:layout_height="@dimen/common_10dp"
+                android:layout_marginStart="@dimen/common_10dp"
+                android:src="@drawable/setting_shape_4d0000_360" />
+
+            <ImageView
+                android:id="@+id/iv_step4"
+                android:layout_width="@dimen/common_10dp"
+                android:layout_height="@dimen/common_10dp"
+                android:layout_marginStart="@dimen/common_10dp"
+                android:src="@drawable/setting_shape_4d0000_360" />
+
+            <ImageView
+                android:id="@+id/iv_step5"
+                android:layout_width="@dimen/common_10dp"
+                android:layout_height="@dimen/common_10dp"
+                android:layout_marginStart="@dimen/common_10dp"
+                android:src="@drawable/setting_shape_4d0000_360"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_step6"
+                android:layout_width="@dimen/common_10dp"
+                android:layout_height="@dimen/common_10dp"
+                android:layout_marginStart="@dimen/common_10dp"
+                android:src="@drawable/setting_shape_4d0000_360" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tips_layout"
+            android:layout_width="@dimen/common_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common_30dp"
+            android:layout_marginEnd="@dimen/common_30dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_logo"
+            app:layout_constraintTop_toTopOf="@id/iv_logo">
+
+            <TextView
+                android:id="@+id/tv_tips1"
+                android:layout_width="@dimen/common_324dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_25dp"
+                android:layout_marginTop="@dimen/common_64dp"
+                android:text="@string/common_text_calibration_tip_1"
+                android:textColor="@color/common_color_black"
+                android:textSize="@dimen/common_text_size_sp_19"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="@dimen/common_3dp"
+                android:layout_height="@dimen/common_3dp"
+                android:layout_marginStart="@dimen/common_20dp"
+                android:layout_marginTop="@dimen/common_8_5dp"
+                android:layout_marginEnd="@dimen/common_5dp"
+                android:background="@drawable/setting_bg_black_r1f5"
+                app:layout_constraintEnd_toStartOf="@id/tv_tips1"
+                app:layout_constraintTop_toTopOf="@id/tv_tips1" />
+
+            <TextView
+                android:id="@+id/tv_tips2"
+                android:layout_width="@dimen/common_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_5dp"
+                android:text="@string/common_text_calibration_tip_2"
+                android:textColor="@color/common_color_black"
+                android:textSize="@dimen/common_text_size_sp_19"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_tips1"
+                app:layout_constraintTop_toBottomOf="@id/tv_tips1" />
+
+            <ImageView
+                android:id="@+id/iv"
+                android:layout_width="@dimen/common_3dp"
+                android:layout_height="@dimen/common_3dp"
+                android:layout_marginStart="@dimen/common_20dp"
+                android:layout_marginTop="@dimen/common_8_5dp"
+                android:layout_marginEnd="@dimen/common_5dp"
+                android:background="@drawable/setting_bg_black_r1f5"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@id/tv_tips2"
+                app:layout_constraintTop_toTopOf="@id/tv_tips2" />
+
+            <TextView
+                android:id="@+id/tv_tips3"
+                android:layout_width="@dimen/common_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_5dp"
+                android:text="@string/common_text_calibration_tip_4"
+                android:textColor="@color/common_color_black"
+                android:textSize="@dimen/common_text_size_sp_19"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@id/tv_tips2"
+                app:layout_constraintStart_toStartOf="@id/tv_tips2"
+                app:layout_constraintTop_toBottomOf="@id/tv_tips2" />
+
+            <ImageView
+                android:id="@+id/iv3"
+                android:layout_width="@dimen/common_3dp"
+                android:layout_height="@dimen/common_3dp"
+                android:layout_marginStart="@dimen/common_20dp"
+                android:layout_marginTop="@dimen/common_7dp"
+                android:layout_marginEnd="@dimen/common_5dp"
+                android:background="@drawable/setting_bg_black_r1f5"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@id/tv_tips3"
+                app:layout_constraintTop_toTopOf="@id/tv_tips3" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/step_layout"
+            android:layout_width="@dimen/common_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common_55dp"
+            android:layout_marginTop="@dimen/common_30dp"
+            android:layout_marginEnd="@dimen/common_60dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_logo"
+            app:layout_constraintTop_toTopOf="@id/iv_logo">
+
+            <TextView
+                android:id="@+id/step"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/common_text_step_one"
+                android:textColor="@color/common_color_33"
+                android:textSize="@dimen/common_text_size_sp_25"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/step_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_30dp"
+                android:text="@string/common_text_step_one_tips"
+                android:textColor="@color/common_color_33"
+                android:textSize="@dimen/common_text_size_sp_19"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/step" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/btn_start"
+            android:layout_width="@dimen/common_324dp"
+            android:layout_height="@dimen/common_54dp"
+            android:layout_marginStart="@dimen/common_30dp"
+            android:layout_marginBottom="@dimen/common_56dp"
+            android:background="@drawable/common_selector_bg_007aff"
+            android:gravity="center"
+            android:text="@string/common_text_start_calibrate"
+            android:textColor="@color/common_color_selector_btn"
+            android:textSize="@dimen/common_text_size_sp_20"
+            android:visibility="visible"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toBottomOf="@id/iv_logo"
+            app:layout_constraintStart_toStartOf="@id/tips_layout" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll_calibration"
+            android:layout_width="@dimen/common_324dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common_55dp"
+            android:layout_marginEnd="@dimen/common_100dp"
+            android:orientation="vertical"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/iv_logo"
+            app:layout_constraintStart_toEndOf="@id/iv_logo">
+
+            <ProgressBar
+                android:id="@+id/progress"
+                style="@style/setting_imu_progress_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_4dp"
+                android:layout_marginBottom="@dimen/common_8dp"
+                android:max="100"
+                android:maxHeight="@dimen/common_4dp"
+                android:progress="52"
+                android:visibility="visible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/common_56dp"
+                android:text="@string/common_text_calibration_tip_3"
+                android:textColor="@color/common_color_80"
+                android:textSize="@dimen/common_text_size_sp_17" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/layout_cal"
+        layout="@layout/setting_view_calibration_status"
+        android:visibility="gone" />
+</androidx.constraintlayout.widget.ConstraintLayout>

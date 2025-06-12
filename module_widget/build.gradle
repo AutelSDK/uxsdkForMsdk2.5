@@ -1,0 +1,85 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+    alias(libs.plugins.org.jetbrains.kotlin.android)
+    alias(libs.plugins.compose.compiler)
+}
+
+apply from: '../dependencies.gradle'
+apply from: '../androidConfig.gradle'
+
+kapt {
+    arguments {
+        arg("AROUTER_MODULE_NAME", project.getName())
+    }
+}
+
+android {
+    namespace = "com.autel.widget"
+    basicAndroidConfig(project)
+
+    resourcePrefix "widget_"
+
+    lintOptions {
+        checkReleaseBuilds = false
+        disable 'All'
+    }
+
+    buildFeatures {
+        viewBinding = true
+        buildConfig = true
+        compose = true
+    }
+}
+
+dependencies {
+    kapt rootProject.ext.deps.external.arouter.compiler
+
+    implementation rootProject.ext.autel.uxsdk.frame
+    compileOnly rootProject.ext.autel.uxsdk.msdk
+    implementation(platform(rootProject.ext.deps.external.compose.bom))
+    implementation(rootProject.ext.deps.external.compose.ui)
+    implementation(rootProject.ext.deps.external.compose.runtime)
+    implementation(rootProject.ext.deps.external.compose.ui_graphics)
+    implementation(rootProject.ext.deps.external.compose.ui_tooling_preview)
+    implementation(rootProject.ext.deps.external.compose.material3)
+    implementation(rootProject.ext.deps.external.compose.runtime_livedata)
+    implementation(rootProject.ext.deps.external.compose.constraintlayout)
+    implementation(rootProject.ext.deps.external.compose.activity)
+    debugImplementation(rootProject.ext.deps.external.compose.ui_tooling)
+    debugImplementation(rootProject.ext.deps.external.compose.ui_test_manifest)
+
+    implementation(libs.kotlin.reflect)
+
+    implementation(
+            rootProject.ext.deps.external.arouter.api,
+            rootProject.ext.deps.external.multitype,
+            rootProject.ext.deps.external.android.viewpager2,
+            rootProject.ext.deps.external.lifecycle.viewmodel,
+            rootProject.ext.deps.external.lifecycle.livedata,
+            rootProject.ext.deps.external.lifecycle.runtime,
+            rootProject.ext.deps.external.lifecycle.savedstate,
+            rootProject.ext.deps.external.android.multidex,
+            rootProject.ext.deps.external.android.core_ktx,
+            rootProject.ext.deps.external.android.appcompat,
+            rootProject.ext.deps.external.android.activity_ktx,
+            rootProject.ext.deps.external.android.fragment_ktx,
+            rootProject.ext.deps.external.android.design,
+            rootProject.ext.deps.external.glide.glide,
+            rootProject.ext.deps.external.lottie,
+            rootProject.ext.deps.external.retrofit.core,
+            rootProject.ext.deps.external.retrofit.rxjava,
+            rootProject.ext.deps.external.retrofit.gson,
+            rootProject.ext.deps.external.retrofit.retrofit_converter_moshi,
+            rootProject.ext.deps.external.commons
+    )
+
+    implementation rootProject.ext.autel.uxsdk.log
+    implementation rootProject.ext.autel.uxsdk.ui
+    implementation rootProject.ext.autel.uxsdk.storage
+    implementation rootProject.ext.autel.uxsdk.utils
+    implementation rootProject.ext.autel.uxsdk.map
+    implementation rootProject.ext.autel.uxsdk.data
+    implementation rootProject.ext.autel.uxsdk.gdal
+}

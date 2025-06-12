@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <declare-styleable name="VirtualZoomScaleView">
+        <attr name="mission_scale_view_line_height" format="dimension" />
+        <attr name="mission_scale_view_line_gap" format="dimension" />
+        <attr name="mission_scale_view_line_short_width" format="dimension" />
+        <attr name="mission_scale_view_line_long_width" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="AttitudeBallWidget" tools:ignore="ResourceName">
+        <attr name="widget_model" format="string"/>
+        <attr name="ignore_rotation" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="north_LoopScaleView" tools:ignore="ResourceName">
+        <!--可视范围内显示的大刻度数-->
+        <attr name="north_maxShowItem" format="integer"/>
+        <!--最大刻度值-->
+        <attr name="north_maxValue" format="integer"/>
+        <!--一个刻度表示的值的大小-->
+        <attr name="north_oneItemValue" format="integer"/>
+        <!--指针颜色-->
+        <attr name="north_cursorColor" format="color"/>
+        <!--刻度文字颜色-->
+        <attr name="north_scaleTextColor" format="color"/>
+        <!--指针图标，颜色和这个属性二选一-->
+        <attr name="north_cursorMap" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="StatusBarView"  tools:ignore="ResourceName">
+        <attr name="show_warn_tips" format="boolean"/>
+        <attr name="default_font" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="LongClickTakeOffView" tools:ignore="ResourceName">
+        <attr name="progressBgColor" format="color"/>
+        <attr name="progressColor" format="color"/>
+        <attr name="progress_strokeWidth" format="dimension"/>
+        <attr name="progressAnimatorTime" format="integer"/>
+    </declare-styleable>
+</resources>

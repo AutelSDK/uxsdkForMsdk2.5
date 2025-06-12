@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_popupwindow_lookup"
+    android:layout_width="@dimen/common_270dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/common_20dp"
+    android:layout_marginTop="@dimen/common_127dp"
+    android:background="@drawable/setting_lose_drone_info_bg"
+    android:paddingBottom="@dimen/common_20dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="@dimen/common_40dp"
+        android:layout_height="@dimen/common_40dp"
+        android:layout_alignParentEnd="true"
+        android:padding="@dimen/common_8dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_find_drone_close" />
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/video_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_140dp"
+        android:layout_below="@id/iv_close"
+        android:layout_marginStart="@dimen/common_10dp"
+        android:layout_marginEnd="@dimen/common_10dp"
+        android:layout_marginBottom="@dimen/common_10dp"
+        android:visibility="visible"
+        app:surface_type="surface_view"
+        app:use_controller="false" />
+
+    <TextView
+        android:id="@+id/tv_lose_time_title"
+        style="@style/common_font_gray_white_14_lose"
+        android:layout_below="@+id/video_view"
+        android:layout_marginStart="@dimen/common_25dp"
+        android:layout_marginTop="@dimen/common_10dp"
+        android:layout_marginEnd="@dimen/common_10dp"
+        android:text="@string/common_text_lost_drone_time"
+        android:textColor="@color/common_color_white_70" />
+
+    <TextView
+        android:id="@+id/tv_lose_time"
+        style="@style/common_font_gray_white_14_lose"
+        android:layout_below="@+id/video_view"
+        android:layout_marginTop="@dimen/common_10dp"
+        android:layout_marginEnd="@dimen/common_20dp"
+        android:layout_toEndOf="@+id/tv_lose_time_title"
+        android:gravity="center_vertical|start"
+        android:textColor="@color/common_color_white_70"
+        tools:text="2022.12.05 13:25:11" />
+
+    <TextView
+        android:id="@+id/tv_lose_location_title"
+        style="@style/common_font_gray_white_14_lose"
+        android:layout_below="@+id/tv_lose_time"
+        android:layout_marginStart="@dimen/common_25dp"
+        android:layout_marginTop="@dimen/common_10dp"
+        android:layout_marginEnd="@dimen/common_10dp"
+        android:text="@string/common_text_lost_drone_location"
+        android:textColor="@color/common_color_white_70" />
+
+    <TextView
+        android:id="@+id/tv_lose_location"
+        style="@style/common_font_gray_white_14_lose"
+        android:layout_below="@+id/tv_lose_time"
+        android:layout_marginTop="@dimen/common_10dp"
+        android:layout_marginEnd="@dimen/common_20dp"
+        android:layout_toRightOf="@+id/tv_lose_location_title"
+        android:gravity="center_vertical|start"
+        android:textColor="@color/common_color_white_70"
+        tools:text="广东省深圳市南山区学苑大道 南山智园 " />
+
+    <TextView
+        android:id="@+id/tv_lose_coordinate_title"
+        style="@style/common_font_gray_white_14_lose"
+        android:layout_below="@+id/tv_lose_location"
+        android:layout_marginStart="@dimen/common_25dp"
+        android:layout_marginTop="@dimen/common_10dp"
+        android:layout_marginEnd="@dimen/common_10dp"
+        android:text="@string/common_text_lost_drone_coordinate"
+        android:textColor="@color/common_color_white_70" />
+
+    <TextView
+        android:id="@+id/tv_lose_coordinate_lat"
+        style="@style/common_font_gray_white_14_lose"
+        android:layout_below="@+id/tv_lose_location"
+        android:layout_marginTop="@dimen/common_10dp"
+        android:layout_toStartOf="@+id/tv_copy_lat"
+        android:layout_toEndOf="@+id/tv_lose_coordinate_title"
+        android:gravity="center_vertical|start"
+        android:textColor="@color/common_color_white_70"
+        tools:text="E 103.33344" />
+
+    <TextView
+        android:id="@+id/tv_copy_lat"
+        style="@style/common_font_gray_white_14_lose"
+        android:layout_below="@+id/tv_lose_location"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/common_10dp"
+        android:layout_marginEnd="@dimen/common_15dp"
+        android:gravity="center_vertical|start"
+        android:paddingStart="@dimen/common_10dp"
+        android:paddingEnd="@dimen/common_10dp"
+        android:text="@string/common_text_lost_drone_copy"
+        android:textColor="@color/common_color_FEE15D"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_lose_coordinate_title" />
+
+    <TextView
+        android:id="@+id/tv_lose_coordinate_lng"
+        style="@style/common_font_gray_white_14_lose"
+        android:layout_below="@+id/tv_lose_coordinate_lat"
+        android:layout_marginTop="@dimen/common_10dp"
+        android:layout_toStartOf="@+id/tv_copy_lng"
+        android:layout_toEndOf="@+id/tv_lose_coordinate_title"
+        android:gravity="center_vertical|start"
+        android:textColor="@color/common_color_white_70"
+        tools:text="N 23.33334436434" />
+
+    <TextView
+        android:id="@+id/tv_copy_lng"
+        style="@style/common_font_gray_white_14_lose"
+        android:layout_below="@+id/tv_lose_coordinate_lat"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/common_10dp"
+        android:layout_marginEnd="@dimen/common_15dp"
+        android:gravity="center_vertical|start"
+        android:paddingStart="@dimen/common_10dp"
+        android:paddingEnd="@dimen/common_10dp"
+        android:text="@string/common_text_lost_drone_copy"
+        android:textColor="@color/common_color_FEE15D" />
+
+    <TextView
+        android:id="@+id/tv_lose_distance_title"
+        style="@style/common_font_gray_white_14_lose"
+        android:layout_below="@+id/tv_lose_coordinate_lng"
+        android:layout_marginStart="@dimen/common_25dp"
+        android:layout_marginTop="@dimen/common_10dp"
+        android:layout_marginEnd="@dimen/common_10dp"
+        android:text="@string/common_text_lost_drone_distance"
+        android:textColor="@color/common_color_white_70"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_lose_coordinate_lng" />
+
+    <TextView
+        android:id="@+id/tv_lose_distance"
+        style="@style/common_font_gray_white_14_lose"
+        android:layout_below="@+id/tv_lose_coordinate_lng"
+        android:layout_marginTop="@dimen/common_10dp"
+        android:layout_marginEnd="@dimen/common_25dp"
+        android:layout_toEndOf="@+id/tv_lose_distance_title"
+        android:gravity="center_vertical|start"
+        android:textColor="@color/common_color_white_70"
+        tools:text="3.845km" />
+
+    <TextView
+        android:id="@+id/tv_start_guide"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_45dp"
+        android:layout_below="@+id/tv_lose_distance"
+        android:layout_marginStart="@dimen/common_25dp"
+        android:layout_marginTop="@dimen/common_25dp"
+        android:layout_marginEnd="@dimen/common_25dp"
+        android:background="@drawable/setting_lose_drone_guide_bg"
+        android:gravity="center"
+        android:text="@string/common_text_lost_drone_navigating"
+        android:textSize="@dimen/common_text_size_sp_17"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_start_tweet"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_45dp"
+        android:layout_below="@+id/tv_start_guide"
+        android:layout_marginStart="@dimen/common_25dp"
+        android:layout_marginTop="@dimen/common_15dp"
+        android:layout_marginEnd="@dimen/common_25dp"
+        android:background="@drawable/setting_selector_lose_drone_tweet_bg"
+        android:gravity="center"
+        android:paddingStart="@dimen/common_10dp"
+        android:paddingEnd="@dimen/common_10dp"
+        android:text="@string/common_text_light_drone"
+        android:textColor="@color/common_selector_text_color_white_100_70"
+        android:textSize="@dimen/common_text_size_sp_17"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tv_start_guide" />
+
+</RelativeLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_color_white"
+    android:fitsSystemWindows="false">
+
+    <com.autel.common.widget.CommonTitleView
+        android:id="@+id/view_title"
+        android:layout_width="@dimen/common_0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title_leftIconVisibility="true"
+        app:title_name="@string/common_text_radar_cal"
+        app:title_rightIconVisibility="false" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_step"
+        android:layout_width="@dimen/common_0dp"
+        android:layout_height="@dimen/common_0dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_title">
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="@dimen/common_432dp"
+            android:layout_height="@dimen/common_360dp"
+            android:layout_marginStart="@dimen/common_150dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/setting_icon_imu_0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tips_layout"
+            android:layout_width="@dimen/common_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common_30dp"
+            android:layout_marginEnd="@dimen/common_30dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_logo"
+            app:layout_constraintTop_toTopOf="@id/iv_logo">
+
+            <TextView
+                android:id="@+id/tv_tips1"
+                android:layout_width="@dimen/common_324dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_25dp"
+                android:layout_marginTop="@dimen/common_64dp"
+                android:text="@string/common_text_radar_cal_tips"
+                android:textColor="@color/common_color_black"
+                android:textSize="@dimen/common_text_size_sp_19"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/btn_start"
+            android:layout_width="@dimen/common_324dp"
+            android:layout_height="@dimen/common_54dp"
+            android:layout_marginStart="@dimen/common_30dp"
+            android:layout_marginBottom="@dimen/common_56dp"
+            android:background="@drawable/common_selector_bg_007aff"
+            android:gravity="center"
+            android:text="Start calibrating"
+            android:textColor="@color/common_color_selector_btn"
+            android:textSize="@dimen/common_text_size_sp_20"
+            android:visibility="visible"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toBottomOf="@id/iv_logo"
+            app:layout_constraintStart_toStartOf="@id/tips_layout" />
+
+        <TextView
+            android:id="@+id/tv_radar_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_12dp"
+            android:textColor="@color/common_color_808080"
+            android:textSize="@dimen/common_text_size_sp_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/btn_start"
+            app:layout_constraintTop_toBottomOf="@id/btn_start"
+            tools:text="Calibration Status: ..." />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

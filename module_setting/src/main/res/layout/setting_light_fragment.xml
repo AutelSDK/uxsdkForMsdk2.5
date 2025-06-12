@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <com.autel.common.widget.CommonItemSwitch
+        android:id="@+id/light_cis_concealment"
+        android:layout_width="@dimen/common_450dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/common_item_bg_all"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title_name="@string/common_text_light_concealment_model_title"
+        app:content_value="@string/common_text_stealth_mode_tips"
+        app:content_visibility="visible" />
+
+    <com.autel.common.widget.CommonItemSwitch
+        android:id="@+id/light_cis_night"
+        android:layout_width="@dimen/common_450dp"
+        android:layout_height="@dimen/common_55dp"
+        android:layout_marginTop="@dimen/common_8dp"
+        android:background="@drawable/common_item_bg_all"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/light_cis_concealment"
+        app:title_name="@string/common_text_light_night_title"
+        tools:visibility="visible" />
+
+    <com.autel.common.widget.CommonItemSwitch
+        android:id="@+id/cis_arm_light"
+        android:layout_width="@dimen/common_450dp"
+        android:layout_height="@dimen/common_55dp"
+        android:layout_marginTop="@dimen/common_8dp"
+        android:background="@drawable/common_item_bg_all"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/light_cis_night"
+        app:title_name="@string/common_text_arm_light"
+        tools:visibility="visible" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ll_bottom_light"
+        android:layout_width="@dimen/common_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_8dp"
+        android:background="@drawable/common_item_bg_all"
+        android:paddingStart="@dimen/common_15dp"
+        android:paddingTop="@dimen/common_15dp"
+        android:paddingEnd="@dimen/common_15dp"
+        android:paddingBottom="@dimen/common_25dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cis_arm_light"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/tv_bottom_light"
+            style="@style/common_font_white_19.5"
+            android:text="@string/common_text_down_fill_light"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.autel.common.widget.spinnerview.CommonSpinnerView
+            android:id="@+id/csv_bottom_light"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_34dp"
+            android:layout_marginTop="@dimen/common_15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_bottom_light" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

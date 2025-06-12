@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="@dimen/common_450dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/common_item_bg_all">
+
+        <com.autel.common.widget.CommonSuperSeekView
+            android:id="@+id/cssv_yaw_trip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:bottom_line_visibility="visible"
+            app:cssv_range_max="120"
+            app:cssv_range_min="20"
+            app:cssv_title="@string/common_text_sensitivity_trip"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.autel.common.widget.CommonSuperSeekView
+            android:id="@+id/cssv_yaw_posture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:bottom_line_visibility="visible"
+            app:cssv_progress_margin_end="20"
+            app:cssv_progress_margin_start="20"
+            app:cssv_range_max="100"
+            app:cssv_range_min="20"
+            app:cssv_title="@string/common_text_sensitivity_posture"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cssv_yaw_trip" />
+
+        <com.autel.common.widget.CommonSuperSeekView
+            android:id="@+id/cssv_yaw_brake"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:bottom_line_visibility="gone"
+            app:cssv_range_max="200"
+            app:cssv_range_min="20"
+            app:cssv_title="@string/common_text_sensitivity_brake"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cssv_yaw_posture" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:layout_width="@dimen/common_450dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.autel.common.widget.CommonItemSwitch
+                    android:id="@+id/view_histogram"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/common_55dp"
+                    android:layout_marginTop="@dimen/common_24dp"
+                    android:background="@drawable/common_shape_rect_solid_color_1c1c1e_radius_9"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:title_name="@string/common_text_thrower_auto_record" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_strike"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_8dp"
+                android:background="@drawable/common_item_bg_all">
+
+                <TextView
+                    android:id="@+id/tv_strike_type"
+                    style="@style/common_font_white_19.5"
+                    android:layout_marginLeft="@dimen/common_15dp"
+                    android:layout_marginTop="@dimen/common_10dp"
+                    android:text="@string/common_text_strike_type"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.autel.common.widget.spinnerview.CommonSpinnerView
+                    android:id="@+id/csv_strike_type"
+                    android:layout_width="@dimen/common_150dp"
+                    android:layout_height="@dimen/common_34dp"
+                    android:layout_marginRight="@dimen/common_15dp"
+                    android:layout_marginTop="@dimen/common_10dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_strike_tip"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textSize="@dimen/common_text_size_sp_15"
+                    android:layout_marginTop="@dimen/common_15dp"
+                    android:layout_marginEnd="@dimen/common_10dp"
+                    android:layout_marginStart="@dimen/common_15dp"
+                    android:layout_marginBottom="@dimen/common_10dp"
+                    android:text="@string/common_text_strike_type_tip"
+                    android:textColor="@color/common_color_bd"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_strike_type" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/common_line_width"
+                    android:layout_marginLeft="@dimen/common_15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

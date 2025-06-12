@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/iv_pseudo"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common_44dp"
+    android:paddingHorizontal="@dimen/common_15dp"
+    android:paddingVertical="@dimen/common_12dp"
+    android:scaleType="fitXY"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:src="@drawable/mission_selector_colour_atla_glow_bow" />
+

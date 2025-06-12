@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_color_f2f2f6"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/cl_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_50dp"
+        android:background="@color/common_color_white"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_close"
+            android:layout_width="@dimen/common_80dp"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:src="@drawable/common_ic_outlined_back_black" />
+
+        <com.autel.common.widget.AutelTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/common_text_more_remote_id_title"
+            android:textColor="@color/common_color_FF333333"
+            android:textSize="@dimen/common_text_size_sp_17"
+            app:AutelTextFace="SSFD_Medium" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_gravity="bottom"
+            android:background="@color/common_color_80" />
+    </FrameLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_30dp"
+        android:layout_marginTop="@dimen/common_15dp"
+        android:layout_marginEnd="@dimen/common_30dp"
+        android:background="@drawable/common_shape_rect_solid_color_ff_radius_10"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_55dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/common_20dp"
+                android:text="@string/common_text_plane_id"
+                android:textColor="@color/common_color_FF333333"
+                android:textSize="@dimen/common_text_size_sp_16" />
+
+            <TextView
+                android:id="@+id/drone_sn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="@dimen/common_20dp"
+                android:text="@string/common_text_no_value"
+                android:textColor="@color/common_color_808080"
+                android:textSize="@dimen/common_text_size_sp_14" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_gravity="bottom"
+            android:visibility="gone"
+            android:layout_marginStart="@dimen/common_20dp"
+            android:background="@color/common_color_e0" />
+
+        <FrameLayout
+            android:id="@+id/layout_pilot"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="@dimen/common_55dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/common_20dp"
+                android:text="@string/common_text_pilot_id"
+                android:textColor="@color/common_color_FF333333"
+                android:textSize="@dimen/common_text_size_sp_16" />
+
+            <TextView
+                android:id="@+id/pilotId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="@dimen/common_20dp"
+                android:gravity="center_vertical"
+                android:text="@string/common_text_input_pilot_id"
+                android:textColor="@color/common_color_808080"
+                android:textSize="@dimen/common_text_size_sp_14"
+                app:drawableEndCompat="@drawable/rid_icons_outlined_arrow_right" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="@dimen/common_20dp"
+            android:background="@color/common_color_e0" />
+
+        <FrameLayout
+            android:id="@+id/layout_target"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_55dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/common_20dp"
+                android:text="@string/common_text_purpose_of_flight"
+                android:textColor="@color/common_color_FF333333"
+                android:textSize="@dimen/common_text_size_sp_16" />
+
+            <TextView
+                android:id="@+id/purpose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="@dimen/common_20dp"
+                android:gravity="center_vertical"
+                android:text="@string/common_text_unfilled"
+                android:textColor="@color/common_color_808080"
+                android:textSize="@dimen/common_text_size_sp_14"
+                app:drawableEndCompat="@drawable/rid_icons_outlined_arrow_right" />
+        </FrameLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

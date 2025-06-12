@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:background="@color/black">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_10dp"
+        android:layout_marginTop="@dimen/common_20dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/common_text_size_sp_19"
+        app:layout_constraintBottom_toTopOf="@id/side_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_goneMarginBottom="@dimen/common_20dp"
+        tools:text="主标题" />
+
+    <TextView
+        android:id="@+id/side_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_6dp"
+        android:layout_marginBottom="@dimen/common_20dp"
+        android:textColor="@color/common_color_white_60"
+        android:textSize="@dimen/common_text_size_sp_15"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/title"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        tools:text="副标题" />
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/common_15dp"
+        android:src="@drawable/common_ic_arrow_right_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/common_10dp"
+        android:text="@string/common_text_mission_please_select"
+        android:textColor="@color/common_color_white_60"
+        android:textSize="@dimen/common_text_size_sp_14"
+        app:layout_constraintBottom_toBottomOf="@id/icon"
+        app:layout_constraintRight_toLeftOf="@id/icon"
+        app:layout_constraintTop_toTopOf="@id/icon" />
+</androidx.constraintlayout.widget.ConstraintLayout>

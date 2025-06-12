@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:ignore="MissingDefaultResource">
+
+    <LinearLayout
+        android:layout_width="@dimen/common_450dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.autel.common.widget.CommonItemSwitch
+            android:id="@+id/cis_obstacle_avoidance_system"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/common_shape_rect_solid_color_1c1c1e_radius_9"
+            android:paddingBottom="@dimen/common_15dp"
+            android:visibility="gone"
+            app:bottom_line_visibility="gone"
+            app:content_value="@string/common_text_obstacle_avoidance_system_tips"
+            app:title_name="@string/common_text_obstacle_avoidance_system" />
+
+        <com.autel.common.widget.CommonItemSwitch
+            android:id="@+id/cis_avoidance_behavior"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/common_shape_mission_1c1c1e_top_9"
+            android:paddingBottom="@dimen/common_15dp"
+            app:bottom_line_visibility="gone"
+            app:button_visibility="gone"
+            app:content_value="@string/common_text_avoidance_behavior_desc"
+            app:title_name="@string/common_text_avoidance_behavior" />
+
+        <com.autel.common.widget.CommonItemRadioCheck
+            android:id="@+id/circ_avoidance_behavior"
+            android:background="@drawable/common_shape_mission_1c1c1e_bottom_9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/common_15dp"
+            android:gravity="center_vertical"
+            app:bottom_line_visibility="gone"
+            app:title_name_visibility="gone" />
+
+        <com.autel.common.widget.CommonSuperSeekView
+            android:id="@+id/cssv_stopping_distance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/common_shape_mission_1c1c1e_bottom_9"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:bottom_line_visibility="gone"
+            app:cssv_range_max="10"
+            app:cssv_range_min="1"
+            app:cssv_title="@string/common_text_safety_distance" />
+
+        <com.autel.common.widget.CommonSuperSeekView
+            android:id="@+id/cssv_alarm_distance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_10dp"
+            android:background="@drawable/common_shape_mission_1c1c1e_top_9"
+            app:bottom_line_visibility="visible"
+            app:cssv_range_max="33"
+            app:cssv_range_min="1"
+            app:cssv_title="@string/common_text_alarm_distance" />
+
+        <com.autel.common.widget.CommonItemSwitch
+            android:id="@+id/cis_radar_switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1C1C1E"
+            android:paddingBottom="@dimen/common_15dp"
+            android:visibility="visible"
+            app:bottom_line_visibility="visible"
+            app:content_value="@string/common_text_enable_visual_radar_tps"
+            app:title_name="@string/common_text_enable_visual_radar" />
+
+        <com.autel.common.widget.CommonItemSwitch
+            android:id="@+id/cis_radar_voice_switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/common_shape_mission_1c1c1e_bottom_9"
+            android:paddingBottom="@dimen/common_15dp"
+            android:visibility="visible"
+            app:bottom_line_visibility="gone"
+            app:content_value="@string/common_text_radar_voice_tips"
+            app:title_name="@string/common_text_radar_voice_title" />
+        <com.autel.common.widget.CommonItemSwitch
+            android:id="@+id/cis_land_protect_switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_10dp"
+            android:background="@drawable/common_shape_rect_solid_color_1c1c1e_radius_9"
+            android:paddingBottom="@dimen/common_15dp"
+            android:visibility="visible"
+            app:bottom_line_visibility="gone"
+            app:content_value="@string/common_text_land_protect_content"
+            app:title_name="@string/common_text_land_protect_title" />
+        <com.autel.common.widget.CommonSettingItemSpinnerView
+            android:id="@+id/csisv_obstacle_avoidance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/common_8dp"
+            android:layout_marginBottom="@dimen/common_40dp"
+            android:background="@drawable/common_item_bg_all"
+            app:title_name = "@string/common_text_avoidance_way"/>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

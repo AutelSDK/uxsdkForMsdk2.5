@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_linkage_zoom"
+        android:layout_width="@dimen/common_variety_codec_btn_size"
+        android:layout_height="@dimen/common_variety_codec_btn_size"
+        android:padding="@dimen/common_8_5dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/mission_selector_linkage_zoom"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</merge>

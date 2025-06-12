@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="@dimen/common_530dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/common_variety_setting_dialog_margin_top"
+        android:layout_marginEnd="@dimen/common_variety_setting_dialog_margin_end"
+        android:layout_marginBottom="@dimen/common_variety_setting_dialog_margin_bottom"
+        android:background="@drawable/common_setting_dialog_bg"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <!--顶部标题-->
+        <RelativeLayout
+            android:id="@+id/setting_rl_top"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_50dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/setting_iv_top_back"
+                android:layout_width="@dimen/common_80dp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/common_10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/setting_top_back"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/setting_tv_top_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@+id/iv_close"
+                android:gravity="center_horizontal"
+                android:text="@string/common_text_fly_controll_title"
+                android:textColor="@color/common_color_white"
+                android:textSize="@dimen/common_text_size_sp_19" />
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="@dimen/common_62dp"
+                android:layout_height="@dimen/common_54dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/common_4dp"
+                android:padding="@dimen/common_11dp"
+                android:scaleType="center"
+                android:src="@drawable/common_ic_setting_close" />
+
+        </RelativeLayout>
+
+        <!-- 右侧切换设置项目-->
+        <ScrollView
+            android:id="@+id/setting_ll_right"
+            android:layout_width="@dimen/common_62dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/common_50dp"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/common_3dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.autel.setting.widget.RightRadioGroupView
+                android:id="@+id/setting_right_radiogroupview"
+                android:layout_width="@dimen/common_62dp"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/common_3dp" />
+        </ScrollView>
+
+        <!-- fragment显示区-->
+        <LinearLayout
+            android:id="@+id/setting_fragment_content_view"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/common_15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/setting_ll_right"
+            app:layout_constraintTop_toBottomOf="@+id/setting_rl_top" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

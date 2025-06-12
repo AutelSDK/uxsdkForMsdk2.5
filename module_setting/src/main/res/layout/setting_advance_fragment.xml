@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/common_450dp"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/common_drawable_transparent">
+
+    <LinearLayout
+        android:layout_width="@dimen/common_450dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/common_60dp"
+        android:orientation="vertical">
+
+        <com.autel.common.widget.CommonItemSwitch
+            android:id="@+id/view_vision_positioning_switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_8dp"
+            android:background="@drawable/common_shape_rect_solid_color_1c1c1e_radius_9"
+            android:paddingBottom="@dimen/common_15dp"
+            app:bottom_line_visibility="gone"
+            app:content_value="@string/common_text_enable_visual_positioning_explain"
+            app:title_name="@string/common_text_enable_visual_positioning" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llc_gnss_system"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_8dp"
+            android:visibility="gone"
+            android:background="@drawable/common_item_bg_all"
+            android:orientation="vertical">
+
+            <com.autel.common.widget.CommonItemSwitch
+                android:id="@+id/civ_gnss_switch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:content_value="@string/common_text_gnss_location_desc"
+                app:title_name="@string/common_text_gnss_location" />
+
+            <com.autel.common.widget.spinnerview.CommonSpinnerView
+                android:id="@+id/csv_check_gnss_mode"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_34dp"
+                android:layout_marginTop="@dimen/common_15dp"
+                android:visibility="gone"
+                android:layout_marginStart="@dimen/common_15dp"
+                android:layout_marginEnd="@dimen/common_15dp"
+                android:layout_marginBottom="@dimen/common_20dp"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.autel.common.widget.CommonItemSwitch
+            android:id="@+id/civ_gnss_add_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/common_item_bg_all"
+            android:visibility="gone"
+            app:title_name="@string/common_text_gnss_add_box" />
+
+        <com.autel.common.widget.CommonItemSwitch
+            android:id="@+id/civ_data_report_cn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_8dp"
+            android:background="@drawable/common_item_bg_only_top"
+            android:visibility="visible"
+            app:bottom_line_visibility="visible"
+            app:content_value="@string/common_text_data_report_desc_cn"
+            app:title_name="@string/common_text_data_report_cn" />
+
+        <com.autel.common.widget.CommonItemText
+            android:id="@+id/cit_input_number_cn"
+            style="@style/common_font_white_19.5"
+            app:bottom_line_visibility="gone"
+            app:cit_item_bg="2"
+            app:drawableEnd="@drawable/common_ic_arrow_right_white"
+            app:end_view_visibility="visible"
+            app:start_margin="@dimen/common_15dp"
+            app:title_name="@string/common_text_input_number" />
+
+        <com.autel.common.widget.CommonItemSwitch
+            android:id="@+id/civ_compass_north"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_55dp"
+            android:layout_marginTop="@dimen/common_8dp"
+            android:background="@drawable/common_item_bg_all"
+            android:text="@string/common_text_gps_fight_switch"
+            android:visibility="gone"
+            app:bottom_line_visibility="gone"
+            app:content_visibility="gone"
+            app:start_margin="@dimen/common_15dp"
+            app:title_name="@string/common_text_compass" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/anti_interference_container"
+            android:layout_height="@dimen/common_55dp"
+            android:layout_marginTop="@dimen/common_8dp"
+            android:background="@drawable/common_item_bg_all">
+
+            <TextView
+                style="@style/common_font_white_19.5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/common_15dp"
+                android:text="@string/common_text_anti_interference" />
+
+            <com.autel.common.widget.CommonItemRadioCheck
+                android:id="@+id/circ_anti_interference"
+                android:layout_width="@dimen/common_180dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/common_15dp"
+                android:gravity="center_vertical"
+                app:bottom_line_visibility="gone"
+                app:end_margin="@dimen/common_1dp"
+                app:title_name_visibility="gone" />
+
+        </RelativeLayout>
+
+        <com.autel.common.widget.CommonItemText
+            android:id="@+id/civ_ai_recognition"
+            style="@style/common_font_white_19.5"
+            android:layout_marginTop="@dimen/common_8dp"
+            android:visibility="gone"
+            app:bottom_line_visibility="gone"
+            app:cit_item_bg="4"
+            app:drawableEnd="@drawable/common_ic_arrow_right_white"
+            app:end_view_visibility="visible"
+            app:start_margin="@dimen/common_15dp"
+            app:title_name="@string/common_text_ai_recognition_settings" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ll_stop_propeller"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_8dp"
+            android:background="@drawable/common_item_bg_all"
+            android:paddingStart="@dimen/common_15dp"
+            android:paddingTop="@dimen/common_15dp"
+            android:paddingEnd="@dimen/common_15dp"
+            android:paddingBottom="@dimen/common_25dp"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv_stop_propeller"
+                style="@style/common_font_white_16"
+                android:layout_height="wrap_content"
+                android:text="@string/common_text_stop_propeller"
+                android:textSize="@dimen/common_text_size_sp_19"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.autel.common.widget.spinnerview.CommonSpinnerView
+                android:id="@+id/csv_stop_propeller"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_34dp"
+                android:layout_marginTop="@dimen/common_15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_stop_propeller" />
+
+            <TextView
+                android:id="@+id/tv_stop_propeller_desc"
+                style="@style/common_font_gray_white_14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_12dp"
+                android:gravity="start"
+                android:text="@string/common_text_stop_propeller_desc"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/csv_stop_propeller" />
+
+            <View
+                android:id="@+id/view_center"
+                android:layout_width="@dimen/common_line_width"
+                android:layout_height="@dimen/common_line_width"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="@dimen/common_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_12dp"
+                android:layout_marginEnd="@dimen/common_5dp"
+                android:src="@drawable/icon_bg_inside_8"
+                app:layout_constraintEnd_toStartOf="@id/view_center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_stop_propeller_desc" />
+
+            <ImageView
+                android:layout_width="@dimen/common_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_5dp"
+                android:layout_marginTop="@dimen/common_12dp"
+                android:src="@drawable/icon_bg_outside_8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/view_center"
+                app:layout_constraintTop_toBottomOf="@id/tv_stop_propeller_desc" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.autel.common.widget.CommonItemSwitch
+            android:id="@+id/cis_nofly_is_support"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_8dp"
+            android:background="@drawable/common_shape_rect_solid_color_1c1c1e_radius_9"
+            app:bottom_line_visibility="gone"
+            app:content_visibility="gone"
+            app:title_name="@string/common_text_nofly_is_support" />
+        <com.autel.common.widget.CommonItemSwitch
+            android:id="@+id/view_adsb_switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_8dp"
+            android:background="@drawable/common_item_bg_all"
+            android:paddingBottom="@dimen/common_15dp"
+            android:visibility="gone"
+            app:bottom_line_visibility="gone"
+            app:content_value="@string/common_text_adsb_tips"
+            app:title_name="@string/common_text_adsb_title" />
+
+        <LinearLayout
+            android:id="@+id/show_warn_level"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/common_item_bg_only_bottom"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="@dimen/common_0dp"
+                    android:layout_height="@dimen/common_130dp"
+                    android:layout_weight="1" />
+                <com.autel.common.widget.CommonImageTextItemCheckView
+                    android:id="@+id/view_adsb_strong_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:citcv_title_name="@string/common_text_adsb_strong_warn_open"
+                    />
+                <View
+                    android:layout_width="@dimen/common_0dp"
+                    android:layout_height="@dimen/common_130dp"
+                    android:layout_weight="1" />
+
+                <com.autel.common.widget.CommonImageTextItemCheckView
+                    android:id="@+id/view_adsb_strong_middle_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:citcv_title_name="@string/common_text_adsb_strong_middle_warn_open"
+                    />
+
+                <View
+                    android:layout_width="@dimen/common_0dp"
+                    android:layout_height="@dimen/common_130dp"
+                    android:layout_weight="1" />
+
+                <com.autel.common.widget.CommonImageTextItemCheckView
+                    android:id="@+id/view_adsb_all_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:citcv_title_name="@string/common_text_adsb_all_warn_open"
+                    />
+                <View
+                    android:layout_width="@dimen/common_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>

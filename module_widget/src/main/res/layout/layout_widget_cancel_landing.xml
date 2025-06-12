@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/common_variety_codec_left_btn_size"
+    android:layout_height="@dimen/common_140dp"
+    tools:parentTag="com.autel.common.base.widget.ConstraintLayoutWidget">
+
+    <LinearLayout
+        android:id="@+id/fl_loading"
+        android:layout_width="@dimen/common_variety_codec_left_btn_size"
+        android:layout_height="@dimen/common_variety_codec_left_btn_size"
+        android:background="@drawable/common_shape_icon_red"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_loading"
+            android:layout_width="@dimen/common_variety_codec_cancel_landing_icon_size"
+            android:layout_height="@dimen/common_variety_codec_cancel_landing_icon_size"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/common_5dp"
+            android:scaleType="fitStart"
+            android:src="@drawable/mission_ic_landing" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/common_text_cancel"
+            android:textColor="@color/common_color_white"
+            android:textSize="@dimen/common_variety_codec_cancel_landing_text_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fl_landing"
+        android:layout_width="@dimen/common_variety_codec_left_btn_size"
+        android:layout_height="@dimen/common_variety_codec_left_btn_size"
+        android:layout_marginTop="@dimen/common_15dp"
+        app:layout_goneMarginTop="@dimen/common_0dp"
+        android:background="@drawable/common_shape_icon_red"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fl_loading"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_landing"
+            android:layout_width="@dimen/common_variety_codec_cancel_landing_icon_size"
+            android:layout_height="@dimen/common_variety_codec_cancel_landing_icon_size"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/common_5dp"
+            android:scaleType="fitStart"
+            android:src="@drawable/mission_ic_decline" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/common_text_cancel"
+            android:textColor="@color/common_color_white"
+            android:textSize="@dimen/common_variety_codec_cancel_landing_text_size" />
+    </LinearLayout>
+
+</merge>

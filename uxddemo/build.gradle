@@ -1,0 +1,158 @@
+plugins {
+    alias(libs.plugins.com.android.application)
+    alias(libs.plugins.org.jetbrains.kotlin.android)
+}
+
+android {
+    namespace 'com.external.uxddemo'
+    basicAndroidConfig(project)
+
+    // 使用有效的NDK版本
+    ndkVersion "23.2.8568313"
+
+    compileSdk = rootProject.ext.versions.compileSdk
+
+    defaultConfig {
+        applicationId "com.external.uxddemo"
+        minSdk = rootProject.ext.versions.minSdk
+        targetSdk = rootProject.ext.versions.targetSdk
+        versionCode = rootProject.ext.versions.versionCode
+        versionName = rootProject.ext.versions.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        
+        // 只构建arm64架构，避免混合问题
+        ndk {
+            abiFilters 'arm64-v8a'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility rootProject.ext.versions.javaCompatibility
+        targetCompatibility rootProject.ext.versions.javaCompatibility
+    }
+    kotlinOptions {
+        jvmTarget = rootProject.ext.versions.javaCompatibility
+    }
+
+    packagingOptions {
+        // 确保只使用一份新版的libc++_shared.so
+        pickFirst "**/libc++_shared.so"
+        // 也排除其他可能冲突的运行时库
+        pickFirst "**/libstdc++.so"
+        pickFirst "**/libgnustl_shared.so"
+    }
+
+    buildFeatures {
+        viewBinding = true
+        buildConfig = true
+    }
+}
+
+// 🔥 强制排除所有AAR中的旧版libc++_shared.so
+configurations.all {
+    exclude group: '*', module: 'libc++_shared'
+    exclude group: '*', module: 'c++_shared'
+    exclude group: '*', module: 'stdc++_shared'
+}
+
+dependencies {
+    implementation libs.androidx.core.ktx
+    implementation libs.androidx.appcompat
+    implementation libs.material
+    testImplementation libs.junit
+    androidTestImplementation libs.androidx.junit
+    androidTestImplementation libs.androidx.espresso.core
+    implementation rootProject.ext.autel.uxsdk.frame
+    implementation rootProject.ext.autel.uxsdk.codec
+    implementation rootProject.ext.autel.uxsdk.mesh
+    //implementation project(path: ':module_netmesh')
+    implementation project(path: ':module_widget')
+    implementation rootProject.ext.autel.uxsdk.camera
+    implementation 'com.tencent:mmkv:1.2.13'
+    implementation rootProject.ext.autel.uxsdk.album
+    implementation project(path: ':module_setting')
+    implementation rootProject.ext.deps.external.protobuf_java
+
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.18.1'
+    implementation 'com.google.android.exoplayer:exoplayer-dash:2.18.1'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.18.1'
+
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.5.0"
+    compileOnly 'io.reactivex.rxjava2:rxjava:2.1.2'
+    compileOnly 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compileOnly rootProject.ext.deps.external.okhttp.core
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+    implementation "androidx.paging:paging-runtime:3.1.1"
+    implementation "androidx.paging:paging-rxjava2:3.1.1"
+    implementation rootProject.ext.autel.uxsdk.ffmpegkitmingpl
+    implementation "com.arthenica:smart-exception-java:0.1.0"
+
+    implementation(rootProject.ext.deps.external.database.room_ktx)
+    implementation 'com.github.CarGuo.GSYVideoPlayer:GSYVideoPlayer:v8.3.4-release-jitpack'
+    implementation rootProject.ext.deps.external.gson
+    compileOnly rootProject.ext.deps.external.okhttp.core
+
+    implementation "com.squareup.okhttp3:okhttp-dnsoverhttps:4.9.3"
+    implementation rootProject.ext.deps.external.okhttp.logging_interceptor
+    implementation rootProject.ext.deps.external.glide.glide
+    implementation "org.jetbrains.kotlin:kotlin-reflect:1.5.21"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.8.0"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0"
+    //离线时区
+    implementation('us.dustinj.timezonemap:timezonemap:4.5') {
+        exclude group: 'com.github.luben', module: 'zstd-jni'
+    }
+    implementation 'com.github.luben:zstd-jni:1.4.9-5@aar'
+    implementation(
+            rootProject.ext.deps.external.arouter.api,
+            rootProject.ext.deps.external.multitype,
+            rootProject.ext.deps.external.android.viewpager2,
+            rootProject.ext.deps.external.lifecycle.viewmodel,
+            rootProject.ext.deps.external.lifecycle.livedata,
+            rootProject.ext.deps.external.lifecycle.runtime,
+            rootProject.ext.deps.external.lifecycle.savedstate,
+            rootProject.ext.deps.external.android.multidex,
+            rootProject.ext.deps.external.android.core_ktx,
+            rootProject.ext.deps.external.android.appcompat,
+            rootProject.ext.deps.external.android.activity_ktx,
+            rootProject.ext.deps.external.android.fragment_ktx,
+            rootProject.ext.deps.external.android.design,
+            rootProject.ext.deps.external.glide.glide,
+            rootProject.ext.deps.external.lottie,
+            rootProject.ext.deps.external.retrofit.core,
+            rootProject.ext.deps.external.retrofit.rxjava,
+            rootProject.ext.deps.external.retrofit.gson,
+            rootProject.ext.deps.external.retrofit.retrofit_converter_moshi,
+            rootProject.ext.deps.external.commons
+    )
+
+    implementation rootProject.ext.autel.uxsdk.msdk
+    implementation('com.autel.sdk.uxsdk:log:1.0.0'){
+        exclude group: 'com.tencent', module: 'mmkv-static'
+        exclude group: 'com.tencent', module: 'mmkv'
+    }
+    implementation 'com.tencent.mars:mars-xlog:1.2.5'
+
+    implementation rootProject.ext.autel.uxsdk.ui
+    implementation rootProject.ext.autel.uxsdk.storage
+    implementation rootProject.ext.autel.uxsdk.utils
+    implementation rootProject.ext.autel.uxsdk.map
+    implementation rootProject.ext.autel.uxsdk.data
+    implementation rootProject.ext.autel.uxsdk.gdal
+
+    implementation rootProject.ext.deps.external.hilt.hilt_android
+    implementation 'com.google.android.flexbox:flexbox:3.0.0'
+
+    implementation("org.maplibre.gl:android-sdk:11.8.2"){
+        exclude group: "", module: "c++_shared"   // 只排掉它带的旧 libc++
+    }
+    implementation("org.maplibre.gl:android-plugin-annotation-v9:3.0.2")
+    implementation("org.maplibre.gl:android-plugin-localization-v9:3.0.2")
+}

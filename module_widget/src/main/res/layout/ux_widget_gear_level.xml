@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <com.autel.common.widget.OutlineTextView
+        android:id="@+id/tv_gear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_6dp"
+        android:layout_marginEnd="@dimen/common_10dp"
+        android:layout_marginBottom="@dimen/common_6dp"
+        android:background="@drawable/mission_shape_gear_model"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/common_7dp"
+        android:paddingEnd="@dimen/common_7dp"
+        android:paddingVertical="@dimen/common_5dp"
+        android:text="@string/common_text_comfort_gear"
+        android:textColor="@color/common_color_white"
+        android:textSize="@dimen/common_text_size_sp_15"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:outlineColor="@color/common_color_black_50"
+        app:outlineWidth="@dimen/common_line_width" />
+</merge>

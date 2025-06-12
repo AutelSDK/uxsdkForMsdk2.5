@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="@dimen/common_450dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/common_50dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_using_account"
+            style="@style/common_font_white_16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_30dp"
+            android:layout_marginTop="@dimen/common_15dp"
+            android:gravity="left"
+            android:text="@string/common_text_rtk_del_rtk_using_account"
+            android:textColor="@color/common_color_BDBDBD" />
+
+        <include
+            layout="@layout/setting_rtk_historical_account_item"
+            android:id="@+id/ly_using_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_15dp"
+            android:layout_marginLeft="@dimen/common_15dp"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/tv_historical_account"
+            style="@style/common_font_white_16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_30dp"
+            android:layout_marginTop="@dimen/common_15dp"
+            android:gravity="left"
+            android:text="@string/common_text_rtk_historical_account"
+            android:textColor="@color/common_color_BDBDBD"
+             />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_accout_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_15dp"
+            android:layout_marginBottom="@dimen/common_15dp"
+            android:layout_marginLeft="@dimen/common_15dp"
+
+            android:background="@drawable/common_item_bg_all"/>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

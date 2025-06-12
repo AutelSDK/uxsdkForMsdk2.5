@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/common_variety_status_bar_height"
+    android:background="@android:color/transparent"
+    tools:ignore="MissingDefaultResource">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_left"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.14" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.86" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_front"
+        android:layout_width="@dimen/common_0dp"
+        android:layout_height="@dimen/common_50dp"
+        app:layout_constraintEnd_toEndOf="@+id/guide_right"
+        app:layout_constraintStart_toStartOf="@+id/guide_left"
+        app:layout_constraintTop_toTopOf="@+id/guide_top">
+
+        <ImageView
+            android:id="@+id/radar_front_one"
+            android:layout_width="@dimen/common_0dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/radar_front_two"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/mission_icon_radar_warn_red_edge" />
+
+        <ImageView
+            android:id="@+id/radar_front_two"
+            android:layout_width="@dimen/common_0dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/radar_front_three"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/radar_front_one"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/mission_icon_radar_warn_red_middle" />
+
+        <ImageView
+            android:id="@+id/radar_front_three"
+            android:layout_width="@dimen/common_0dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/radar_front_four"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/radar_front_two"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/mission_icon_radar_warn_red_middle" />
+
+        <ImageView
+            android:id="@+id/radar_front_four"
+            android:layout_width="@dimen/common_0dp"
+            android:layout_height="match_parent"
+            android:rotationY="180"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/radar_front_three"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/mission_icon_radar_warn_red_edge" />
+
+        <com.autel.common.widget.OutlineTextView
+            android:id="@+id/tv_front"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:includeFontPadding="false"
+            android:layout_marginTop="@dimen/common_15dp"
+            android:textColor="@color/common_color_FEE15D"
+            android:textSize="@dimen/common_text_size_sp_14"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:outlineColor="@color/common_color_black_50"
+            app:outlineWidth="@dimen/common_0_5dp"
+            tools:text="机头 5m" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_left"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/layout_rear"
+        app:layout_constraintStart_toStartOf="@+id/guide_left"
+        app:layout_constraintTop_toBottomOf="@+id/layout_front">
+
+        <ImageView
+            android:id="@+id/radar_left_one"
+            android:layout_width="@dimen/common_50dp"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@id/radar_left_two"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_weight="1"
+            tools:src="@drawable/mission_icon_radar_warn_red_side" />
+
+        <ImageView
+            android:id="@+id/radar_left_two"
+            android:layout_width="@dimen/common_50dp"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@id/radar_left_three"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radar_left_one"
+            app:layout_constraintVertical_weight="1"
+            tools:src="@drawable/mission_icon_radar_warn_red_side" />
+
+        <ImageView
+            android:id="@+id/radar_left_three"
+            android:layout_width="@dimen/common_50dp"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radar_left_two"
+            app:layout_constraintVertical_weight="1"
+            tools:src="@drawable/mission_icon_radar_warn_red_side" />
+
+        <com.autel.common.widget.OutlineTextView
+            android:id="@+id/tv_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/common_15dp"
+            android:includeFontPadding="false"
+            android:textColor="@color/common_color_red"
+            android:textSize="@dimen/common_text_size_sp_14"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/layout_left"
+            app:layout_constraintTop_toTopOf="parent"
+            app:outlineColor="@color/common_color_black_50"
+            app:outlineWidth="0.6dp"
+            tools:text="左侧 2m" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_right"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/layout_rear"
+        app:layout_constraintEnd_toEndOf="@+id/guide_right"
+        app:layout_constraintTop_toBottomOf="@+id/layout_front">
+
+        <ImageView
+            android:id="@+id/radar_right_one"
+            android:layout_width="@dimen/common_50dp"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            android:rotationY="180"
+            app:layout_constraintBottom_toTopOf="@+id/radar_right_two"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_weight="1"
+            tools:src="@drawable/mission_icon_radar_warn_red_side" />
+
+        <ImageView
+            android:id="@+id/radar_right_two"
+            android:layout_width="@dimen/common_50dp"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            android:rotationY="180"
+            app:layout_constraintBottom_toTopOf="@+id/radar_right_three"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radar_right_one"
+            app:layout_constraintVertical_weight="1"
+            tools:src="@drawable/mission_icon_radar_warn_red_side" />
+
+        <ImageView
+            android:id="@+id/radar_right_three"
+            android:layout_width="@dimen/common_50dp"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            android:rotationY="180"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radar_right_two"
+            app:layout_constraintVertical_weight="1"
+            tools:src="@drawable/mission_icon_radar_warn_red_side" />
+
+
+        <com.autel.common.widget.OutlineTextView
+            android:id="@+id/tv_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/common_15dp"
+            android:includeFontPadding="false"
+            android:textColor="@color/common_color_red"
+            android:textSize="@dimen/common_text_size_sp_14"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:outlineColor="@color/common_color_black_50"
+            app:outlineWidth="0.6dp"
+            tools:text="右侧 5m" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_rear"
+        android:layout_width="@dimen/common_0dp"
+        android:layout_height="@dimen/common_50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/guide_bottom"
+        app:layout_constraintEnd_toEndOf="@id/guide_right"
+        app:layout_constraintStart_toStartOf="@id/guide_left">
+
+        <ImageView
+            android:id="@+id/radar_rear_one"
+            android:layout_width="@dimen/common_0dp"
+            android:layout_height="match_parent"
+            android:rotationX="180"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/radar_rear_two"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/mission_icon_radar_warn_red_edge" />
+
+        <ImageView
+            android:id="@+id/radar_rear_two"
+            android:layout_width="@dimen/common_0dp"
+            android:layout_height="match_parent"
+            android:rotationX="180"
+            android:rotationY="0"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/radar_rear_three"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/radar_rear_one"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/mission_icon_radar_warn_red_middle" />
+
+        <ImageView
+            android:id="@+id/radar_rear_three"
+            android:layout_width="@dimen/common_0dp"
+            android:layout_height="match_parent"
+            android:rotationX="180"
+            android:rotationY="0"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/radar_rear_four"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/radar_rear_two"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/mission_icon_radar_warn_red_middle" />
+
+        <ImageView
+            android:id="@+id/radar_rear_four"
+            android:layout_width="@dimen/common_0dp"
+            android:layout_height="match_parent"
+            android:rotation="180"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/radar_rear_three"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/mission_icon_radar_warn_red_edge" />
+
+        <com.autel.common.widget.OutlineTextView
+            android:id="@+id/tv_rear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:includeFontPadding="false"
+            android:textColor="@color/common_color_red"
+            android:textSize="@dimen/common_text_size_sp_14"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:outlineColor="@color/common_color_black_50"
+            app:outlineWidth="@dimen/common_0_5dp"
+            tools:text="机尾 2m" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/layout_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_30dp"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/common_18dp"
+        android:paddingVertical="@dimen/common_13dp"
+        app:layout_constraintEnd_toEndOf="@+id/layout_right"
+        app:layout_constraintStart_toStartOf="@+id/layout_left"
+        app:layout_constraintTop_toBottomOf="@+id/layout_front"
+        tools:background="@drawable/mission_icon_radar_warn_red_center">
+
+        <com.autel.common.widget.OutlineTextView
+            android:id="@+id/tv_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:textColor="@color/common_color_red"
+            android:textSize="@dimen/common_text_size_sp_14"
+            app:outlineColor="@color/common_color_black_50"
+            app:outlineWidth="@dimen/common_0_5dp"
+            tools:text="上方 3M" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_30dp"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/common_18dp"
+        android:paddingVertical="@dimen/common_13dp"
+        app:layout_constraintBottom_toTopOf="@+id/layout_rear"
+        app:layout_constraintEnd_toEndOf="@+id/layout_right"
+        app:layout_constraintStart_toStartOf="@+id/layout_left"
+        tools:background="@drawable/mission_icon_radar_warn_yellow_center">
+
+        <com.autel.common.widget.OutlineTextView
+            android:id="@+id/tv_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/common_5dp"
+            android:includeFontPadding="false"
+            android:textColor="@color/common_color_FEE15D"
+            android:textSize="@dimen/common_text_size_sp_14"
+            app:outlineColor="@color/common_color_black_50"
+            app:outlineWidth="@dimen/common_0_5dp"
+            tools:text="下方 3M" />
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

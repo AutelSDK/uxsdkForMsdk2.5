@@ -1,0 +1,33 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+        //不要移动maven库顺序
+        maven { url = 'https://public-nexus3.autelrobotics.com/repository/sdk/' }
+    }
+}
+
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven {
+            url = 'https://api.mapbox.com/downloads/v2/releases/maven'
+        }
+        maven { url = "https://jitpack.io" }
+        //不要移动maven库顺序
+        maven { url = 'https://public-nexus3.autelrobotics.com/repository/sdk/' }
+        //maplibre的地址
+        maven { url = 'https://oss.sonatype.org/content/repositories/snapshots/' }
+    }
+}
+
+include ':module_setting'
+include ':module_widget'
+include ':uxddemo'

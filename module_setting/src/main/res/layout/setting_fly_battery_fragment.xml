@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="@dimen/common_450dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_battrty_parameter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/common_shape_rect_solid_color_1c1c1e_radius_9"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/common_10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_all_power"
+                    android:layout_width="@dimen/common_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/common_15dp"
+                    android:layout_marginEnd="@dimen/common_5dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/common_text_all_power"
+                    android:textColor="@color/common_color_white"
+                    android:textSize="@dimen/common_text_size_sp_17" />
+
+                <TextView
+                    android:id="@+id/tv_battery_percentage_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/common_15dp"
+                    android:textColor="@color/common_battery_setting_safe"
+                    android:textSize="@dimen/common_text_size_sp_19"
+                    tools:text="80%" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/common_10dp"
+                android:layout_marginBottom="@dimen/common_10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_estimated_flight"
+                    android:layout_width="@dimen/common_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/common_15dp"
+                    android:layout_marginEnd="@dimen/common_5dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/common_text_estimated_flight"
+                    android:textColor="@color/common_color_white"
+                    android:textSize="@dimen/common_text_size_sp_17" />
+
+                <TextView
+                    android:id="@+id/tv_estimated_flight_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/common_15dp"
+                    android:textColor="@color/common_battery_setting_safe"
+                    android:textSize="@dimen/common_text_size_sp_19"
+                    tools:text="18:20" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line"
+                style="@style/common_horizontal_line"
+                android:layout_marginStart="@dimen/common_15dp"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_60dp">
+
+                <TextView
+                    android:id="@+id/tv_battery_dirct"
+                    style="@style/common_font_white_16"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/common_15dp"
+                    android:text="@string/common_text_right_radio_btn_battery" />
+
+                <TextView
+                    android:id="@+id/tv_battery_state"
+                    style="@style/common_font_white_16"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/common_15dp"
+                    tools:text="正常" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/common_25dp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_battery_percentage"
+                        style="@style/common_font_white_18"
+                        tools:text="0%" />
+
+                    <TextView
+                        style="@style/common_font_gray_white_16"
+                        android:layout_marginTop="@dimen/common_3dp"
+                        android:text="@string/common_text_electric_quantity" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_battery_temperature"
+                        style="@style/common_font_white_18"
+                        android:text="0°C" />
+
+                    <TextView
+                        style="@style/common_font_gray_white_16"
+                        android:layout_marginTop="@dimen/common_3dp"
+                        android:text="@string/common_text_temperature" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_battery_voltage"
+                        style="@style/common_font_white_18"
+                        android:text="0V" />
+
+                    <TextView
+                        style="@style/common_font_gray_white_16"
+                        android:layout_marginTop="@dimen/common_3dp"
+                        android:text="@string/common_text_voltage" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_battery_discharge_times"
+                        style="@style/common_font_white_18"
+                        android:text="0" />
+
+                    <TextView
+                        style="@style/common_font_gray_white_16"
+                        android:layout_marginTop="@dimen/common_3dp"
+                        android:text="@string/common_text_discharge_times" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line_1"
+                style="@style/common_horizontal_line"
+                android:layout_marginStart="@dimen/common_15dp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/rl_state_1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_60dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_battery_dirct_1"
+                    style="@style/common_font_white_16"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/common_15dp"
+                    android:text="@string/common_text_right_radio_btn_battery" />
+
+                <TextView
+                    android:id="@+id/tv_battery_state_1"
+                    style="@style/common_font_white_16"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/common_15dp"
+                    tools:text="正常" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_state_info_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/common_25dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="4">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_battery_percentage_1"
+                        style="@style/common_font_white_18"
+                        android:text="0%" />
+
+                    <TextView
+                        style="@style/common_font_gray_white_16"
+                        android:layout_marginTop="@dimen/common_3dp"
+                        android:text="@string/common_text_electric_quantity" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_battery_temperature_1"
+                        style="@style/common_font_white_18"
+                        android:text="0°C" />
+
+                    <TextView
+                        style="@style/common_font_gray_white_16"
+                        android:layout_marginTop="@dimen/common_3dp"
+                        android:text="@string/common_text_temperature" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_battery_voltage_1"
+                        style="@style/common_font_white_18"
+                        android:text="0V" />
+
+                    <TextView
+                        style="@style/common_font_gray_white_16"
+                        android:layout_marginTop="@dimen/common_3dp"
+                        android:text="@string/common_text_voltage" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_battery_discharge_times_1"
+                        style="@style/common_font_white_18"
+                        android:text="0" />
+
+                    <TextView
+                        style="@style/common_font_gray_white_16"
+                        android:layout_marginTop="@dimen/common_3dp"
+                        android:text="@string/common_text_discharge_times" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.autel.setting.widget.DoubleThumbBar
+            android:id="@+id/batterySeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_109dp"
+            android:layout_marginTop="@dimen/common_8dp"
+            android:background="@drawable/common_shape_rect_solid_color_1c1c1e_radius_9"
+            app:bar_endMargin="@dimen/common_15dp"
+            app:bar_firstMaxProgress="17"
+            app:bar_firstMinProgress="0"
+            app:bar_firstProgressColor="@color/common_color_d80000"
+            app:bar_firstTextColor="@color/common_color_d80000"
+            app:bar_firstThumb="@drawable/common_seekbar_thumb"
+            app:bar_intervalProgress="5"
+            app:bar_maxProgress="42"
+            app:bar_normalTextColor="@color/common_color_bdbdc0"
+            app:bar_progressBackgroundColor="@color/common_color_6dd400"
+            app:bar_progressHeight="@dimen/common_3dp"
+            app:bar_progressOffset="8"
+            app:bar_secondaryMinProgress="7"
+            app:bar_secondaryProgressColor="@color/common_color_secondary_fa6400"
+            app:bar_secondaryTextColor="@color/common_color_secondary_fa6400"
+            app:bar_secondaryThumb="@drawable/common_seekbar_thumb"
+            app:bar_startMargin="@dimen/common_15dp"
+            app:bar_thumbSize="@dimen/common_20dp"
+            app:bar_tipTextSize="@dimen/common_text_size_sp_19" />
+
+        <com.autel.common.widget.CommonItemSwitch
+            android:id="@+id/cis_quick_power_change"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_8dp"
+            android:background="@drawable/common_shape_rect_solid_color_1c1c1e_radius_9"
+            android:paddingBottom="@dimen/common_15dp"
+            android:visibility="gone"
+            app:bottom_line_visibility="gone"
+            app:content_value="@string/common_text_quick_power_change_tips"
+            app:title_name="@string/common_text_quick_power_change" />
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
+

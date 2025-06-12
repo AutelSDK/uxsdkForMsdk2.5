@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/common_100dp"
+    android:layout_height="@dimen/common_100dp"
+    tools:background="@color/black"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <ImageView
+        android:id="@+id/iv_function"
+        android:layout_width="@dimen/common_44dp"
+        android:layout_height="@dimen/common_44dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/tv_function"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:src="@drawable/common_icon_return_home" />
+
+    <ImageView
+        android:id="@+id/iv_edit"
+        android:layout_width="@dimen/common_18dp"
+        android:layout_height="@dimen/common_18dp"
+        android:src="@drawable/mission_ic_function_edit_add"
+        app:layout_constraintEnd_toEndOf="@+id/iv_function"
+        app:layout_constraintTop_toTopOf="@+id/iv_function" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_function"
+        android:layout_width="@dimen/common_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_4dp"
+        android:gravity="center|top"
+        android:includeFontPadding="false"
+        android:lines="2"
+        android:ellipsize="end"
+        android:textColor="@color/common_color_selector_enable_select_high_light"
+        android:textSize="@dimen/common_text_size_sp_14"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_function"
+        tools:text="1212233" />
+
+    <View
+        android:id="@+id/virtual_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+</merge>

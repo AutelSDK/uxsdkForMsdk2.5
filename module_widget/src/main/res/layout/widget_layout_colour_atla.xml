@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/common_10dp"
+        android:background="@drawable/common_shape_rect_solid_color_99_26_radius_9"
+        app:layout_constraintStart_toEndOf="@+id/tv_colour_atla"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_colour_atla"
+            android:layout_width="@dimen/common_variety_codec_btn_size"
+            android:layout_height="@dimen/common_variety_codec_btn_size"
+            android:padding="@dimen/common_8_5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/mission_selector_colour_atla"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/model_change"
+            android:layout_width="@dimen/common_80dp"
+            android:layout_height="@dimen/common_41dp"
+            android:layout_marginStart="@dimen/common_4dp"
+            android:background="@drawable/common_shape_rect_solid_white_10_radius_8"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_colour_atla"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/temp_interval"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/common_color_white"
+                android:textSize="@dimen/common_text_size_sp_14"
+                android:textStyle="bold"
+                tools:text="-150~150" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/common_text_model"
+                android:textColor="@color/common_color_white"
+                android:textSize="@dimen/common_text_size_sp_12" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <ImageView
+            android:id="@+id/iv_model_change_loading"
+            android:layout_width="@dimen/common_80dp"
+            android:layout_height="@dimen/common_41dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:scaleType="center"
+            android:src="@drawable/mission_ic_change_mode"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/model_change"
+            app:layout_constraintEnd_toEndOf="@id/model_change"
+            app:layout_constraintStart_toStartOf="@id/model_change"
+            app:layout_constraintTop_toTopOf="@id/model_change" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="end"
+            app:constraint_referenced_ids="iv_model_change_loading,model_change" />
+
+        <TextView
+            android:id="@+id/tv_ffc"
+            android:layout_width="@dimen/common_41dp"
+            android:layout_height="@dimen/common_41dp"
+            android:layout_marginStart="@dimen/common_10dp"
+            android:layout_marginEnd="@dimen/common_10dp"
+            android:background="@drawable/common_shape_rect_solid_white_10_radius_8"
+            android:gravity="center"
+            android:text="FFC"
+            android:textColor="@color/common_color_white"
+            android:textSize="@dimen/common_text_size_sp_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/barrier_end"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</merge>

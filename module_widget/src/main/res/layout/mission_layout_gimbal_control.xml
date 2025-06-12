@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:ignore="MissingDefaultResource">
+
+    <com.autel.ui.TriangleView
+        android:id="@+id/triangle"
+        android:layout_width="@dimen/common_8dp"
+        android:layout_height="@dimen/common_17dp"
+        android:background="@color/common_color_b2_17"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:triangle_view_direction="left" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/mission_selector_icon_bg_all"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/triangle"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/ll_gimbal_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/common_8dp"
+            android:paddingBottom="@dimen/common_8dp">
+
+
+            <ImageView
+                android:id="@+id/iv_gimbal_top"
+                android:layout_width="@dimen/common_40dp"
+                android:layout_height="@dimen/common_47dp"
+                android:layout_marginStart="@dimen/common_4dp"
+                android:layout_marginEnd="@dimen/common_4dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/mission_ic_gimbal_top" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/v_line_top"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_line_width"
+            android:background="#C2C2C2" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_gimbal_angle_top_45"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/common_8dp"
+            android:paddingBottom="@dimen/common_8dp">
+
+
+            <ImageView
+                android:id="@+id/iv_gimbal_angle_top_45"
+                android:layout_width="@dimen/common_40dp"
+                android:layout_height="@dimen/common_47dp"
+                android:layout_marginStart="@dimen/common_4dp"
+                android:layout_marginEnd="@dimen/common_4dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/mission_ic_gimbal_angle_top_45" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/v_line_top_45"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_line_width"
+            android:background="#C2C2C2" />
+
+        <LinearLayout
+            android:id="@+id/ll_gimbal_middle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/common_8dp"
+            android:paddingBottom="@dimen/common_8dp">
+
+
+            <ImageView
+                android:id="@+id/iv_gimbal_middle"
+                android:layout_width="@dimen/common_40dp"
+                android:layout_height="@dimen/common_47dp"
+                android:layout_marginStart="@dimen/common_4dp"
+                android:layout_marginEnd="@dimen/common_4dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/mission_ic_gimbal_middle" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_line_width"
+            android:background="#C2C2C2" />
+
+        <LinearLayout
+            android:id="@+id/ll_gimbal_angle_45"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/common_8dp"
+            android:paddingBottom="@dimen/common_8dp">
+
+            <ImageView
+                android:id="@+id/iv_gimbal_angel_45"
+                android:layout_width="@dimen/common_40dp"
+                android:layout_height="@dimen/common_47dp"
+                android:layout_marginStart="@dimen/common_4dp"
+                android:layout_marginEnd="@dimen/common_4dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/mission_ic_gimbal_angle_45" />
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_line_width"
+            android:background="#C2C2C2" />
+
+        <LinearLayout
+            android:id="@+id/ll_gimbal_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/common_8dp"
+            android:paddingBottom="@dimen/common_8dp">
+
+            <ImageView
+                android:id="@+id/iv_gimbal_bottom"
+                android:layout_width="@dimen/common_40dp"
+                android:layout_height="@dimen/common_47dp"
+                android:layout_marginStart="@dimen/common_4dp"
+                android:layout_marginEnd="@dimen/common_4dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/mission_ic_gimbal_bottom" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

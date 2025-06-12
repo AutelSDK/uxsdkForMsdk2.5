@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/common_variety_codec_left_btn_size"
+    android:layout_height="@dimen/common_variety_codec_left_btn_size"
+    android:background="@drawable/mission_selector_icon_bg_all"
+    tools:parentTag="com.autel.common.base.widget.ConstraintLayoutWidget">
+
+    <ImageView
+        android:id="@+id/iv_gimbal_sacle"
+        android:layout_width="@dimen/common_30dp"
+        android:layout_height="@dimen/common_30dp"
+        android:layout_marginTop="@dimen/common_variety_codec_gimbal_margin_top"
+        android:scaleType="fitXY"
+        android:src="@drawable/common_ic_gimbal_scale"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_pitch_angle"
+        android:layout_width="@dimen/common_24dp"
+        android:layout_height="@dimen/common_21dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/mission_ic_gimbal_pitch_angel"
+        app:layout_constraintBottom_toBottomOf="@id/iv_gimbal_sacle"
+        app:layout_constraintEnd_toEndOf="@+id/iv_gimbal_sacle"
+        app:layout_constraintTop_toTopOf="@id/iv_gimbal_sacle" />
+
+    <TextView
+        android:id="@+id/tv_pitch_angle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_1_5dp"
+        android:layout_marginTop="@dimen/common_6dp"
+        android:textColor="@color/common_color_white"
+        android:textSize="@dimen/common_text_size_sp_13"
+        app:layout_constraintStart_toStartOf="@+id/iv_gimbal_sacle"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="20°" />
+
+</merge>

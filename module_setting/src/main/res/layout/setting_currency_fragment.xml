@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_gnss_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/common_item_bg_all"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.autel.common.widget.CommonItemSwitch
+            android:id="@+id/cis_is_open_gnss_location"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_55dp"
+            android:background="@null"
+            android:text="@string/common_text_gnss_location"
+            app:bottom_line_visibility="gone"
+            app:content_visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:start_margin="@dimen/common_15dp"
+            app:title_name="@string/common_text_gnss_location" />
+
+        <View
+            android:id="@+id/v_gness_line_1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_line_width"
+            android:layout_marginStart="@dimen/common_15dp"
+            android:background="@color/common_color_white_50"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cis_is_open_gnss_location" />
+
+        <TextView
+            android:id="@+id/tv_choice_gps"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_50dp"
+            android:drawableStart="@drawable/setting_is_select"
+            android:drawablePadding="@dimen/common_15dp"
+            android:gravity="center"
+            android:text="@string/common_text_choice_gps"
+            android:textColor="@color/common_color_white"
+            android:textSize="@dimen/common_text_size_sp_16"
+            app:layout_constraintLeft_toLeftOf="@id/v_gness_line_1"
+            app:layout_constraintTop_toBottomOf="@id/v_gness_line_1" />
+
+        <View
+            android:id="@+id/v_gness_line_2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_line_width"
+            android:layout_marginStart="@dimen/common_15dp"
+            android:background="@color/common_color_white_50"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_choice_gps" />
+
+        <TextView
+            android:id="@+id/tv_choice_galileo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_50dp"
+            android:drawableStart="@drawable/setting_is_select"
+            android:drawablePadding="@dimen/common_15dp"
+            android:gravity="center"
+            android:text="@string/common_text_galileo"
+            android:textColor="@color/common_color_white"
+            android:textSize="@dimen/common_text_size_sp_16"
+            app:layout_constraintLeft_toLeftOf="@id/v_gness_line_2"
+            app:layout_constraintTop_toBottomOf="@id/v_gness_line_2" />
+
+        <View
+            android:id="@+id/v_gness_line_3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_line_width"
+            android:layout_marginStart="@dimen/common_15dp"
+            android:background="@color/common_color_white_50"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_choice_galileo" />
+
+        <TextView
+            android:id="@+id/tv_choice_glonass"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_50dp"
+            android:drawableStart="@drawable/setting_is_select"
+            android:drawablePadding="@dimen/common_15dp"
+            android:gravity="center"
+            android:text="@string/common_text_glonass"
+            android:textColor="@color/common_color_white"
+            android:textSize="@dimen/common_text_size_sp_16"
+            app:layout_constraintLeft_toLeftOf="@id/v_gness_line_3"
+            app:layout_constraintTop_toBottomOf="@id/v_gness_line_3" />
+
+        <View
+            android:id="@+id/v_gness_line_4"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_line_width"
+            android:layout_marginStart="@dimen/common_15dp"
+            android:background="@color/common_color_white_50"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_choice_glonass" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_50dp"
+            android:drawableStart="@drawable/setting_is_select"
+            android:drawablePadding="@dimen/common_15dp"
+            android:gravity="center"
+            android:text="@string/common_text_gps_location_1"
+            android:textColor="@color/common_color_white"
+            android:textSize="@dimen/common_text_size_sp_16"
+            app:layout_constraintLeft_toLeftOf="@id/v_gness_line_4"
+            app:layout_constraintTop_toBottomOf="@id/v_gness_line_4" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.autel.common.widget.CommonItemSwitch
+        android:id="@+id/cis_north"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_55dp"
+        android:layout_marginTop="@dimen/common_8dp"
+        android:background="@drawable/common_item_bg_all"
+        android:text="@string/common_text_compass"
+        app:bottom_line_visibility="gone"
+        app:content_visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_gnss_location"
+        app:start_margin="@dimen/common_15dp"
+        app:title_name="@string/common_text_gnss_location" />
+
+
+    <com.autel.common.widget.CommonItemSwitch
+        android:id="@+id/cis_coach_model"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_55dp"
+        android:layout_marginTop="@dimen/common_8dp"
+        android:background="@drawable/common_item_bg_all"
+        app:bottom_line_visibility="gone"
+        app:content_value="@string/common_text_coach_sub_title"
+        app:content_visibility="visible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cis_north"
+        app:start_margin="@dimen/common_15dp"
+        app:title_name="@string/common_text_coach_title" />
+
+    <com.autel.common.widget.CommonItemSwitch
+        android:id="@+id/cis_dsp_sing"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_55dp"
+        android:layout_marginTop="@dimen/common_8dp"
+        android:background="@drawable/common_item_bg_all"
+        android:text="@string/common_text_dsp_signal"
+        app:bottom_line_visibility="gone"
+        app:content_visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cis_coach_model"
+        app:start_margin="@dimen/common_15dp"
+        app:title_name="@string/common_text_dsp_signal" />
+
+    <com.autel.common.widget.CommonItemSwitch
+        android:id="@+id/cis_anti_deception"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_55dp"
+        android:layout_marginTop="@dimen/common_8dp"
+        android:background="@drawable/common_item_bg_all"
+        android:text="@string/common_text_anti_deception"
+        app:bottom_line_visibility="gone"
+        app:content_visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cis_dsp_sing"
+        app:start_margin="@dimen/common_15dp"
+        app:title_name="@string/common_text_anti_deception" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_color_13">
+
+    <com.autel.codec.splitscreen.widget.AutelSplitScreenViewGroup
+        android:id="@+id/autel_split_screen_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.UxsdkDemoActivity" />
+
+    <com.autel.widget.function.view.VirtualFunctionBarView
+        android:id="@+id/virtual_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.autel.widget.widget.statusbar.StatusBarView
+        android:id="@+id/status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <FrameLayout
+        android:id="@+id/fl_test_sky_link"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/common_80dp"
+        android:layout_marginTop="@dimen/common_100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.autel.widget.widget.attitude.AttitudeBallWidget
+        android:id="@+id/attitude_ball"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/common_variety_attitude_margin_end"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.autel.codec.splitscreen.widget.ScreenShortcutView
+        android:id="@+id/screen_shortcut_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_15dp"
+        android:layout_marginEnd="@dimen/common_variety_screen_shortcut_margin_end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/virtual_bar"
+        tools:context=".view.UxsdkDemoActivity" />
+
+    <com.autel.codec.splitscreen.widget.CodecTabSwitchView
+        android:id="@+id/codec_tab_view"
+        android:layout_width="@dimen/common_variety_codec_left_btn_size"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_10dp"
+        android:layout_marginTop="@dimen/common_15dp"
+        android:visibility="visible"
+        app:isVerticalDirection="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/virtual_bar" />
+
+    <com.autel.widget.widget.gimbalpitch.GimbalPitchWidget
+        android:id="@+id/fl_gimbal"
+        android:layout_width="@dimen/common_variety_codec_left_btn_size"
+        android:layout_height="@dimen/common_variety_codec_left_btn_size"
+        android:layout_marginStart="@dimen/common_10dp"
+        android:layout_marginTop="@dimen/common_5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/codec_tab_view" />
+
+    <com.autel.widget.widget.cancellanding.CancelLandingWidget
+        android:id="@+id/cancel_land"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_10dp"
+        android:layout_marginTop="@dimen/common_5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fl_gimbal" />
+
+    <com.autel.widget.widget.codectoolright.CodecToolRightWidget
+        android:id="@+id/codec_tool_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/common_variety_codec_tool_margin_end"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.autel.widget.function.view.FunctionBarView
+        android:id="@+id/function_view"
+        android:layout_width="@dimen/common_0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/rs_status"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/status_bar" />
+
+    <com.autel.widget.widget.remotestatusbar.RemoteStatusView
+        android:id="@+id/rs_status"
+        android:layout_width="@dimen/common_130dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/virtual_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/function_view" />
+
+    <ImageView
+        android:id="@+id/iv_bar_collapse"
+        android:layout_width="@dimen/common_60dp"
+        android:layout_height="@dimen/common_15dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/common_ic_function_bar_collapse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/virtual_bar" />
+
+    <FrameLayout
+        android:id="@+id/layout_panel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_0dp"
+        android:elevation="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/virtual_bar" />
+
+    <com.autel.widget.function.view.FunctionSuspensionView
+        android:id="@+id/function_suspension_view"
+        android:layout_width="@dimen/common_74dp"
+        android:layout_height="@dimen/common_74dp"
+        android:layout_marginStart="@dimen/common_10dp"
+        android:layout_marginTop="@dimen/common_19dp"
+        android:elevation="1dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/common_icon_float"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.autel.widget.function.view.FunctionFloatWindowView
+        android:id="@+id/function_float_window_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="1dp"
+        android:visibility="gone" />
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/function_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:flexDirection="column"
+        android:paddingVertical="@dimen/common_10dp"
+        android:paddingHorizontal="@dimen/common_83dp"
+        app:flexWrap="wrap"
+        app:justifyContent="flex_start"
+        app:showDivider="beginning|middle"
+        app:dividerDrawable="@drawable/flexbox_layout_divider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/function_view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

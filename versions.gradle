@@ -1,0 +1,47 @@
+rootProject.ext {
+    autel = [
+            'sdk': [
+                    'debugtools'   : "com.autel.sdk:debugtools:1.0.1@aar",
+                    'expose'       : "com.autel.sdk:expose:1.0.1",
+                    'debugtoolsfordragonfish'   : "com.autel.sdk:debugtoolsfordragonfish:1.0.1@aar",
+                    'exposefordragonfish'       : "com.autel.sdk:exposefordragonfish:1.0.1",
+                    'dronecenter'  : "com.autel.sdk:dronecenter:1.0.1",
+                    'mediacenter'  : "com.autel.sdk:mediacenter:1.0.1",
+                    'libnetty'     : "com.autel.sdk:libnetty:1.0.1",
+                    'protocol'     : "com.autel.sdk:protocol:1.0.1",
+                    'linkage'      : "com.autel.sdk:linkage:1.0.1",
+                    'libbase'      : "com.autel.sdk:libbase:1.0.1",
+                    'libcloud'     : "com.autel.sdk:libcloud:1.0.1",
+                    'FloatX'       : "com.autel.sdk:FloatX:1.0.0",
+                    'autobanh'     : "com.autel.sdk:autobanh:1.0.0@jar",
+                    'libmqtt'      : "com.autel.sdk:libmqtt:1.0.1",
+                    'webrtc'       : "com.autel.sdk:webrtc:1.0.1",
+                    'cloudapi'     : "com.autel.sdk:cloudapi:1.0.18",
+                    'libAutelRtmp' : "com.autel.component:libAutelRtmp:1.0.1",
+                    'dragonfish_ext' : "com.autel.sdk:dragonfish_ext:1.0.1",
+            ],
+            'msdk2': [
+                    'exposefordragonfish'   : "com.autel.sdk:exposefordragonfish:1.0.1",
+                    'debugtoolsfordragonfish': "com.autel.sdk:debugtoolsfordragonfish:1.0.1",
+            ],
+            'uxsdk': [
+                    'msdk' : "com.autel.sdk.uxsdk:msdk:1.0.0",
+                    'debugtools' : "com.autel.sdk.uxsdk:debugtools:1.0.0",
+                    'BaseRecyclerViewAdapterHelper' : "com.autel.sdk.uxsdk:BaseRecyclerViewAdapterHelper:1.0.0",
+                    'gdal' : "com.autel.sdk.uxsdk:gdal:1.0.0",
+                    'log' : "com.autel.sdk.uxsdk:log:1.0.0",
+                    'storage' : "com.autel.sdk.uxsdk:storage:1.0.0",
+                    'ui' : "com.autel.sdk.uxsdk:ui:1.0.0",
+                    'ffmpegkitmingpl' : "com.autel.sdk.uxsdk:ffmpeg-kit-min-gpl:1.0.0",
+                    'legal' : "com.autel.sdk.uxsdk:legal:1.0.0",
+                    'data' : "com.autel.sdk.uxsdk:data:1.0.0",
+                    'map' : "com.autel.sdk.uxsdk:map:1.0.3",
+                    'album' : "com.autel.sdk.uxsdk:album:1.0.2",
+                    'camera' : "com.autel.sdk.uxsdk:camera:1.0.0",
+                    'codec' : "com.autel.sdk.uxsdk:codec:1.0.0",
+                    'utils' : "com.autel.sdk.uxsdk:utils:1.0.0",
+                    'frame' : "com.autel.sdk.uxsdk:frame:1.0.4",
+                    'mesh' : "com.autel.sdk.uxsdk:netmesh:1.0.1"
+            ]
+    ]
+} 

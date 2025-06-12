@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_10dp"
+        android:layout_marginTop="@dimen/common_5dp"
+        android:layout_marginEnd="@dimen/common_10dp"
+        android:layout_marginBottom="@dimen/common_5dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:background="@drawable/common_item_bg_all">
+
+        <TextView
+            android:id="@+id/classificationName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common_10dp"
+            android:layout_marginTop="@dimen/common_13dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/common_text_size_sp_18"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="快捷工具" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/funs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/classificationName"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_remote_control_signal"
+        android:layout_width="@dimen/common_30dp"
+        android:layout_height="@dimen/common_25dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/widget_remote_controller_signal_level_list"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</merge>

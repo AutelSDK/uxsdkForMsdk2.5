@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/common_380dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:fitsSystemWindows="true"
+    app:cardBackgroundColor="@color/common_color_ff"
+    app:cardCornerRadius="@dimen/common_14dp"
+    app:cardElevation="0px"
+    tools:ignore="MissingDefaultResource,ResourceName">
+
+    <LinearLayout
+        android:layout_width="@dimen/common_380dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_play_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common_24dp"
+            android:layout_marginTop="@dimen/common_20dp"
+            android:layout_marginEnd="@dimen/common_24dp"
+            android:gravity="center"
+            android:text="@string/common_text_ai_mode_import"
+            android:textColor="@color/common_color_black"
+            android:textSize="@dimen/common_text_size_sp_17"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common_24dp"
+            android:layout_marginTop="@dimen/common_15dp"
+            android:layout_marginEnd="@dimen/common_24dp"
+            android:layout_marginBottom="@dimen/common_20dp"
+            android:gravity="center"
+            android:textColor="@color/common_color_black"
+            android:textSize="@dimen/common_text_size_sp_17"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="“XXXXX”“XXXXX”“XXXXX”已经存在，确定全部替换？" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_1dp"
+            android:background="@color/common_color_cd" />
+
+        <TextView
+            android:id="@+id/tv_replace"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_50dp"
+            android:gravity="center"
+            android:text="@string/common_text_replace"
+            android:textColor="@color/common_color_007aff"
+            android:textSize="@dimen/common_text_size_sp_17"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_1dp"
+            android:background="@color/common_color_cd" />
+
+        <TextView
+            android:id="@+id/tv_jump_to_import"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_50dp"
+            android:gravity="center"
+            android:text="@string/common_text_jump_to_import"
+            android:textColor="@color/common_color_007aff"
+            android:textSize="@dimen/common_text_size_sp_17"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_1dp"
+            android:background="@color/common_color_cd" />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_50dp"
+            android:gravity="center"
+            android:text="@string/common_text_cancel_import"
+            android:textColor="@color/common_color_007aff"
+            android:textSize="@dimen/common_text_size_sp_17"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

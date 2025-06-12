@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@drawable/common_shape_rect_solid_color_00_radius_left_12">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_store"
+        android:layout_width="@dimen/common_450dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/common_15dp"
+        android:layout_marginBottom="@dimen/common_20dp"
+        android:background="@drawable/common_shape_height_1c1c1c_bg_9dp" />
+
+</FrameLayout>

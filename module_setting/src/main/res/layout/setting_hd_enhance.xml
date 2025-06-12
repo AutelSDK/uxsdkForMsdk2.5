@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/common_450dp"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="@dimen/common_450dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/common_item_bg_all"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/common_15dp"
+            android:paddingTop="@dimen/common_20dp"
+            android:paddingEnd="@dimen/common_0dp"
+            android:paddingBottom="@dimen/common_20dp">
+
+            <TextView
+                android:id="@+id/tv_monitoring"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/common_text_on_site_monitoring"
+                android:textColor="@color/common_color_FFFFFFFF"
+                android:textSize="@dimen/common_text_size_sp_19"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_monitor_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/common_15dp"
+                android:textColor="@color/common_color_secondary_e60012"
+                android:textSize="@dimen/common_text_size_sp_19"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/common_text_battery_text_exception" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_drone"
+                android:layout_width="@dimen/common_40dp"
+                android:layout_height="@dimen/common_40dp"
+                android:layout_marginStart="@dimen/common_35dp"
+                android:layout_marginTop="@dimen/common_25dp"
+                android:background="@drawable/icon_enhance_drone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_monitoring" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_network_1"
+                android:layout_width="@dimen/common_40dp"
+                android:layout_height="@dimen/common_40dp"
+                android:background="@drawable/icon_enhance_network"
+                app:layout_constraintBottom_toBottomOf="@id/iv_drone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iv_drone" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_server_1"
+                android:layout_width="@dimen/common_40dp"
+                android:layout_height="@dimen/common_40dp"
+                android:layout_marginEnd="@dimen/common_50dp"
+                android:background="@drawable/icon_enhance_server"
+                app:layout_constraintBottom_toBottomOf="@id/iv_drone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iv_drone" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/network_status_1"
+                android:layout_width="@dimen/common_67dp"
+                android:layout_height="@dimen/common_15dp"
+                android:background="@drawable/icon_network_abnormal"
+                app:layout_constraintBottom_toBottomOf="@id/iv_drone"
+                app:layout_constraintEnd_toStartOf="@id/iv_network_1"
+                app:layout_constraintStart_toEndOf="@id/iv_drone"
+                app:layout_constraintTop_toTopOf="@id/iv_drone" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/network_status_2"
+                android:layout_width="@dimen/common_67dp"
+                android:layout_height="@dimen/common_15dp"
+                android:background="@drawable/icon_network_abnormal"
+                app:layout_constraintBottom_toBottomOf="@id/iv_drone"
+                app:layout_constraintEnd_toStartOf="@id/iv_server_1"
+                app:layout_constraintStart_toEndOf="@id/iv_network_1"
+                app:layout_constraintTop_toTopOf="@id/iv_drone" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_remote"
+                android:layout_width="@dimen/common_40dp"
+                android:layout_height="@dimen/common_40dp"
+                android:layout_marginStart="@dimen/common_35dp"
+                android:layout_marginTop="@dimen/common_60dp"
+                android:background="@drawable/icon_enhance_remote"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_drone" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_network_2"
+                android:layout_width="@dimen/common_40dp"
+                android:layout_height="@dimen/common_40dp"
+                android:background="@drawable/icon_enhance_network"
+                app:layout_constraintBottom_toBottomOf="@id/iv_remote"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iv_remote" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_server_2"
+                android:layout_width="@dimen/common_40dp"
+                android:layout_height="@dimen/common_40dp"
+                android:layout_marginEnd="@dimen/common_50dp"
+                android:background="@drawable/icon_enhance_server"
+                app:layout_constraintBottom_toBottomOf="@id/iv_remote"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iv_remote" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/network_status_3"
+                android:layout_width="@dimen/common_67dp"
+                android:layout_height="@dimen/common_15dp"
+                android:background="@drawable/icon_network_abnormal"
+                app:layout_constraintBottom_toBottomOf="@id/iv_remote"
+                app:layout_constraintEnd_toStartOf="@id/iv_network_2"
+                app:layout_constraintStart_toEndOf="@id/iv_remote"
+                app:layout_constraintTop_toTopOf="@id/iv_remote" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/network_status_4"
+                android:layout_width="@dimen/common_67dp"
+                android:layout_height="@dimen/common_15dp"
+                android:background="@drawable/icon_network_abnormal"
+                app:layout_constraintBottom_toBottomOf="@id/iv_remote"
+                app:layout_constraintEnd_toStartOf="@id/iv_server_2"
+                app:layout_constraintStart_toEndOf="@id/iv_network_2"
+                app:layout_constraintTop_toTopOf="@id/iv_remote" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_4dp"
+                android:gravity="center"
+                android:text="@string/common_text_aircraft"
+                android:textColor="@color/common_color_BDBDBD"
+                android:textSize="@dimen/common_text_size_sp_16"
+                app:layout_constraintEnd_toEndOf="@id/iv_drone"
+                app:layout_constraintStart_toStartOf="@id/iv_drone"
+                app:layout_constraintTop_toBottomOf="@id/iv_drone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_4dp"
+                android:gravity="center"
+                android:text="@string/common_text_network"
+                android:textColor="@color/common_color_BDBDBD"
+                android:textSize="@dimen/common_text_size_sp_16"
+                app:layout_constraintEnd_toEndOf="@id/iv_network_1"
+                app:layout_constraintStart_toStartOf="@id/iv_network_1"
+                app:layout_constraintTop_toBottomOf="@id/iv_network_1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_4dp"
+                android:gravity="center"
+                android:text="@string/common_text_server"
+                android:textColor="@color/common_color_BDBDBD"
+                android:textSize="@dimen/common_text_size_sp_16"
+                app:layout_constraintEnd_toEndOf="@id/iv_server_1"
+                app:layout_constraintStart_toStartOf="@id/iv_server_1"
+                app:layout_constraintTop_toBottomOf="@id/iv_server_1" />
+
+            <TextView
+                android:id="@+id/tv_rc_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_4dp"
+                android:gravity="center"
+                android:text="@string/common_text_right_radio_btn_remote_controller"
+                android:textColor="@color/common_color_BDBDBD"
+                android:textSize="@dimen/common_text_size_sp_16"
+                app:layout_constraintEnd_toEndOf="@id/iv_remote"
+                app:layout_constraintStart_toStartOf="@id/iv_remote"
+                app:layout_constraintTop_toBottomOf="@id/iv_remote" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_4dp"
+                android:gravity="center"
+                android:text="@string/common_text_network"
+                android:textColor="@color/common_color_BDBDBD"
+                android:textSize="@dimen/common_text_size_sp_16"
+                app:layout_constraintEnd_toEndOf="@id/iv_network_2"
+                app:layout_constraintStart_toStartOf="@id/iv_network_2"
+                app:layout_constraintTop_toBottomOf="@id/iv_network_2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_4dp"
+                android:gravity="center"
+                android:text="@string/common_text_server"
+                android:textColor="@color/common_color_BDBDBD"
+                android:textSize="@dimen/common_text_size_sp_16"
+                app:layout_constraintEnd_toEndOf="@id/iv_server_2"
+                app:layout_constraintStart_toStartOf="@id/iv_server_2"
+                app:layout_constraintTop_toBottomOf="@id/iv_server_2" />
+
+            <TextView
+                android:id="@+id/tv_warn_drone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_20dp"
+                android:layout_marginEnd="@dimen/common_15dp"
+                android:background="@drawable/common_item_bg_all_red"
+                android:drawablePadding="@dimen/common_3dp"
+                android:paddingStart="10dp"
+                android:paddingTop="@dimen/common_5dp"
+                android:paddingEnd="@dimen/common_10dp"
+                android:paddingBottom="@dimen/common_5dp"
+                android:text="@string/common_text_enhance_drone_warn_1"
+                android:textColor="@color/common_color_secondary_e60012"
+                android:textSize="@dimen/common_text_size_sp_15"
+                android:visibility="visible"
+                app:drawableStartCompat="@drawable/icon_warn_red"
+                app:layout_constraintTop_toBottomOf="@id/tv_rc_title" />
+
+            <TextView
+                android:id="@+id/tv_warn_rc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_5dp"
+                android:layout_marginEnd="@dimen/common_15dp"
+                android:background="@drawable/common_item_bg_all_red"
+                android:drawablePadding="@dimen/common_3dp"
+                android:paddingStart="10dp"
+                android:paddingTop="@dimen/common_5dp"
+                android:paddingEnd="@dimen/common_10dp"
+                android:paddingBottom="@dimen/common_5dp"
+                android:text="@string/common_text_enhance_rc_warn_1"
+                android:textColor="@color/common_color_secondary_e60012"
+                android:textSize="@dimen/common_text_size_sp_15"
+                android:visibility="visible"
+                app:drawableStartCompat="@drawable/icon_warn_red"
+                app:layout_constraintTop_toBottomOf="@id/tv_warn_drone" />
+
+            <View
+                android:id="@+id/line1"
+                style="@style/common_horizontal_line"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/common_20dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_warn_rc" />
+
+            <com.autel.common.widget.CommonItemText
+                android:id="@+id/cit_enhance_config_title"
+                style="@style/common_font_white_19.5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-15dp"
+                app:bottom_line_visibility="gone"
+                app:cit_item_bg="4"
+                app:content_value="@string/common_text_enhance_config_desc"
+                app:drawableEnd="@drawable/common_ic_arrow_right_white"
+                app:end_view_visibility="visible"
+                app:layout_constraintTop_toBottomOf="@id/line1"
+                app:start_margin="@dimen/common_15dp"
+                app:title_name="@string/common_text_enhance_config_title"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_drone_config"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_15dp"
+                android:layout_marginTop="@dimen/common_4dp"
+                android:gravity="center"
+                android:text="@string/common_text_enhance_config_drone"
+                android:textColor="@color/common_color_FFFFFFFF"
+                android:textSize="@dimen/common_text_size_sp_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cit_enhance_config_title" />
+
+            <TextView
+                android:id="@+id/tv_drone_config_url"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_4dp"
+                android:gravity="center"
+                android:text="@string/common_text_no_value"
+                android:textColor="@color/common_color_BDBDBD"
+                android:textSize="@dimen/common_text_size_sp_16"
+                app:layout_constraintStart_toStartOf="@id/tv_drone_config"
+                app:layout_constraintTop_toBottomOf="@id/tv_drone_config" />
+
+            <View
+                android:id="@+id/line2"
+                style="@style/common_horizontal_line"
+                android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/common_15dp"
+                android:layout_marginTop="@dimen/common_13dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_drone_config_url" />
+
+            <TextView
+                android:id="@+id/tv_rc_config"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_15dp"
+                android:layout_marginTop="@dimen/common_16dp"
+                android:gravity="center"
+                android:text="@string/common_text_enhance_config_rc"
+                android:textColor="@color/common_color_FFFFFFFF"
+                android:textSize="@dimen/common_text_size_sp_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line2" />
+
+            <TextView
+                android:id="@+id/tv_rc_config_url"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_4dp"
+                android:gravity="center"
+                android:text="@string/common_text_no_value"
+                android:textColor="@color/common_color_BDBDBD"
+                android:textSize="@dimen/common_text_size_sp_16"
+                app:layout_constraintStart_toStartOf="@id/tv_rc_config"
+                app:layout_constraintTop_toBottomOf="@id/tv_rc_config" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

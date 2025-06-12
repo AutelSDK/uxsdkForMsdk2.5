@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common_variety_function_bar_height"
+    android:orientation="horizontal">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fv_area"
+        android:layout_width="@dimen/common_0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/common_color_black_50" />
+
+    <com.autel.widget.function.view.SwitchFunctionItemView
+        android:id="@+id/function_more"
+        android:layout_width="@dimen/common_variety_function_bar_height"
+        android:layout_height="match_parent"
+        android:background="@color/common_color_black_50"
+        android:visibility="visible" />
+
+</LinearLayout>

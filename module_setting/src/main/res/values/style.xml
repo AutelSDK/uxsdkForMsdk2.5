@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="setting_RadioButtonParam" tools:ignore="ResourceName">
+        <item name="android:layout_marginTop">@dimen/common_16_5dp</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/common_color_selector_high_light</item>
+        <item name="android:textSize">@dimen/common_text_size_sp_12</item>
+    </style>
+
+    <declare-styleable name="DoubleThumbBar" tools:ignore="ResourceName">
+        <attr name="bar_progressBackgroundColor" format="reference" />
+        <attr name="bar_firstProgressColor" format="reference" />
+        <attr name="bar_secondaryProgressColor" format="reference" />
+        <attr name="bar_firstTextColor" format="reference" />
+        <attr name="bar_secondaryTextColor" format="reference" />
+        <attr name="bar_normalTextColor" format="reference" />
+        <attr name="bar_firstThumb" format="reference" />
+        <attr name="bar_secondaryThumb" format="reference" />
+        <attr name="bar_tipTextSize" format="dimension" />
+        <attr name="bar_thumbSize" format="dimension" />
+        <attr name="bar_progressHeight" format="dimension" />
+        <attr name="bar_maxProgress" format="integer" />
+        <attr name="bar_startMargin" format="dimension" />
+        <attr name="bar_endMargin" format="dimension" />
+        <attr name="bar_intervalProgress" format="integer" />
+        <attr name="bar_firstMinProgress" format="integer" />
+        <attr name="bar_firstMaxProgress" format="integer" />
+        <attr name="bar_secondaryMinProgress" format="integer" />
+        <attr name="bar_secondaryMaxProgress" format="integer" />
+        <attr name="bar_progressOffset" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="SimpleCircleProgress" tools:ignore="ResourceName">
+        <attr name="scp_bgColor" format="reference" />
+        <attr name="scp_progressColor" format="reference" />
+        <attr name="scp_strokeWidth" format="dimension" />
+        <attr name="scp_max" format="integer" />
+    </declare-styleable>
+
+    <style name="setting_imu_progress_horizontal" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:indeterminateOnly">false</item>
+        <!--进度条的进度颜色drawable文件-->
+        <item name="android:progressDrawable">@drawable/common_layer_seekbar_007aff</item>
+        <!--进度条的最小高度-->
+        <item name="android:minHeight">3dp</item>
+        <!--进度条的最大高度-->
+        <item name="android:maxHeight">3dp</item>
+    </style>
+
+    <declare-styleable name="ScaleRadioButton" tools:ignore="ResourceName">
+        <attr name="drawableSizes" format="dimension"/><!--drawable的大小-->
+        <attr name="drawableTop" format="reference"/><!--显示在上方的图片-->
+        <attr name="drawableLeft" format="reference"/><!--显示在左边的图片-->
+        <attr name="drawableRight" format="reference"/><!--显示在右边的图片-->
+        <attr name="drawableBottom" format="reference"/><!--显示下边的图片-->
+    </declare-styleable>
+
+    <style name="setting_RTKEditText" tools:ignore="ResourceName">
+        <item name="android:layout_width">@dimen/common_270dp</item>
+        <item name="android:layout_height">@dimen/common_40dp</item>
+        <item name="android:layout_gravity">end|center_vertical</item>
+        <item name="android:layout_marginTop">@dimen/common_22dp</item>
+        <item name="android:layout_marginEnd">@dimen/common_15dp</item>
+        <item name="android:layout_marginStart">@dimen/common_15dp</item>
+        <item name="android:textColor">@color/common_color_white</item>
+        <item name="android:textColorHint">@color/common_color_white</item>
+        <item name="android:textSize">@dimen/common_16dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:background">@drawable/setting_rtk_black_edit_text_bg</item>
+        <item name="android:paddingStart">@dimen/common_15dp</item>
+        <item name="android:paddingEnd">@dimen/common_15dp</item>
+        <item name="android:paddingTop">@dimen/common_9_5dp</item>
+        <item name="android:paddingBottom">@dimen/common_8dp</item>
+        <item name="android:saveEnabled">false</item>
+        <item name="android:imeOptions">actionDone</item>
+    </style>
+
+    <style name="setting_rtk_text_view" parent="common_font_white">
+        <item name="android:textSize">@dimen/common_text_size_sp_17</item>
+        <item name="android:gravity">left</item>
+        <item name="android:layout_marginTop">@dimen/common_8dp</item>
+        <item name="android:layout_marginLeft">@dimen/common_15dp</item>
+    </style>
+</resources>

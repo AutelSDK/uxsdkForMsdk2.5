@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_cal_progress"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <com.autel.setting.widget.SimpleCircleProgress
+        android:id="@+id/scp_progress"
+        android:layout_width="@dimen/common_130dp"
+        android:layout_height="@dimen/common_130dp"
+        app:layout_constraintBottom_toTopOf="@id/tv_progress_tips"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:scp_bgColor="@color/common_color_da"
+        app:scp_max="1000"
+        app:scp_progressColor="@color/common_color_007aff"
+        app:scp_strokeWidth="@dimen/common_3dp" />
+
+    <TextView
+        android:id="@+id/tv_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0%"
+        android:textColor="@color/common_color_007aff"
+        android:textSize="@dimen/common_text_size_sp_18"
+        app:layout_constraintBottom_toBottomOf="@id/scp_progress"
+        app:layout_constraintEnd_toEndOf="@id/scp_progress"
+        app:layout_constraintStart_toStartOf="@id/scp_progress"
+        app:layout_constraintTop_toTopOf="@id/scp_progress" />
+
+    <TextView
+        android:id="@+id/tv_progress_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_20dp"
+        android:text="@string/common_text_do_not_turnoff_power"
+        android:textColor="@color/common_color_black"
+        android:textSize="@dimen/common_text_size_sp_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scp_progress" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+

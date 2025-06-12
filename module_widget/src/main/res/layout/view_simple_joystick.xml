@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingDefaultResource">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/outer_ring"
+        android:layout_width="@dimen/common_74dp"
+        android:layout_height="@dimen/common_74dp"
+        android:background="@drawable/mission_bg_joystick_outer_ring"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/common_15dp"
+        android:layout_height="@dimen/common_15dp"
+        android:background="@drawable/mission_bg_joystick_center"
+        app:layout_constraintBottom_toBottomOf="@id/outer_ring"
+        app:layout_constraintEnd_toEndOf="@id/outer_ring"
+        app:layout_constraintStart_toStartOf="@id/outer_ring"
+        app:layout_constraintTop_toTopOf="@id/outer_ring" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/top"
+        android:layout_width="@dimen/common_15dp"
+        android:layout_height="@dimen/common_12dp"
+        android:src="@drawable/mission_bg_joystick_top"
+        android:layout_marginTop="@dimen/common_3dp"
+        app:layout_constraintEnd_toEndOf="@id/outer_ring"
+        app:layout_constraintStart_toStartOf="@id/outer_ring"
+        app:layout_constraintTop_toTopOf="@id/outer_ring" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/right"
+        android:layout_width="@dimen/common_15dp"
+        android:layout_height="@dimen/common_12dp"
+        android:src="@drawable/mission_bg_joystick_top"
+        android:rotation="90"
+        app:layout_constraintEnd_toEndOf="@id/outer_ring"
+        app:layout_constraintBottom_toBottomOf="@id/outer_ring"
+        app:layout_constraintTop_toTopOf="@id/outer_ring" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/bottom"
+        android:layout_width="@dimen/common_15dp"
+        android:layout_height="@dimen/common_12dp"
+        android:src="@drawable/mission_bg_joystick_top"
+        android:rotation="180"
+        android:layout_marginBottom="@dimen/common_3dp"
+        app:layout_constraintEnd_toEndOf="@id/outer_ring"
+        app:layout_constraintStart_toStartOf="@id/outer_ring"
+        app:layout_constraintBottom_toBottomOf="@id/outer_ring" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/left"
+        android:layout_width="@dimen/common_15dp"
+        android:layout_height="@dimen/common_12dp"
+        android:src="@drawable/mission_bg_joystick_top"
+        android:rotation="270"
+        app:layout_constraintStart_toStartOf="@id/outer_ring"
+        app:layout_constraintBottom_toBottomOf="@id/outer_ring"
+        app:layout_constraintTop_toTopOf="@id/outer_ring" />
+</androidx.constraintlayout.widget.ConstraintLayout>

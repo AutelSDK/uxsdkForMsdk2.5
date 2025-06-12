@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.autel.common.widget.ConsumeEventConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cecl_layout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common_variety_status_bar_height"
+    android:background="@color/common_color_black"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="@dimen/common_49dp"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/common_20dp"
+        android:paddingTop="@dimen/common_9dp"
+        android:paddingEnd="@dimen/common_5dp"
+        android:paddingBottom="@dimen/common_9dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/common_ic_outlined_back_write"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_warn"
+        android:layout_width="@dimen/common_250dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/common_10dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_back"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginStart="@dimen/common_20dp"
+        tools:visibility="visible">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_warn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/common_icon_bell"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.autel.common.widget.AutelTextView
+            android:id="@+id/tv_warn_num"
+            android:layout_width="@dimen/common_17dp"
+            android:layout_height="@dimen/common_17dp"
+            android:background="@drawable/common_shape_icon_red"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/common_text_size_sp_13"
+            app:AutelTextFace="SSFD_Medium"
+            app:layout_constraintCircle="@id/iv_warn"
+            app:layout_constraintCircleAngle="45"
+            app:layout_constraintCircleRadius="@dimen/common_10dp"
+            app:layout_constraintEnd_toEndOf="@id/iv_warn"
+            app:layout_constraintTop_toTopOf="@id/iv_warn"
+            tools:text="99" />
+
+        <com.autel.common.widget.spinnerview.ScrollTextView
+            android:id="@+id/tv_fly_status"
+            android:layout_width="@dimen/common_0dp"
+            android:layout_height="@dimen/common_30dp"
+            android:layout_marginStart="@dimen/common_24dp"
+            android:background="@drawable/mission_shape_fly_status_unconnected"
+            android:ellipsize="marquee"
+            android:gravity="center_vertical|left"
+            android:paddingHorizontal="@dimen/common_5dp"
+            android:singleLine="true"
+            android:text="@string/common_text_aircraft_disconnect"
+            android:textColor="@color/common_color_white"
+            android:textSize="@dimen/common_text_size_sp_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_warn_num"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="@dimen/common_0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/iv_aircraft_no_sdcard"
+        app:layout_constraintStart_toEndOf="@id/cl_warn"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.autel.common.widget.OutlineTextView
+            android:id="@+id/tv_positioning_mode"
+            android:layout_width="@dimen/common_0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/common_15dp"
+            android:layout_marginEnd="@dimen/common_10dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical|end"
+            android:lines="1"
+            android:text="@string/common_text_visual_positioning_mode"
+            android:textColor="@color/common_battery_setting_safe"
+            android:textSize="@dimen/common_text_size_sp_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:outlineColor="@color/common_color_black_50"
+            app:outlineWidth="@dimen/common_line_width"
+            tools:text="GNSS模式" />
+
+        <View
+            android:id="@+id/label"
+            android:layout_width="@dimen/common_1dp"
+            android:layout_height="@dimen/common_15dp"
+            android:background="@color/common_color_808080"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/flight_mode"
+            app:layout_constraintStart_toEndOf="@id/tv_positioning_mode"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.autel.widget.widget.statusbar.FlightModeText
+            android:id="@+id/flight_mode"
+            android:layout_width="@dimen/common_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common_10dp"
+            android:gravity="start"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/common_text_size_sp_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/label"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="智能飞行" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_country_code"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:minWidth="@dimen/common_60dp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/iv_relay_connect"
+        android:textSize="@dimen/common_text_size_sp_17"
+        android:visibility="gone"
+        tools:text="CN"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/iv_relay_connect"
+        android:layout_width="@dimen/common_25dp"
+        android:layout_height="@dimen/common_25dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_remoter_connect"
+        android:visibility="gone"
+        android:layout_marginEnd="@dimen/common_10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/iv_aircraft_no_sdcard"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+    <ImageView
+        android:id="@+id/iv_aircraft_no_sdcard"
+        android:layout_width="@dimen/common_25dp"
+        android:layout_height="@dimen/common_25dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_no_sdcard"
+        android:visibility="gone"
+        android:layout_marginEnd="@dimen/common_10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/iv_mission_remote_electric"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+    <!--遥控器电量-->
+    <ImageView
+        android:id="@+id/iv_mission_remote_electric"
+        android:layout_width="@dimen/common_25dp"
+        android:layout_height="@dimen/common_25dp"
+        android:layout_gravity="center"
+        android:scaleType="fitXY"
+        android:src="@drawable/mission_ic_remote_control_electric"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tv_remote_control_electric"
+        app:layout_constraintTop_toTopOf="parent" />
+    <com.autel.common.widget.OutlineTextView
+        android:id="@+id/tv_remote_control_electric"
+        style="@style/common_font_white_13"
+        android:textColor="@color/common_color_white_50"
+        android:layout_height="@dimen/common_31dp"
+        android:text="@string/common_text_no_value"
+        android:textSize="@dimen/common_text_size_sp_16"
+        android:layout_marginEnd="@dimen/common_10dp"
+        android:textStyle="bold"
+        app:AutelTextFace="DIN_Alternate_Bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/iv_remote_control_signal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:outlineColor="@color/common_color_black_50"
+        app:outlineWidth="@dimen/common_line_width" />
+    <!--end 遥控器电量-->
+    <!--遥控器信号强度-->
+    <ImageView
+        android:id="@+id/iv_remote_control_signal"
+        android:layout_width="@dimen/common_30dp"
+        android:layout_height="@dimen/common_25dp"
+        android:layout_marginEnd="@dimen/common_10dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/mission_ic_remote_control_signal_disable"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/lte_view"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_rc_signal_quality"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="@dimen/common_text_size_sp_9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@id/iv_remote_control_signal" />
+
+    <com.autel.ux.widget.lte.LTEWidget
+        android:id="@+id/lte_view"
+        android:layout_width="wrap_content"
+        android:layout_marginEnd="@dimen/common_10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/cl_rtk"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="match_parent"/>
+
+    <!--RTK信号-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_rtk"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/common_10dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/ll_gps"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/tv_rtk_fix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_2dp"
+            android:text="RTK 30"
+            android:textColor="@color/common_color_ad"
+            android:textSize="@dimen/common_text_size_sp_10"
+            app:layout_constraintLeft_toLeftOf="@+id/tv_rtk_state"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_rtk_state"
+            android:layout_width="@dimen/common_32dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/common_4dp"
+            android:background="@drawable/common_shape_solid_adadad_radius_2_4"
+            android:gravity="center"
+            android:text="NONE"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_text_size_sp_8"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_rtk_fix" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!--gps信号强度-->
+    <LinearLayout
+        android:id="@+id/ll_gps"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/common_10dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/cl_electric"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_mission_gps"
+            android:layout_width="@dimen/common_25dp"
+            android:layout_height="@dimen/common_25dp"
+            android:layout_gravity="center_vertical"
+            android:scaleType="fitXY"
+            android:src="@drawable/mission_ic_gps_signal_disable" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+
+            <com.autel.common.widget.OutlineTextView
+                android:id="@+id/tv_gps_signal"
+                style="@style/common_font_white_9"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_1_5dp"
+                android:gravity="center"
+                android:textSize="@dimen/common_text_size_sp_11"
+                app:layout_constraintBottom_toTopOf="@id/tv_gps_count"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:outlineColor="@color/common_color_black_50"
+                app:outlineWidth="@dimen/common_line_width"
+                tools:text="强" />
+
+            <com.autel.common.widget.OutlineTextView
+                android:id="@+id/tv_gps_count"
+                style="@style/common_font_white_9"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textSize="@dimen/common_text_size_sp_11"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/tv_gps_signal"
+                app:layout_constraintStart_toStartOf="@id/tv_gps_signal"
+                app:layout_constraintTop_toBottomOf="@id/tv_gps_signal"
+                app:outlineColor="@color/common_color_black_50"
+                app:outlineWidth="@dimen/common_line_width"
+                tools:text="300" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+    <!--飞机电量-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_electric"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/common_10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/iv_obstacle_avoidance"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_mission_aircraft_electric"
+            android:layout_width="@dimen/common_25dp"
+            android:layout_height="@dimen/common_25dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/mission_ic_aircraft_electric_disable"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.autel.common.widget.OutlineTextView
+            android:id="@+id/tv_aircraft_electric"
+            style="@style/common_font_white_13"
+            android:textColor="@color/common_color_white_50"
+            android:layout_marginStart="@dimen/common_4dp"
+            android:text="@string/common_text_no_value"
+            android:textSize="@dimen/common_text_size_sp_16"
+            android:textStyle="bold"
+            app:AutelTextFace="DIN_Alternate_Bold"
+            app:layout_constraintBottom_toBottomOf="@id/iv_mission_aircraft_electric"
+            app:layout_constraintLeft_toRightOf="@id/iv_mission_aircraft_electric"
+            app:layout_constraintTop_toTopOf="@id/iv_mission_aircraft_electric"
+            app:layout_goneMarginStart="@dimen/common_6_5dp"
+            app:outlineColor="@color/common_color_black_50"
+            app:outlineWidth="@dimen/common_line_width" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!--雷达图标-->
+    <ImageView
+        android:id="@+id/iv_obstacle_avoidance"
+        android:layout_width="@dimen/common_25dp"
+        android:layout_height="@dimen/common_25dp"
+        android:layout_gravity="center"
+        android:layout_marginEnd="@dimen/common_10dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/mission_icon_vision_off"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tv_gear"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--档位-->
+    <com.autel.common.widget.OutlineTextView
+        android:id="@+id/tv_gear"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/common_6dp"
+        android:layout_marginEnd="@dimen/common_10dp"
+        android:layout_marginBottom="@dimen/common_6dp"
+        android:background="@drawable/mission_shape_gear_model"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/common_7dp"
+        android:paddingEnd="@dimen/common_7dp"
+        android:text="@string/common_text_comfort_gear"
+        android:textColor="@color/common_color_white"
+        android:textSize="@dimen/common_text_size_sp_15"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:outlineColor="@color/common_color_black_50"
+        app:outlineWidth="@dimen/common_line_width" />
+</com.autel.common.widget.ConsumeEventConstraintLayout>

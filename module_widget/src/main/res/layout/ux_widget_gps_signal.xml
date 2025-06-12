@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/black"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+
+    <!--RTK信号-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_rtk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/common_10dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/iv_gps_signal"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/tv_rtk_fix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_2dp"
+            android:textColor="@color/common_color_ad"
+            android:textSize="@dimen/common_text_size_sp_10"
+            app:layout_constraintLeft_toLeftOf="@+id/tv_rtk_state"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="RTK 30" />
+
+        <TextView
+            android:id="@+id/tv_rtk_state"
+            android:layout_width="@dimen/common_32dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/common_4dp"
+            android:background="@drawable/common_shape_solid_adadad_radius_2_4"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_text_size_sp_8"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_rtk_fix"
+            tools:text="NONE" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_gps_signal"
+        android:layout_width="@dimen/common_25dp"
+        android:layout_height="@dimen/common_25dp"
+        android:layout_gravity="center_vertical"
+        android:scaleType="fitXY"
+        android:src="@drawable/mission_ic_gps_signal_disable"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tv_gps_count"
+        app:layout_constraintStart_toEndOf="@id/layout_rtk"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.autel.common.widget.OutlineTextView
+        android:id="@+id/tv_gps_signal_strength"
+        style="@style/common_font_white_9"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_1_5dp"
+        android:gravity="center"
+        android:textSize="@dimen/common_text_size_sp_11"
+        app:layout_constraintBottom_toTopOf="@id/tv_gps_count"
+        app:layout_constraintEnd_toEndOf="@id/tv_gps_count"
+        app:layout_constraintStart_toEndOf="@id/iv_gps_signal"
+        app:layout_constraintTop_toTopOf="@id/iv_gps_signal"
+        app:outlineColor="@color/common_color_black_50"
+        app:outlineWidth="@dimen/common_line_width"
+        tools:text="@string/common_text_gps_tag_none" />
+
+    <com.autel.common.widget.OutlineTextView
+        android:id="@+id/tv_gps_count"
+        style="@style/common_font_white_9"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textSize="@dimen/common_text_size_sp_11"
+        app:layout_constraintBottom_toBottomOf="@id/iv_gps_signal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_gps_signal"
+        app:layout_constraintTop_toBottomOf="@id/tv_gps_signal_strength"
+        app:outlineColor="@color/common_color_black_50"
+        app:outlineWidth="@dimen/common_line_width"
+        tools:text="300" />
+</merge>

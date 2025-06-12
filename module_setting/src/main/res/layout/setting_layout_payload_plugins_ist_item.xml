@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.autel.common.widget.CommonItemText
+        android:id="@+id/cit_item"
+        style="@style/common_font_white_19.5"
+        app:bottom_line_visibility="visible"
+        app:drawableEnd="@drawable/common_ic_arrow_right_white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:start_margin="@dimen/common_15dp"
+        app:title_name="@string/common_text_compass_calibration" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

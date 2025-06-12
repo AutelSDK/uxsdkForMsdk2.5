@@ -1,0 +1,72 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+}
+
+apply from: '../dependencies.gradle'
+apply from: '../androidConfig.gradle'
+
+kapt {
+    arguments {
+        arg("AROUTER_MODULE_NAME", project.getName())
+    }
+}
+
+android {
+    namespace = "com.autel.setting"
+    basicAndroidConfig(project)
+
+    resourcePrefix "setting_"
+
+    buildFeatures {
+        viewBinding = true
+    }
+}
+
+dependencies {
+
+    compileOnly rootProject.ext.autel.uxsdk.msdk
+    compileOnly rootProject.ext.autel.uxsdk.debugtools
+    kapt rootProject.ext.deps.external.arouter.compiler
+    implementation rootProject.ext.autel.uxsdk.frame
+    implementation project(path: ':module_widget')
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.18.1'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.18.1'
+    implementation rootProject.ext.deps.external.backgroundlibrary
+    implementation rootProject.ext.deps.external.retrofit.rxjava
+    implementation rootProject.ext.deps.external.okhttp.logging_interceptor
+    implementation(
+            rootProject.ext.deps.external.arouter.api,
+            rootProject.ext.deps.external.multitype,
+            rootProject.ext.deps.external.android.viewpager2,
+            rootProject.ext.deps.external.lifecycle.viewmodel,
+            rootProject.ext.deps.external.lifecycle.livedata,
+            rootProject.ext.deps.external.lifecycle.runtime,
+            rootProject.ext.deps.external.lifecycle.savedstate,
+            rootProject.ext.deps.external.android.multidex,
+            rootProject.ext.deps.external.android.core_ktx,
+            rootProject.ext.deps.external.android.appcompat,
+            rootProject.ext.deps.external.android.activity_ktx,
+            rootProject.ext.deps.external.android.fragment_ktx,
+            rootProject.ext.deps.external.android.design,
+            rootProject.ext.deps.external.glide.glide,
+            rootProject.ext.deps.external.lottie,
+            rootProject.ext.deps.external.retrofit.core,
+            rootProject.ext.deps.external.retrofit.rxjava,
+            rootProject.ext.deps.external.retrofit.gson,
+            rootProject.ext.deps.external.retrofit.retrofit_converter_moshi,
+            rootProject.ext.deps.external.commons
+    )
+
+    implementation rootProject.ext.autel.uxsdk.log
+    implementation rootProject.ext.autel.uxsdk.ui
+    implementation rootProject.ext.autel.uxsdk.storage
+    implementation rootProject.ext.autel.uxsdk.utils
+    implementation rootProject.ext.autel.uxsdk.map
+    implementation rootProject.ext.autel.uxsdk.data
+    implementation rootProject.ext.autel.uxsdk.gdal
+    implementation 'com.google.android.flexbox:flexbox:3.0.0'
+    implementation rootProject.ext.autel.uxsdk.BaseRecyclerViewAdapterHelper
+
+}

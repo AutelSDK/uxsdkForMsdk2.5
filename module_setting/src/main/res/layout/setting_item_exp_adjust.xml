@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="ResourceName">
+
+    <TextView
+        android:id="@+id/setting_tv_exp_up"
+        style="@style/common_font_white_14"
+        android:text="@string/common_text_controller_model_up_title"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.autel.setting.widget.ExpView
+        android:id="@+id/setting_exp_img"
+        android:layout_width="@dimen/common_116dp"
+        android:layout_height="@dimen/common_118dp"
+        android:layout_marginTop="@dimen/common_5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/setting_tv_exp_up" />
+
+    <TextView
+        android:id="@+id/setting_tv_exp_down"
+        style="@style/common_font_white_14"
+        android:layout_marginTop="@dimen/common_5dp"
+        android:text="@string/common_text_controller_model_down_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/setting_exp_img" />
+
+    <com.autel.common.widget.EnterpriseEditText
+        android:id="@+id/setting_edit_exp_number"
+        android:layout_width="@dimen/common_80dp"
+        android:layout_height="@dimen/common_30dp"
+        android:layout_marginTop="@dimen/common_9dp"
+        android:background="@drawable/setting_edit_input_bg"
+        android:gravity="center"
+        android:imeOptions="actionDone|flagNoEnterAction"
+        android:inputType="numberDecimal"
+        android:maxLength="4"
+        android:text="0.5"
+        android:textColor="@color/common_color_white"
+        android:textSize="@dimen/common_text_size_sp_15"
+        app:common_edt_input_type="input_float"
+        app:common_edt_max="0.7"
+        app:common_edt_min="0.2"
+        app:layout_constraintLeft_toLeftOf="@id/setting_exp_img"
+        app:layout_constraintRight_toRightOf="@id/setting_exp_img"
+        app:layout_constraintTop_toBottomOf="@id/setting_tv_exp_down" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

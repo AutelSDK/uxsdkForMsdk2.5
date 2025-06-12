@@ -1,0 +1,84 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/common_450dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="@dimen/common_8dp"
+    android:background="@drawable/common_item_bg_all"
+    android:minHeight="@dimen/common_180dp">
+
+    <TextView
+        android:id="@+id/tv_key_define"
+        style="@style/common_font_white_16"
+        android:layout_marginLeft="@dimen/common_15dp"
+        android:layout_marginTop="@dimen/common_17dp"
+        android:text="@string/common_text_c1_c2_key_define"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_key_define"
+        android:layout_width="@dimen/common_120dp"
+        android:layout_height="@dimen/common_103dp"
+        android:layout_marginTop="@dimen/common_10dp"
+        android:layout_marginBottom="@dimen/common_27dp"
+        android:src="@drawable/setting_icon_remote_custom_define"
+        app:layout_constraintLeft_toLeftOf="@id/tv_key_define"
+        app:layout_constraintTop_toBottomOf="@id/tv_key_define" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_key_define"
+        app:layout_constraintLeft_toRightOf="@id/iv_key_define"
+        app:layout_constraintTop_toTopOf="@id/iv_key_define">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_42dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_custom_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="C1"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/common_text_size_sp_16" />
+
+            <com.autel.common.widget.spinnerview.CommonSpinnerView
+                android:id="@+id/tv_select_c1_spinner"
+                android:layout_width="@dimen/common_213_5dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_7dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_custom_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_42dp"
+            android:layout_marginTop="@dimen/common_20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="C2"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/common_text_size_sp_16" />
+
+            <com.autel.common.widget.spinnerview.CommonSpinnerView
+                android:id="@+id/tv_select_c2_spinner"
+                android:layout_width="@dimen/common_213_5dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_7dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

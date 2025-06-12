@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout"
+    tools:ignore="ResourceName">
+
+    <ImageView
+        android:id="@+id/iv_lidar"
+        android:layout_width="@dimen/common_46dp"
+        android:layout_height="@dimen/common_46dp"
+        android:src="@drawable/mission_ic_lidar_cross"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ll_lidar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_12dp"
+        android:layout_marginTop="@dimen/common_15dp"
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/common_30dp"
+        app:layout_constraintRight_toLeftOf="@+id/iv_lidar"
+        app:layout_constraintTop_toBottomOf="@+id/iv_lidar">
+
+
+        <com.autel.common.widget.OutlineTextView
+            android:id="@+id/tv_rng_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/common_text_RNG"
+            android:textColor="@color/common_color_03fef4"
+            android:textSize="@dimen/common_text_size_sp_13"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_rng"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_rng"
+            app:layout_constraintVertical_bias="0.666"
+            app:outlineColor="@color/common_color_black_50"
+            app:outlineWidth="@dimen/common_1dp"/>
+
+        <com.autel.common.widget.OutlineTextView
+            android:id="@+id/tv_asl_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/common_text_MSL"
+            android:textColor="@color/common_color_03fef4"
+            android:textSize="@dimen/common_text_size_sp_13"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_asl"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_asl"
+            app:outlineColor="@color/common_color_black_50"
+            app:outlineWidth="@dimen/common_1dp"/>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="end"
+            app:constraint_referenced_ids="tv_asl_title,tv_rng_title" />
+
+        <com.autel.common.widget.OutlineTextView
+            android:id="@+id/tv_rng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/common_6dp"
+            android:text="@string/common_text_no_value"
+            android:textColor="@color/common_color_03fef4"
+            android:textSize="@dimen/common_text_size_sp_14"
+            app:layout_constraintStart_toEndOf="@id/barrier_title"
+            app:layout_constraintTop_toTopOf="parent"
+            app:outlineColor="@color/common_color_black_50"
+            app:outlineWidth="@dimen/common_1dp"/>
+
+        <com.autel.common.widget.OutlineTextView
+            android:id="@+id/tv_asl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/common_6dp"
+            android:text="@string/common_text_no_value"
+            android:textColor="@color/common_color_03fef4"
+            android:textSize="@dimen/common_text_size_sp_14"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/barrier_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_rng"
+            app:outlineColor="@color/common_color_black_50"
+            app:outlineWidth="@dimen/common_1dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_target_n"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="@dimen/common_12dp"
+        android:text="@string/common_north_N"
+        android:textColor="@color/common_color_03fef4"
+        android:textSize="@dimen/common_text_size_sp_14"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/ll_lidar"
+        app:layout_constraintTop_toBottomOf="@+id/ll_lidar" />
+
+
+    <com.autel.common.widget.OutlineTextView
+        android:id="@+id/tv_target_n_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="@string/common_text_no_value"
+        android:textColor="@color/common_color_03fef4"
+        android:textSize="@dimen/common_text_size_sp_14"
+        android:layout_marginTop="@dimen/common_12dp"
+        app:layout_constraintStart_toStartOf="@id/ll_lidar"
+        app:layout_constraintTop_toBottomOf="@+id/ll_lidar"
+        app:outlineColor="@color/common_color_black_50"
+        app:outlineWidth="@dimen/common_1dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_target_e"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="@string/common_north_E"
+        android:textColor="@color/common_color_03fef4"
+        android:textSize="@dimen/common_text_size_sp_14"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/tv_target_n"
+        app:layout_constraintTop_toBottomOf="@+id/tv_target_n" />
+
+    <com.autel.common.widget.OutlineTextView
+        android:id="@+id/tv_target_e_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="@string/common_text_no_value"
+        android:textColor="@color/common_color_03fef4"
+        android:textSize="@dimen/common_text_size_sp_14"
+        app:layout_constraintTop_toBottomOf="@id/tv_target_n_value"
+        app:layout_constraintLeft_toLeftOf="@id/tv_target_n_value"
+        app:outlineColor="@color/common_color_black_50"
+        app:outlineWidth="@dimen/common_1dp"
+        />
+</merge>
+

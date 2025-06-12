@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<level-list xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:ignore="ResourceName">
+
+    <item android:maxLevel="10" android:drawable="@drawable/mission_ic_remote_control_electric_red"/>
+    <item android:maxLevel="30" android:drawable="@drawable/mission_ic_remote_control_orange"/>
+    <item android:maxLevel="100" android:drawable="@drawable/mission_ic_remote_control_electric_green"/>
+</level-list>

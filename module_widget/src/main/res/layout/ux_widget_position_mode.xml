@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <com.autel.common.widget.OutlineTextView
+        android:id="@+id/tv_positioning_mode"
+        android:layout_width="@dimen/common_0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/common_15dp"
+        android:layout_marginEnd="@dimen/common_10dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical|end"
+        android:lines="1"
+        android:text="@string/common_text_visual_positioning_mode"
+        android:textColor="@color/common_battery_setting_safe"
+        android:textSize="@dimen/common_text_size_sp_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:outlineColor="@color/common_color_black_50"
+        app:outlineWidth="@dimen/common_line_width"
+        tools:text="GNSS模式" />
+</merge>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_color_white"
+    android:clickable="true">
+
+    <com.autel.common.widget.CommonTitleView
+        android:id="@+id/view_title"
+        android:layout_width="@dimen/common_0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title_leftIconVisibility="true"
+        app:title_name="@string/common_text_compass_calibration"
+        app:title_rightIconVisibility="false" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_step"
+        android:layout_width="@dimen/common_0dp"
+        android:layout_height="@dimen/common_0dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_title">
+
+        <TextView
+            android:id="@+id/setting_tv_cal_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_10dp"
+            android:text="1/3"
+            android:textColor="@color/common_color_66"
+            android:textSize="@dimen/common_text_size_sp_17"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <ImageView
+            android:id="@+id/setting_iv_calibration_init"
+            android:layout_width="@dimen/common_432dp"
+            android:layout_height="@dimen/common_360dp"
+            android:layout_marginEnd="@dimen/common_20dp"
+            android:background="@drawable/campass_calib_normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guide_line"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/setting_ll_indicate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@id/setting_iv_calibration_init"
+            app:layout_constraintLeft_toLeftOf="@id/setting_iv_calibration_init"
+            app:layout_constraintRight_toRightOf="@id/setting_iv_calibration_init">
+
+            <ImageView
+                android:id="@+id/iv_indicate_one"
+                android:layout_width="@dimen/common_8dp"
+                android:layout_height="@dimen/common_8dp"
+                android:layout_marginRight="@dimen/common_10dp"
+                android:layout_marginBottom="@dimen/common_15dp"
+                android:background="@drawable/common_shape_circle_666666" />
+
+            <ImageView
+                android:id="@+id/iv_indicate_two"
+                android:layout_width="@dimen/common_8dp"
+                android:layout_height="@dimen/common_8dp"
+                android:layout_marginRight="@dimen/common_10dp"
+                android:layout_marginBottom="@dimen/common_15dp"
+                android:background="@drawable/common_shape_circle_666666" />
+
+            <ImageView
+                android:id="@+id/iv_indicate_three"
+                android:layout_width="@dimen/common_8dp"
+                android:layout_height="@dimen/common_8dp"
+                android:layout_marginBottom="@dimen/common_15dp"
+                android:background="@drawable/common_shape_circle_666666" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_calibration_step_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_42dp"
+            android:layout_marginTop="@dimen/common_42dp"
+            android:text="@string/common_text_step_one"
+            android:textColor="@color/common_color_33"
+            android:textSize="@dimen/common_text_size_sp_25"
+            app:layout_constraintLeft_toRightOf="@+id/setting_iv_calibration_init"
+            app:layout_constraintTop_toTopOf="@id/setting_iv_calibration_init" />
+
+        <TextView
+            android:id="@+id/tv_calibration_step_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_36dp"
+            android:text="@string/common_text_step_first_content"
+            android:textColor="@color/common_color_33"
+            android:textSize="@dimen/common_text_size_sp_19"
+            app:layout_constraintLeft_toLeftOf="@id/tv_calibration_step_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_calibration_step_title" />
+
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/gp_start_calibration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="setting_tv_cal_number,setting_ll_indicate,tv_calibration_step_title,tv_calibration_step_content" />
+
+        <TextView
+            android:id="@+id/tv_start_info"
+            android:layout_width="@dimen/common_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common_42dp"
+            android:layout_marginTop="@dimen/common_42dp"
+            android:layout_marginEnd="@dimen/common_100dp"
+            android:text="@string/common_text_calibration_content"
+            android:textColor="@color/common_color_black"
+            android:textSize="@dimen/common_text_size_sp_19"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/setting_iv_calibration_init"
+            app:layout_constraintTop_toTopOf="@id/setting_iv_calibration_init" />
+
+        <TextView
+            android:id="@+id/button_calibration_start"
+            android:layout_width="@dimen/common_324dp"
+            android:layout_height="@dimen/common_54dp"
+            android:layout_marginStart="@dimen/common_42dp"
+            android:layout_marginBottom="@dimen/common_50dp"
+            android:gravity="center"
+            android:background="@drawable/common_selector_bg_007aff"
+            android:text="@string/common_text_start_calibrate"
+            android:textColor="@color/common_color_selector_btn"
+            android:textSize="@dimen/common_text_size_sp_20"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toBottomOf="@id/setting_iv_calibration_init"
+            app:layout_constraintStart_toEndOf="@id/setting_iv_calibration_init" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/gp_init_calibration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="button_calibration_start,tv_start_info" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/layout_cal"
+        layout="@layout/setting_view_calibration_status"
+        android:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

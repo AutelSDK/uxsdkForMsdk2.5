@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <com.autel.widget.widget.linkagezoom.LinkageZoomWidget
+        android:id="@+id/iv_linkage_zoom"
+        android:layout_width="@dimen/common_variety_codec_btn_size"
+        android:layout_height="@dimen/common_variety_codec_btn_size"
+        android:layout_marginEnd="@dimen/common_variety_codec_link_zoom_margin_end"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/iv_take_photo"
+        app:layout_constraintEnd_toStartOf="@id/iv_take_photo"
+        app:layout_constraintTop_toTopOf="@id/iv_take_photo"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/iv_camera_setting"
+        android:layout_width="@dimen/common_variety_codec_btn_size"
+        android:layout_height="@dimen/common_variety_codec_btn_size"
+        android:background="@drawable/mission_selector_icon_bg_round"
+        android:padding="@dimen/common_7dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/mission_selector_right_camera_setting"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/iv_take_photo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_take_photo"
+        android:layout_width="@dimen/common_variety_photo_video_size"
+        android:layout_height="@dimen/common_variety_photo_video_size"
+        android:layout_marginTop="@dimen/common_variety_codec_photo_margin_top"
+        android:background="@drawable/mission_selector_right_camera_take_photo"
+        android:padding="@dimen/common_variety_photo_image_padding"
+        android:scaleType="fitXY"
+        android:src="@drawable/mission_ic_take_photo"
+        app:layout_constraintBottom_toTopOf="@+id/iv_album"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_camera_setting" />
+
+    <ProgressBar
+        android:id="@+id/ps_take_loading"
+        android:layout_width="@dimen/common_variety_photo_video_size"
+        android:layout_height="@dimen/common_variety_photo_video_size"
+        android:indeterminateDrawable="@drawable/mission_anim_progress_bg"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_take_photo"
+        app:layout_constraintEnd_toEndOf="@+id/iv_take_photo"
+        app:layout_constraintStart_toStartOf="@+id/iv_take_photo"
+        app:layout_constraintTop_toTopOf="@+id/iv_take_photo" />
+
+
+    <ImageView
+        android:id="@+id/iv_take_video"
+        android:layout_width="@dimen/common_variety_photo_video_size"
+        android:layout_height="@dimen/common_variety_photo_video_size"
+        android:layout_marginTop="@dimen/common_variety_codec_video_margin_top"
+        android:background="@drawable/mission_selector_right_camera_take_video"
+        android:padding="@dimen/common_variety_video_image_padding"
+        android:scaleType="fitXY"
+        android:src="@drawable/mission_selector_take_video"
+        app:layout_constraintBottom_toTopOf="@+id/iv_album"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_take_photo" />
+
+    <ProgressBar
+        android:id="@+id/ps_take_video_loading"
+        android:layout_width="@dimen/common_variety_photo_video_size"
+        android:layout_height="@dimen/common_variety_photo_video_size"
+        android:indeterminateDrawable="@drawable/mission_anim_record_progress_bg"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_take_video"
+        app:layout_constraintEnd_toEndOf="@+id/iv_take_video"
+        app:layout_constraintStart_toStartOf="@+id/iv_take_video"
+        app:layout_constraintTop_toTopOf="@+id/iv_take_video" />
+
+
+    <com.autel.common.widget.OutlineTextView
+        android:id="@+id/tv_video_record_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_2dp"
+        android:background="@drawable/common_text_bg_r4"
+        android:paddingStart="@dimen/common_5dp"
+        android:paddingEnd="@dimen/common_5dp"
+        android:textColor="@color/common_color_red"
+        android:textSize="@dimen/common_text_size_sp_16"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/iv_take_video"
+        app:layout_constraintStart_toStartOf="@id/iv_take_video"
+        app:layout_constraintTop_toBottomOf="@+id/iv_take_video"
+        tools:visibility="visible" />
+
+    <FrameLayout
+        android:id="@+id/fl_album"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_variety_codec_album_margin_top"
+        android:background="@drawable/mission_selector_icon_bg_round"
+        android:padding="1px"
+        app:layout_constraintBottom_toTopOf="@+id/iv_split_screen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/iv_take_photo"
+        app:layout_constraintTop_toBottomOf="@+id/iv_take_video">
+
+        <ImageView
+            android:id="@+id/iv_album"
+            android:layout_width="@dimen/common_variety_codec_btn_size"
+            android:layout_height="@dimen/common_variety_codec_btn_size"
+            android:scaleType="fitXY"
+            android:src="@drawable/mission_ic_album"
+            android:visibility="visible" />
+    </FrameLayout>
+</merge>

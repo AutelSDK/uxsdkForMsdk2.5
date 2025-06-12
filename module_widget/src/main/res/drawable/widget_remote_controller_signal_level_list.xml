@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<level-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:maxLevel="0" android:drawable="@drawable/mission_ic_remote_control_signal_disable" />
+    <item android:maxLevel="20" android:drawable="@drawable/mission_ic_remote_control_signal1" />
+    <item android:maxLevel="40" android:drawable="@drawable/mission_ic_remote_control_signal2" />
+    <item android:maxLevel="60" android:drawable="@drawable/mission_ic_remote_control_signal3" />
+    <item android:maxLevel="80" android:drawable="@drawable/mission_ic_remote_control_signal4" />
+    <item android:maxLevel="100" android:drawable="@drawable/mission_ic_remote_control_signal5" />
+</level-list>

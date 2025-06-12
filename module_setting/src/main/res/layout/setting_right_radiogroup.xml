@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    tools:background="@color/common_color_00">
+
+    <RadioGroup
+        android:id="@+id/setting_radiogroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.autel.setting.widget.ScaleRadioButton
+            android:id="@+id/setting_rb_fly_controll"
+            style="@style/setting_RadioButtonParam"
+            android:text="@string/common_text_right_radio_btn_flight_control"
+            android:button="@null"
+            android:clickable="true"
+            app:drawableSizes="@dimen/common_48dp"
+            app:drawableTop="@drawable/setting_fly_controll_selector" />
+
+        <com.autel.setting.widget.ScaleRadioButton
+            android:id="@+id/setting_rb_obstaclel"
+            style="@style/setting_RadioButtonParam"
+            android:text="@string/common_text_right_radio_btn_oa"
+            android:clickable="true"
+            app:drawableSizes="@dimen/common_48dp"
+            app:drawableTop="@drawable/setting_obstaclel_selector" />
+
+        <com.autel.setting.widget.ScaleRadioButton
+            android:id="@+id/setting_rb_remote"
+            style="@style/setting_RadioButtonParam"
+            android:text="@string/common_text_right_radio_btn_remote_controller"
+            android:clickable="true"
+            app:drawableSizes="@dimen/common_48dp"
+            app:drawableTop="@drawable/setting_remote_selector" />
+
+        <com.autel.setting.widget.ScaleRadioButton
+            android:id="@+id/setting_rb_hd"
+            style="@style/setting_RadioButtonParam"
+            android:text="@string/common_text_right_radio_btn_image_transmission"
+            android:clickable="true"
+            app:drawableSizes="@dimen/common_48dp"
+            app:drawableTop="@drawable/setting_hd_selector" />
+
+        <com.autel.setting.widget.ScaleRadioButton
+            android:id="@+id/setting_rb_battery"
+            style="@style/setting_RadioButtonParam"
+            android:text="@string/common_text_right_radio_btn_battery"
+            android:clickable="true"
+            app:drawableSizes="@dimen/common_48dp"
+            app:drawableTop="@drawable/setting_battery_selector" />
+
+        <com.autel.setting.widget.ScaleRadioButton
+            android:id="@+id/setting_rb_camera"
+            style="@style/setting_RadioButtonParam"
+            android:text="@string/common_text_right_radio_btn_gimbal"
+            android:clickable="true"
+            app:drawableSizes="@dimen/common_48dp"
+            app:drawableTop="@drawable/setting_camera_selector" />
+
+        <com.autel.setting.widget.ScaleRadioButton
+            android:id="@+id/setting_rb_rtk"
+            style="@style/setting_RadioButtonParam"
+            android:text="@string/common_text_right_radio_btn_rtk"
+            android:visibility="gone"
+            android:clickable="true"
+            app:drawableSizes="@dimen/common_48dp"
+            app:drawableTop="@drawable/setting_rtk_selector" />
+
+        <com.autel.setting.widget.ScaleRadioButton
+            android:id="@+id/setting_rb_thrower"
+            style="@style/setting_RadioButtonParam"
+            android:text="@string/common_text_right_radio_btn_thrower"
+            android:clickable="true"
+            app:drawableSizes="@dimen/common_48dp"
+            android:visibility="gone"
+            app:drawableTop="@drawable/setting_thrower_selector" />
+
+        <com.autel.setting.widget.ScaleRadioButton
+            android:id="@+id/setting_rb_payload"
+            style="@style/setting_RadioButtonParam"
+            android:text="@string/common_text_plugin_device"
+            android:clickable="true"
+            app:drawableSizes="@dimen/common_42dp"
+            android:visibility="visible"
+            app:drawableTop="@drawable/common_selector_plugin" />
+
+        <com.autel.setting.widget.ScaleRadioButton
+            android:id="@+id/setting_rb_more"
+            style="@style/setting_RadioButtonParam"
+            android:text="@string/common_text_more_title"
+            android:clickable="true"
+            app:drawableSizes="@dimen/common_48dp"
+            app:drawableTop="@drawable/setting_more_selector" />
+    </RadioGroup>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

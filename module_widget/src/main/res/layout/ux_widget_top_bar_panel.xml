@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common_40dp"
+    android:background="@color/common_color_black"
+    android:orientation="horizontal"
+    tools:ignore="ResourceName">
+
+    <!-- 告警占位 -->
+    <View
+        android:id="@+id/iv_warn"
+        android:layout_width="@dimen/common_40dp"
+        android:layout_height="match_parent"
+        android:background="@color/common_color_red"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 告警占位 -->
+    <View
+        android:id="@+id/iv_warn_msg"
+        android:layout_width="@dimen/common_180dp"
+        android:layout_height="match_parent"
+        android:background="@color/common_color_secondary_3ce171"
+        app:layout_constraintStart_toEndOf="@id/iv_warn" />
+
+    <com.autel.ux.widget.positionmode.PositionModeWidget
+        android:id="@+id/position_mode"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toStartOf="@id/label"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/iv_warn_msg" />
+
+    <View
+        android:id="@+id/label"
+        android:layout_width="@dimen/common_1dp"
+        android:layout_height="@dimen/common_15dp"
+        android:background="@color/common_color_808080"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/flight_mode"
+        app:layout_constraintStart_toEndOf="@id/position_mode"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.autel.ux.widget.flightmodel.FlightModelWidget
+        android:id="@+id/flight_mode"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toStartOf="@id/widget_sdcard"
+        app:layout_constraintStart_toEndOf="@id/label" />
+
+
+    <com.autel.ux.widget.gearlevel.GearLevelWidget
+        android:id="@+id/widget_gear_level"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/common_10dp"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.autel.ux.widget.obstacleavoidance.ObstacleAvoidanceWidget
+        android:id="@+id/widget_obstacle_avoidance"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/common_10dp"
+        app:layout_constraintEnd_toStartOf="@id/widget_gear_level" />
+
+    <com.autel.ux.widget.power.DronePowerWidget
+        android:id="@+id/widget_drone_power"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/common_10dp"
+        app:layout_constraintEnd_toStartOf="@id/widget_obstacle_avoidance" />
+
+    <com.autel.ux.widget.gpssignal.GPSSignalWidget
+        android:id="@+id/widget_gps_signal"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/common_10dp"
+        app:layout_constraintEnd_toStartOf="@id/widget_drone_power" />
+
+    <com.autel.ux.widget.remotecontrollersignal.RemoteControllerSignalWidget
+        android:id="@+id/widget_remote_control_signal"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/common_10dp"
+        app:layout_constraintEnd_toStartOf="@id/widget_gps_signal" />
+
+    <com.autel.ux.widget.remotecontrolpower.RemoteControlPowerWidget
+        android:id="@+id/widget_remote_control_power"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/common_10dp"
+        app:layout_constraintEnd_toStartOf="@id/widget_remote_control_signal" />
+
+    <com.autel.ux.widget.sdcard.SDCardWidget
+        android:id="@+id/widget_sdcard"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/common_10dp"
+        app:layout_constraintEnd_toStartOf="@id/widget_remote_control_power" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <com.autel.ui.TriangleView
+        android:id="@+id/iv_triangle"
+        android:layout_width="@dimen/common_20dp"
+        android:layout_height="@dimen/common_10dp"
+        android:background="@color/common_color_black_90"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:triangle_view_direction="top" />
+
+    <View
+        android:id="@+id/view_bg"
+        android:layout_width="@dimen/common_260dp"
+        android:layout_height="0dp"
+        android:background="@drawable/common_shape_solid_color_black_90_radius_8"
+        app:layout_constraintBottom_toBottomOf="@id/space"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_triangle" />
+
+    <View
+        android:id="@+id/label1"
+        android:layout_width="@dimen/common_0_5dp"
+        android:layout_height="@dimen/common_45dp"
+        android:layout_marginTop="@dimen/common_14_5dp"
+        android:background="@color/common_color_white_20"
+        app:layout_constraintEnd_toEndOf="@id/view_bg"
+        app:layout_constraintStart_toStartOf="@id/view_bg"
+        app:layout_constraintTop_toTopOf="@id/view_bg" />
+
+    <View
+        android:id="@+id/label2"
+        android:layout_width="@dimen/common_0dp"
+        android:layout_height="@dimen/common_0_5dp"
+        android:layout_marginTop="@dimen/common_14_5dp"
+        android:background="@color/common_color_white_20"
+        app:layout_constraintEnd_toEndOf="@id/view_bg"
+        app:layout_constraintStart_toStartOf="@id/view_bg"
+        app:layout_constraintTop_toBottomOf="@id/label1" />
+
+    <TextView
+        android:id="@+id/tv_drone_lte_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/common_color_red"
+        android:textSize="@dimen/common_text_size_sp_14"
+        app:layout_constraintBottom_toTopOf="@id/tv_drone_lte"
+        app:layout_constraintEnd_toStartOf="@id/label1"
+        app:layout_constraintStart_toStartOf="@id/view_bg"
+        app:layout_constraintTop_toTopOf="@id/view_bg"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="@string/common_text_gps_tag_none" />
+
+    <TextView
+        android:id="@+id/tv_drone_lte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/common_text_drone_lte"
+        android:textColor="@color/common_color_white_80"
+        android:textSize="@dimen/common_text_size_sp_13"
+        app:layout_constraintBottom_toTopOf="@id/label2"
+        app:layout_constraintEnd_toStartOf="@id/label1"
+        app:layout_constraintStart_toStartOf="@id/view_bg"
+        app:layout_constraintTop_toBottomOf="@id/tv_drone_lte_level" />
+
+    <TextView
+        android:id="@+id/tv_remote_lte_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/common_color_red"
+        android:textSize="@dimen/common_text_size_sp_14"
+        app:layout_constraintBottom_toTopOf="@id/tv_remote_lte"
+        app:layout_constraintEnd_toEndOf="@id/view_bg"
+        app:layout_constraintStart_toEndOf="@id/label1"
+        app:layout_constraintTop_toTopOf="@id/view_bg"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="@string/common_text_gps_tag_none" />
+
+    <TextView
+        android:id="@+id/tv_remote_lte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/common_text_remote_control_lte"
+        android:textColor="@color/common_color_white_80"
+        android:textSize="@dimen/common_text_size_sp_13"
+        app:layout_constraintBottom_toTopOf="@id/label2"
+        app:layout_constraintEnd_toEndOf="@id/view_bg"
+        app:layout_constraintStart_toEndOf="@id/label1"
+        app:layout_constraintTop_toBottomOf="@id/tv_remote_lte_level" />
+
+    <TextView
+        android:id="@+id/label3"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/common_50dp"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/common_15dp"
+        android:text="@string/common_text_hd_enhance_title"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/view_bg"
+        app:layout_constraintTop_toBottomOf="@id/label2" />
+
+    <ImageView
+        android:id="@+id/title_tip_icon"
+        android:layout_width="@dimen/common_30dp"
+        android:layout_height="@dimen/common_30dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/common_ic_exclamation_mark"
+        app:layout_constraintBottom_toBottomOf="@id/label3"
+        app:layout_constraintStart_toEndOf="@id/label3"
+        app:layout_constraintTop_toTopOf="@id/label3" />
+
+    <com.autel.ui.SwitchButton
+        android:id="@+id/switch_button"
+        android:layout_width="@dimen/common_39_5dp"
+        android:layout_height="@dimen/common_27_5dp"
+        android:layout_marginEnd="@dimen/common_15dp"
+        app:layout_constraintBottom_toBottomOf="@id/label3"
+        app:layout_constraintEnd_toEndOf="@id/view_bg"
+        app:layout_constraintTop_toTopOf="@id/label3"
+        app:sb_background="@color/common_color_4f"
+        app:sb_show_indicator="false" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_drone_warn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/common_15dp"
+        android:layout_marginTop="@dimen/common_5dp"
+        android:background="@drawable/common_item_bg_all_red"
+        android:paddingVertical="@dimen/common_4dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/view_bg"
+        app:layout_constraintStart_toStartOf="@id/view_bg"
+        app:layout_constraintTop_toBottomOf="@id/label3"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_drone_warn"
+            android:layout_width="@dimen/common_12dp"
+            android:layout_height="@dimen/common_12dp"
+            android:layout_marginStart="@dimen/common_5dp"
+            android:layout_marginTop="@dimen/common_5dp"
+            android:src="@drawable/icon_warn_red"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_drone_warn" />
+
+        <TextView
+            android:id="@+id/tv_drone_warn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common_5dp"
+            android:textColor="@color/common_color_secondary_e60012"
+            android:textSize="@dimen/common_text_size_sp_14"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_drone_warn"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="飞机未连接网络，请检查网络或SIM卡套餐余量" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_remote_warn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/common_15dp"
+        android:layout_marginVertical="@dimen/common_5dp"
+        android:background="@drawable/common_item_bg_all_red"
+        android:paddingVertical="@dimen/common_4dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/view_bg"
+        app:layout_constraintStart_toStartOf="@id/view_bg"
+        app:layout_constraintTop_toBottomOf="@id/layout_drone_warn"
+        app:layout_goneMarginTop="@dimen/common_5dp"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_remote_control_warn"
+            android:layout_width="@dimen/common_12dp"
+            android:layout_height="@dimen/common_12dp"
+            android:layout_marginStart="@dimen/common_5dp"
+            android:layout_marginTop="@dimen/common_5dp"
+            android:src="@drawable/icon_warn_red"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_remote_control_warn" />
+
+        <TextView
+            android:id="@+id/tv_remote_control_warn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common_5dp"
+            android:textColor="@color/common_color_secondary_e60012"
+            android:textSize="@dimen/common_text_size_sp_14"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_remote_control_warn"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="飞机未连接网络，请检查网络或SIM卡套餐余量" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/space"
+        android:layout_width="1dp"
+        android:layout_height="@dimen/common_15dp"
+        app:layout_constraintStart_toStartOf="@id/layout_remote_warn"
+        app:layout_constraintTop_toBottomOf="@id/layout_remote_warn" />
+
+    <com.autel.ui.TriangleView
+        android:id="@+id/iv_triangle2"
+        android:layout_width="@dimen/common_20dp"
+        android:layout_height="@dimen/common_10dp"
+        android:background="@color/common_color_ff"
+        app:layout_constraintEnd_toEndOf="@id/title_tip_icon"
+        app:layout_constraintStart_toStartOf="@id/title_tip_icon"
+        app:layout_constraintTop_toBottomOf="@id/title_tip_icon"
+        app:triangle_view_direction="top" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_lte_tip"
+        android:layout_width="@dimen/common_270dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/common_shape_rect_solid_color_white_radius_9"
+        app:layout_constraintEnd_toEndOf="@id/iv_triangle2"
+        app:layout_constraintStart_toStartOf="@id/iv_triangle2"
+        app:layout_constraintTop_toBottomOf="@id/iv_triangle2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/common_15dp"
+            android:text="@string/common_text_enhanced_picture_transmission_tips"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_text_size_sp_15"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/lte_tips_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:constraint_referenced_ids="iv_triangle2,layout_lte_tip"
+        tools:visibility="gone" />
+</merge>

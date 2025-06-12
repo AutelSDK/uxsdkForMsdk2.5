@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <application>
+        <activity
+            android:name="com.autel.setting.view.SettingGimbalCalibrationActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name="com.autel.setting.view.SettingIMUCalibrationActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.autel.setting.view.SettingRadarCalibrationActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".view.SettingCompassCalibrationActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".view.SettingControllerCalibrationActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".view.SettingRemoteCompassCalibrationActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".view.ImportAiModeActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".view.DataSecurityActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".view.rid.RemoteIDActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".view.FileSelectorActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+    </application>
+
+</manifest>
