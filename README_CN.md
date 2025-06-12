@@ -12,7 +12,7 @@
 
 ## 二、主界面 Widget 组件一览与用法
 
-![image-20250612094143348](C:\Users\R22449\AppData\Roaming\Typora\typora-user-images\image-20250612094143348.png)
+![20250612-121325](.\20250612-121325.jpg)
 
 ### 1. 组件目录结构
 
@@ -102,7 +102,7 @@ override fun onCreate(savedInstanceState: Bundle?) {
 
 ## 四、设置模块功能详解
 
-![image-20250612095337395](C:\Users\R22449\AppData\Roaming\Typora\typora-user-images\image-20250612095337395.png)
+![20250612-121332](.\20250612-121332.jpg)
 
 ### 1. 设置页面主要功能
 

@@ -14,7 +14,7 @@
 
 ## 2. Main Interface Widget Components Overview & Usage
 
-![image-20250612095636995](C:\Users\R22449\AppData\Roaming\Typora\typora-user-images\image-20250612095636995.png)
+![20250612-121325](.\20250612-121325.jpg)
 
 ### 1. Component Directory Structure
 
@@ -117,7 +117,7 @@ override fun onCreate(savedInstanceState: Bundle?) {
 
 ## 4. Settings Module Feature Overview
 
-![image-20250612095557257](C:\Users\R22449\AppData\Roaming\Typora\typora-user-images\image-20250612095557257.png)
+![20250612-121332](.\20250612-121332.jpg)
 
 ### 1. Main Settings Features
 
