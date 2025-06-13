@@ -35,7 +35,7 @@ rootProject.ext {
                     'ffmpegkitmingpl' : "com.autel.sdk.uxsdk:ffmpeg-kit-min-gpl:1.0.0",
                     'legal' : "com.autel.sdk.uxsdk:legal:1.0.0",
                     'data' : "com.autel.sdk.uxsdk:data:1.0.0",
-                    'map' : "com.autel.sdk.uxsdk:map:1.0.3",
+                    'map' : "com.autel.sdk.uxsdk:map:1.0.5",
                     'album' : "com.autel.sdk.uxsdk:album:1.0.2",
                     'camera' : "com.autel.sdk.uxsdk:camera:1.0.0",
                     'codec' : "com.autel.sdk.uxsdk:codec:1.0.0",
