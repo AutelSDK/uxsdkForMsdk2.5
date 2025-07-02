@@ -37,10 +37,10 @@ rootProject.ext {
                     'data' : "com.autel.sdk.uxsdk:data:1.0.0",
                     'map' : "com.autel.sdk.uxsdk:map:1.0.5",
                     'album' : "com.autel.sdk.uxsdk:album:1.0.2",
-                    'camera' : "com.autel.sdk.uxsdk:camera:1.0.0",
+                    'camera' : "com.autel.sdk.uxsdk:camera:1.0.1",
                     'codec' : "com.autel.sdk.uxsdk:codec:1.0.0",
                     'utils' : "com.autel.sdk.uxsdk:utils:1.0.0",
-                    'frame' : "com.autel.sdk.uxsdk:frame:1.0.4",
+                    'frame' : "com.autel.sdk.uxsdk:frame:1.0.6",
                     'mesh' : "com.autel.sdk.uxsdk:netmesh:1.0.1"
             ]
     ]
